@@ -23,7 +23,15 @@ class MachineShop extends Model implements Transformable
     protected $fillable = [
     	'name',
 		'address',
+        'city_id',
 		'phone'
     ];
+
+    public function city()
+    {
+
+        return $this->belongsTo(City::class);
+
+    }
 
 }

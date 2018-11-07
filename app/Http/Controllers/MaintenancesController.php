@@ -121,7 +121,8 @@ class MaintenancesController extends Controller
                         'maintenanceCategory_list',
                         'maintenanceStatus_list',
                         'machineShop_list',
-                        'provider_list'
+                        'provider_list',
+                        'vehicles_list'
                     ));
     }
 

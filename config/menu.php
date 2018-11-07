@@ -40,7 +40,7 @@ Menu::macro('sidebar', function () {
 
         ->add(Link::to('/vehicles', '<i class="fa fa-car"></i><span>Veiculos/Máquinas</span>'))
 
-        ->action('HomeController@index', '<i class="fa fa-truck"></i><span>Fornecedores</span>')
+        ->add(Link::to('/providers', '<i class="fa fa-truck"></i><span>Fornecedores</span>'))
 
         ->add(Link::to('/maintenances', '<i class="fa fa-wrench"></i><span>Manutenções</span>'))
 

@@ -34,8 +34,8 @@
 					 			<th>{{ $provider->id }}</th>
 					 			<th>{{ $provider->name }}</th>
 					 			<th>{{ $provider->address }}</th>
-					 			<th>{{ $provider->city_id }}</th>
-					 			<th>{{ $provider->state }}</th>
+					 			<th>{{ $provider->city->name }}</th>
+					 			<th>{{ $provider->city->state->name }}</th>
 					 			<th>{{ $provider->phone }}</th>
 					 			<th>{{ $provider->email }}</th>
 					 			<td>

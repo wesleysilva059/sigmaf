@@ -2,15 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 use App\Http\Requests;
-use Prettus\Validator\Contracts\ValidatorInterface;
-use Prettus\Validator\Exceptions\ValidatorException;
 use App\Http\Requests\MachineShopCreateRequest;
 use App\Http\Requests\MachineShopUpdateRequest;
+use App\Entities\State;
+use App\Entities\City;
 use App\Repositories\MachineShopRepository;
 use App\Validators\MachineShopValidator;
+use Illuminate\Http\Request;
+use Prettus\Validator\Contracts\ValidatorInterface;
+use Prettus\Validator\Exceptions\ValidatorException;
 
 /**
  * Class MachineShopsController.
@@ -35,10 +36,11 @@ class MachineShopsController extends Controller
      * @param MachineShopRepository $repository
      * @param MachineShopValidator $validator
      */
-    public function __construct(MachineShopRepository $repository, MachineShopValidator $validator)
+    public function __construct(MachineShopRepository $repository, MachineShopValidator $validator, State $state)
     {
         $this->repository = $repository;
         $this->validator  = $validator;
+        $this->state = $state;
     }
 
     /**
@@ -63,7 +65,16 @@ class MachineShopsController extends Controller
 
     public function create()
     {
-        return view('register.machineShops.create');
+        $state_list = State::all();
+
+        return view('register.machineShops.create', compact('state_list'));
+    }
+
+    public function getCities($state_id)
+    {
+        $cities = City::all()->where('state_id',$state_id);
+        sleep(1);
+        return response()->json($cities);
     }
 
     /**
@@ -77,11 +88,14 @@ class MachineShopsController extends Controller
      */
     public function store(MachineShopCreateRequest $request)
     {
+        //dd($request);
         try {
 
             $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_CREATE);
 
             $machineShop = $this->repository->create($request->all());
+
+
 
             $response = [
                 'message' => 'MachineShop created.',

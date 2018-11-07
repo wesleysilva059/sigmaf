@@ -32,6 +32,15 @@
  * Skin: Blue
  * ----------
  */
+
+/**Cor quando passar por cima**/
+
+
+
+.highlight {
+  background-color: #ccc;
+}
+
 .bt-test{
 	margin-top: 22px;
 }

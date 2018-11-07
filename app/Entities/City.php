@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Models;
+namespace App\Entities;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class City extends Model
 {
@@ -53,6 +54,20 @@ class City extends Model
     {
 
         return $this->belongsTo(State::class, 'state_id');
+
+    }
+
+    public function machineShop()
+    {
+
+        return $this->hasMany(MachineShop::class, 'city_id');
+
+    }
+
+        public function provider()
+    {
+
+        return $this->hasMany(Provider::class, 'city_id');
 
     }
 

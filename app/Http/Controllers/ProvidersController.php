@@ -2,15 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
+use App\Entities\City;
+use App\Entities\State;
 use App\Http\Requests;
-use Prettus\Validator\Contracts\ValidatorInterface;
-use Prettus\Validator\Exceptions\ValidatorException;
 use App\Http\Requests\ProviderCreateRequest;
 use App\Http\Requests\ProviderUpdateRequest;
 use App\Repositories\ProviderRepository;
 use App\Validators\ProviderValidator;
+use Illuminate\Http\Request;
+use Prettus\Validator\Contracts\ValidatorInterface;
+use Prettus\Validator\Exceptions\ValidatorException;
 
 /**
  * Class ProvidersController.
@@ -63,7 +64,16 @@ class ProvidersController extends Controller
 
     public function create()
     {
-        return view('register.providers.create');
+        $state_list = State::all();
+
+        return view('register.providers.create', compact('state_list'));
+    }
+
+    public function getCities($state_id)
+    {
+        $cities = City::all()->where('state_id',$state_id);
+        sleep(1);
+        return response()->json($cities);
     }
 
     /**

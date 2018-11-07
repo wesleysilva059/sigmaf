@@ -22,6 +22,8 @@
 					 			<th>#</th>
 					 			<th>Nome</th>
 					 			<th>Endereço</th>
+					 			<th>Cidade</th>
+					 			<th>Estado</th>
 					 			<th>Telefone</th>
 					 		</tr>
 					 	</thead>
@@ -31,6 +33,8 @@
 					 			<th>{{ $machineShop->id }}</th>
 					 			<th>{{ $machineShop->name }}</th>
 					 			<th>{{ $machineShop->address }}</th>
+					 			<th>{{ $machineShop->city->name}}</th>
+					 			<th>{{ $machineShop->city->state->name}}</th>
 					 			<th>{{ $machineShop->phone }}</th>
 					 			<td>
 					 				<a href="#" class="btn btn-info">

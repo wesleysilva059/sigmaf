@@ -21,7 +21,7 @@
     <script src="/js/Chart.bundle.js"></script>
     <script src="/js/utils.js"></script>
     <script src="/js/jquery.min.js" type="text/javascript"></script>
-    <script src="/js/bootstrap-datepicker.min.js"></script>
+    <!-- <script src="/js/bootstrap-datepicker.min.js"></script> -->
 
     <script>
         //See https://laracasts.com/discuss/channels/vue/use-trans-in-vuejs

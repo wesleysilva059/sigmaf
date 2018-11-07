@@ -31,6 +31,7 @@ Route::group(['middleware' => 'auth'], function () {
 		Route::get('/getCostCenters/{departmente_id}', 'VehiclesController@getCostCenter');
 
 	Route::resource('providers', 'ProvidersController');
+		Route::get('/getCities/{state_id}', 'ProvidersController@getCities');
 
 	Route::resource('costCenters', 'CostCentersController');
 		Route::get('/costCenter/create', 'CostCentersController@create')->name('costCenter.create');
@@ -40,6 +41,7 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::resource('oilChangeTypes', 'OilChangeTypesController');
 
 	Route::resource('machineShops', 'MachineShopsController');
+		Route::get('/getCities/{state_id}', 'MachineShopsController@getCities');
 
 	Route::resource('maintenanceCategories', 'MaintenanceCategoriesController');
 

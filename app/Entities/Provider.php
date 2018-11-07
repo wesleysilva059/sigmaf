@@ -28,4 +28,11 @@ class Provider extends Model implements Transformable
 		'email'
     ];
 
+    public function city()
+    {
+
+        return $this->belongsTo(City::class);
+
+    }
+
 }
