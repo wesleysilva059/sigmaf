@@ -17,19 +17,28 @@ class CreateOilChangesTable extends Migration
 	{
 		Schema::create('oil_changes', function(Blueprint $table) {
             $table->increments('id');
-            $table->integer('controlPeriod');
             $table->integer('periodOilChange');
-            $table->date('nextDateOilChange');
-            $table->unsignedInteger('oilChange_id');
+            $table->unsignedInteger('oilChangeType_id');
             $table->unsignedInteger('vehicle_id');
-
-            $table->foreign('oilChange_id')->references('id')->on('oil_change_types')
+            $table->unsignedInteger('employee_id');
+            $table->date('initDate');
+            $table->date('endDate')->nullable();
+            $table->date('nextDateOilChange');
+            $table->integer('currentKmHr');
+            $table->unsignedInteger('maintenanceStatus_id');
+            $table->foreign('oilChangeType_id')->references('id')->on('oil_change_types')
             	->onDelete('cascade')
             	->onUpdate('cascade');
             $table->foreign('vehicle_id')->references('id')->on('vehicles')
             	->onDelete('cascade')
             	->onUpdate('cascade');
-
+            $table->foreign('employee_id')->references('id')->on('employees')
+            	->onDelete('cascade')
+            	->onUpdate('cascade');
+            $table->foreign('maintenanceStatus_id')->references('id')->on('maintenance_statuses')
+            	->onDelete('cascade')
+            	->onUpdate('cascade');
+            	
             $table->timestamps();
 		});
 	}

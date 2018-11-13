@@ -136,6 +136,7 @@ class VehiclesController extends Controller
      */
     public function store(VehicleCreateRequest $request)
     {
+        dd($request);
         try {
 
             $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_CREATE);

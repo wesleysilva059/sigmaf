@@ -34,4 +34,8 @@ class MachineShop extends Model implements Transformable
 
     }
 
+    public function maintenance(){
+        return $this->hasMany(Maintenance::class);
+    }
+
 }

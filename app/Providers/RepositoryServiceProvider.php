@@ -46,6 +46,9 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(\App\Repositories\OtherServiceRepository::class, \App\Repositories\OtherServiceRepositoryEloquent::class);
         $this->app->bind(\App\Repositories\UserRepository::class, \App\Repositories\UserRepositoryEloquent::class);
         $this->app->bind(\App\Repositories\VehicleModelRepository::class, \App\Repositories\VehicleModelRepositoryEloquent::class);
+        $this->app->bind(\App\Repositories\LubrificationRepository::class, \App\Repositories\LubrificationRepositoryEloquent::class);
+        $this->app->bind(\App\Repositories\LubrificationTypeRepository::class, \App\Repositories\LubrificationTypeRepositoryEloquent::class);
+        $this->app->bind(\App\Repositories\EmployeeRepository::class, \App\Repositories\EmployeeRepositoryEloquent::class);
         //:end-bindings:
     }
 }

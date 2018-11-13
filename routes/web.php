@@ -52,8 +52,18 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::resource('vehicleModels', 'VehicleModelsController');
 
 	Route::resource('maintenances', 'MaintenancesController');
+		Route::get('/getCostCenters/{departmente_id}', 'MaintenancesController@getCostCenter');
 
 	Route::resource('vehicleTypes', 'VehicleTypesController');
+
+	Route::resource('oilChanges', 'OilChangesController');
+
+	Route::resource('filterChanges', 'FilterChangesController');
+
+	Route::resource('lubrifications', 'LubrificationsController');
+
+	Route::resource('cleanings', 'CleaningsController');
+
 });
 
 

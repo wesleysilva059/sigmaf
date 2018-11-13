@@ -30,5 +30,9 @@ class VehicleModel extends Model implements Transformable
         return $this->hasMany(vehicle::class);
     }
 
+    public function maintenance(){
+        return $this->hasMany(Maintenance::class);
+    }
+
 }
 

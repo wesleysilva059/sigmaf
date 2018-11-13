@@ -126,6 +126,13 @@ class MaintenancesController extends Controller
                     ));
     }
 
+    public function getCostCenter($department_id)
+    {
+        $costCenters = $this->costCenterRepository->all()->where('department_id',$department_id);
+        sleep(1);
+        return response()->json($costCenters);
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -137,6 +144,7 @@ class MaintenancesController extends Controller
      */
     public function store(MaintenanceCreateRequest $request)
     {
+        //dd($request);
         try {
 
             $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_CREATE);

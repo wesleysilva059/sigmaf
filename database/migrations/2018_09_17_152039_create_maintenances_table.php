@@ -21,9 +21,9 @@ class CreateMaintenancesTable extends Migration
             $table->unsignedInteger('vehicle_id');
             $table->integer('purchaseItem');
             $table->integer('localService');
-            $table->string('priority');
-            $table->string('story');
-            $table->string('plannedMaintenance');
+            $table->integer('priority');
+            $table->text('story');
+            $table->text('plannedMaintenance')->nullable();
             $table->unsignedInteger('maintenanceCategory_id');
             $table->unsignedInteger('maintenanceStatus_id');
             $table->unsignedInteger('machineShop_id');
@@ -31,9 +31,10 @@ class CreateMaintenancesTable extends Migration
             $table->unsignedInteger('costCenter_id');
             $table->unsignedInteger('department_id');
             $table->date('initDateMaintenance');
-            $table->date('endDateMaintenance');
+            $table->date('endDateMaintenance')->nullable();
             $table->date('expectedDateEnd');
-            $table->text('serviceDescRealized');
+            $table->text('serviceDescRealized')->nullable();
+            $table->int('kmHrAtual');
 
             $table->foreign('vehicle_id')->references('id')->on('vehicles')
             	->onDelete('cascade')

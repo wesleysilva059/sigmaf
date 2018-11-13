@@ -30,4 +30,8 @@ class Department extends Model implements Transformable
         return $this->hasMany(CostCenter::class);
     }
 
+    public function maintenance(){
+        return $this->hasMany(Maintenance::class);
+    }
+
 }

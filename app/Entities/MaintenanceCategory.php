@@ -22,4 +22,8 @@ class MaintenanceCategory extends Model implements Transformable
      */
     protected $fillable = ['name'];
 
+    public function maintenance(){
+        return $this->hasMany(Maintenance::class);
+    }
+
 }

@@ -4,9 +4,9 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
 /**
- * Class CreateOtherServicesTable.
+ * Class CreateLubrificationsTable.
  */
-class CreateOtherServicesTable extends Migration
+class CreateLubrificationsTable extends Migration
 {
 	/**
 	 * Run the migrations.
@@ -15,24 +15,24 @@ class CreateOtherServicesTable extends Migration
 	 */
 	public function up()
 	{
-		Schema::create('other_services', function(Blueprint $table) {
+		Schema::create('lubrifications', function(Blueprint $table) {
             $table->increments('id');
+            $table->integer('periodLubrification');
+            $table->unsignedInteger('lubrificationType_id');
             $table->unsignedInteger('vehicle_id');
-            $table->integer('serviceType');
+            $table->unsignedInteger('employee_id');
             $table->date('initDate');
-            $table->date('endDate');
+            $table->date('endDate')->nullable();
+            $table->date('nextDateLubrification');
             $table->integer('currentKmHr');
-            $table->unsignedInteger('provider_id');
-            $table->unsignedInteger('machineShop_id');
             $table->unsignedInteger('maintenanceStatus_id');
-
+            $table->foreign('lubrificationType_id')->references('id')->on('oil_change_types')
+            	->onDelete('cascade')
+            	->onUpdate('cascade');
             $table->foreign('vehicle_id')->references('id')->on('vehicles')
             	->onDelete('cascade')
             	->onUpdate('cascade');
-            $table->foreign('provider_id')->references('id')->on('providers')
-            	->onDelete('cascade')
-            	->onUpdate('cascade');
-            $table->foreign('machineShop_id')->references('id')->on('machine_shops')
+            $table->foreign('employee_id')->references('id')->on('employees')
             	->onDelete('cascade')
             	->onUpdate('cascade');
             $table->foreign('maintenanceStatus_id')->references('id')->on('maintenance_statuses')
@@ -50,6 +50,6 @@ class CreateOtherServicesTable extends Migration
 	 */
 	public function down()
 	{
-		Schema::drop('other_services');
+		Schema::drop('lubrifications');
 	}
 }

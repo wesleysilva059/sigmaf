@@ -42,11 +42,14 @@ Menu::macro('sidebar', function () {
 
         ->add(Link::to('/providers', '<i class="fa fa-truck"></i><span>Fornecedores</span>'))
 
-        ->add(Link::to('/maintenances', '<i class="fa fa-wrench"></i><span>Manutenções</span>'))
-
-        ->action('HomeController@index', '<i class="fa fa-cog"></i><span>Lubrificações</span>')
-
-        ->action('HomeController@index', '<i class="fa fa-eraser"></i><span>Limpezas</span>')
+        ->add(Menu::new()->prepend('<a href="#"><i class="fa fa-share"></i><span>Cadastrar Serviços</span> <i class="fa fa-angle-left pull-right"></i></a>')
+            ->addParentClass('treeview')
+            ->add(Link::to('/maintenances', '<i class="fa fa-wrench"></i><span>Manutenção</span>'))
+            ->add(Link::to('/oilChanges', '<i class="fa fa-eraser"></i><span>Troca de óleo</span>'))->addClass('treeview-menu')
+            ->add(Link::to('/filterChanges', '<i class="fa fa-eraser"></i><span>Troca de Filtro</span>'))->addClass('treeview-menu')
+            ->add(Link::to('/Lubrifications', '<i class="fa fa-eraser"></i><span>Lubrificação</span>'))->addClass('treeview-menu')
+            ->add(Link::to('/cleanings', '<i class="fa fa-eraser"></i><span>Limpeza</span>'))->addClass('treeview-menu')    
+        )
 
         ->link('http://www.acacha.org', Menu::adminlteDefaultMenu('Relatórios'))
 

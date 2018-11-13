@@ -7,11 +7,11 @@ use Prettus\Repository\Contracts\Transformable;
 use Prettus\Repository\Traits\TransformableTrait;
 
 /**
- * Class Mark.
+ * Class Employee.
  *
  * @package namespace App\Entities;
  */
-class Make extends Model implements Transformable
+class Employee extends Model implements Transformable
 {
     use TransformableTrait;
 
@@ -20,10 +20,6 @@ class Make extends Model implements Transformable
      *
      * @var array
      */
-    protected $fillable = ['name'];
-
-    public function vehicleModel(){
-        return $this->belongsTo(vehicleModel::class, 'vehicleModel_id');
-    }
+    protected $fillable = [];
 
 }
