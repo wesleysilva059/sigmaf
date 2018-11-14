@@ -15,8 +15,6 @@ Route::get('/', 'HomeController@index');
 
 Route::group(['middleware' => 'auth'], function () {
 
-	Route::get('chart','HomeController@chartHome');
-
 	Route::resource('users', 'UsersController');
 		Route::get('/user/create' , 'UsersController@create')->name('user.create');
 
@@ -55,6 +53,9 @@ Route::group(['middleware' => 'auth'], function () {
 
 	Route::resource('maintenances', 'MaintenancesController');
 		Route::get('/getCostCenters/{departmente_id}', 'MaintenancesController@getCostCenter');
+		Route::get('/historicsPeriod', 'MaintenancesController@historicsPeriod');
+		Route::any('/maintenancesSearch', 'MaintenancesController@searchPeriod')->name('maintenances.search');
+		Route::any('/historicsPeriodPrint','MaintenancesController@print')->name('maintenances.print');
 
 	Route::resource('vehicleTypes', 'VehicleTypesController');
 

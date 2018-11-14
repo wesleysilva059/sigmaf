@@ -2,9 +2,11 @@
 
 namespace App\Entities;
 
+use App\Entities\Vehicle;
 use Illuminate\Database\Eloquent\Model;
 use Prettus\Repository\Contracts\Transformable;
 use Prettus\Repository\Traits\TransformableTrait;
+
 
 /**
  * Class Maintenance.
@@ -95,6 +97,26 @@ class Maintenance extends Model implements Transformable
 
         $expectedDateEnd = $expectedDateEnd[2]. '/' . $expectedDateEnd[1] . '/' . $expectedDateEnd[0];
         return $expectedDateEnd;
+    }
+
+    public function search(Array $data, $totalPage)
+    {
+        $vehicle = Vehicle::where('vehiclePlate', $data['vehiclePlate'])->get();
+
+        $historics = $this->where(function ($query) use ($data, $vehicle) {
+            
+            if (isset($data['vehiclePlate']))
+                $query->where('vehicle_id', $vehicle[0]->id);
+
+            if (isset($data['date_init']) && isset($data['date_end']))
+                $query->whereBetween('initDateMaintenance',[$data['date_init'],$data['date_end']]);
+
+        })
+
+        ->paginate($totalPage);
+        //->toSql();dd($historics);
+
+        return $historics;
     }
 
 }

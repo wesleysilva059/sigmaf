@@ -2,22 +2,23 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
+use App\Entities\Maintenance;
 use App\Http\Requests;
-use Prettus\Validator\Contracts\ValidatorInterface;
-use Prettus\Validator\Exceptions\ValidatorException;
 use App\Http\Requests\MaintenanceCreateRequest;
 use App\Http\Requests\MaintenanceUpdateRequest;
-use App\Repositories\MaintenanceRepository;
-use App\Validators\MaintenanceValidator;
 use App\Repositories\CostCenterRepository;
 use App\Repositories\DepartmentRepository;
-use App\Repositories\VehicleRepository;
-use App\Repositories\MaintenanceCategoryRepository;
-use App\Repositories\MaintenanceStatusRepository;
 use App\Repositories\MachineShopRepository;
+use App\Repositories\MaintenanceCategoryRepository;
+use App\Repositories\MaintenanceRepository;
+use App\Repositories\MaintenanceStatusRepository;
 use App\Repositories\ProviderRepository;
+use App\Repositories\VehicleRepository;
+use App\Validators\MaintenanceValidator;
+use Barryvdh\DomPDF\Facade as PDF;
+use Illuminate\Http\Request;
+use Prettus\Validator\Contracts\ValidatorInterface;
+use Prettus\Validator\Exceptions\ValidatorException;
 
 /**
  * Class MaintenancesController.
@@ -273,5 +274,31 @@ class MaintenancesController extends Controller
         }
 
         return redirect()->back()->with('message', 'Maintenance deleted.');
+    }
+
+    public function historicsPeriod()
+    {
+        $historics = $this->repository->orderBy('initDateMaintenance','desc')->paginate($limit = 15, $columns = ['*']);
+
+
+        return view('reports.services.maintenances.index', compact('historics'));
+    }
+
+    public function searchPeriod(Request $request, Maintenance $maintenances)
+    {
+        $dataForm = $request->except('_token');
+
+        $historics = $maintenances->search($dataForm, '15');
+
+        return view('reports.services.maintenances.index', compact('historics', 'dataForm'));
+    }
+
+    public function print()
+    {
+        $historics = $this->repository->orderBy('initDateMaintenance','desc')->paginate($limit = 15, $columns = ['*']);
+
+        $pdf = PDF::loadView('reports.services.maintenances.index', compact('historics'));
+
+        return $pdf->stream();
     }
 }

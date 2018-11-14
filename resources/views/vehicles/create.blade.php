@@ -22,7 +22,7 @@
                     <li role="presentation" class="active">
                         <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Step 1">
                             <span class="round-tab">
-                                <i class="glyphicon glyphicon-folder-open"></i>
+                                <i class="glyphicon glyphicon-log-in"></i>
                             </span>
                         </a>
                     </li>
@@ -30,21 +30,21 @@
                     <li role="presentation" class="disabled">
                         <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Step 2">
                             <span class="round-tab">
-                                <i class="glyphicon glyphicon-pencil"></i>
+                                <i class="glyphicon glyphicon-briefcase"></i>
                             </span>
                         </a>
                     </li>
                     <li role="presentation" class="disabled">
                         <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Step 3">
                             <span class="round-tab">
-                                <i class="glyphicon glyphicon-picture"></i>
+                                <i class="glyphicon glyphicon-wrench"></i>
                             </span>
                         </a>
                     </li>
 					<li role="presentation" class="disabled">
                         <a href="#step4" data-toggle="tab" aria-controls="step4" role="tab" title="Step 4">
                             <span class="round-tab">
-                                <i class="glyphicon glyphicon-th"></i>
+                                <i class="glyphicon glyphicon-list-alt"></i>
                             </span>
                         </a>
                     </li>
