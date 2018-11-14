@@ -26,4 +26,16 @@ class MaintenanceStatus extends Model implements Transformable
         return $this->hasMany(Maintenance::class);
     }
 
+    public function filterChange(){
+        return $this->hasMany(FilterChange::class);
+    }
+
+    public function oilChange(){
+        return $this->hasMany(OilChange::class);
+    }
+
+    public function lubrification(){
+        return $this->hasMany(Lubrification::class);
+    }
+
 }

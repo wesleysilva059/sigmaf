@@ -34,7 +34,7 @@ class CreateMaintenancesTable extends Migration
             $table->date('endDateMaintenance')->nullable();
             $table->date('expectedDateEnd');
             $table->text('serviceDescRealized')->nullable();
-            $table->int('kmHrAtual');
+            $table->integer('kmHrAtual');
 
             $table->foreign('vehicle_id')->references('id')->on('vehicles')
             	->onDelete('cascade')

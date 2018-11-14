@@ -22,4 +22,8 @@ class OilChangeType extends Model implements Transformable
      */
     protected $fillable = ['name'];
 
+    public function oilChange(){
+        return $this->hasMany(OilChange::class);
+    }
+
 }

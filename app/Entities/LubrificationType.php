@@ -20,6 +20,10 @@ class LubrificationType extends Model implements Transformable
      *
      * @var array
      */
-    protected $fillable = [];
+    protected $fillable = ['name'];
+
+    public function lubrification(){
+        return $this->hasMany(Lubrification::class);
+    }
 
 }

@@ -83,7 +83,7 @@ class MaintenancesController extends Controller
             ]);
         }
 
-        return view('maintenances.index', compact('maintenances'));
+        return view('services.maintenances.index', compact('maintenances'));
     }
 
     public function create()
@@ -113,7 +113,7 @@ class MaintenancesController extends Controller
         $costCenter_list            = $this->costCenterRepository->all(['id','name']);
         $vehicles_list              = $this->vehicleRepository->all();
 
-        return view('maintenances.create', compact(
+        return view('services.maintenances.create', compact(
                         'codNextMaintenance', 
                         'currentYear',
                         'department_list',
@@ -192,7 +192,7 @@ class MaintenancesController extends Controller
             ]);
         }
 
-        return view('maintenances.show', compact('maintenance'));
+        return view('services.maintenances.show', compact('maintenance'));
     }
 
     /**
@@ -206,7 +206,7 @@ class MaintenancesController extends Controller
     {
         $maintenance = $this->repository->find($id);
 
-        return view('maintenances.edit', compact('maintenance'));
+        return view('services.maintenances.edit', compact('maintenance'));
     }
 
     /**

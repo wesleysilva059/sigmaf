@@ -2,15 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 use App\Http\Requests;
-use Prettus\Validator\Contracts\ValidatorInterface;
-use Prettus\Validator\Exceptions\ValidatorException;
 use App\Http\Requests\OilChangeCreateRequest;
 use App\Http\Requests\OilChangeUpdateRequest;
+use App\Repositories\EmployeeRepository;
+use App\Repositories\MaintenanceStatusRepository;
 use App\Repositories\OilChangeRepository;
+use App\Repositories\OilChangeTypeRepository;
+use App\Repositories\VehicleRepository;
 use App\Validators\OilChangeValidator;
+use Illuminate\Http\Request;
+use Prettus\Validator\Contracts\ValidatorInterface;
+use Prettus\Validator\Exceptions\ValidatorException;
 
 /**
  * Class OilChangesController.
@@ -23,6 +26,10 @@ class OilChangesController extends Controller
      * @var OilChangeRepository
      */
     protected $repository;
+    protected $vehicleRepository;
+    protected $maintenanceStatusRepository;
+    protected $employeeRepository;
+    protected $oilChangeTypeRepository;
 
     /**
      * @var OilChangeValidator
@@ -35,10 +42,20 @@ class OilChangesController extends Controller
      * @param OilChangeRepository $repository
      * @param OilChangeValidator $validator
      */
-    public function __construct(OilChangeRepository $repository, OilChangeValidator $validator)
+    public function __construct(OilChangeRepository $repository, 
+                                OilChangeValidator $validator, 
+                                VehicleRepository $vehicleRepository, 
+                                MaintenanceStatusRepository $maintenanceStatusRepository,
+                                EmployeeRepository $employeeRepository,
+                                OilChangeTypeRepository $oilChangeTypeRepository
+                            )
     {
-        $this->repository = $repository;
-        $this->validator  = $validator;
+        $this->repository                   = $repository;
+        $this->validator                    = $validator;
+        $this->vehicleRepository            = $vehicleRepository;
+        $this->maintenanceStatusRepository  = $maintenanceStatusRepository;
+        $this->employeeRepository           = $employeeRepository;
+        $this->oilChangeTypeRepository      = $oilChangeTypeRepository;
     }
 
     /**
@@ -51,14 +68,35 @@ class OilChangesController extends Controller
         $this->repository->pushCriteria(app('Prettus\Repository\Criteria\RequestCriteria'));
         $oilChanges = $this->repository->all();
 
-        if (request()->wantsJson()) {
+        //$nextOilChange = $oilChanges->currentKmHr + $oilChanges->periodOilChange;
+        //dd($nextOilChange);
 
-            return response()->json([
-                'data' => $oilChanges,
-            ]);
+        return view('services.oilChanges.index', compact('oilChanges'));
+    }
+
+    public function create()
+    {
+
+        $oilChange = $this->repository->first();
+        
+        if(!is_null($oilChange)){
+            $idNextOilChange = $oilChange->id + 1;
+        }else{
+            $idNextOilChange = 1;
         }
 
-        return view('oilChanges.index', compact('oilChanges'));
+        $vehicles_list              = $this->vehicleRepository->all();
+        $maintenanceStatus_list     = $this->maintenanceStatusRepository->all(['id', 'name']);
+        $employees_list             = $this->employeeRepository->all(['id', 'name']);
+        $oilChangeType_list         = $this->oilChangeTypeRepository->all(['id','name']); 
+
+        return view('services.oilChanges.create', compact(
+                                                    'vehicles_list', 
+                                                    'maintenanceStatus_list', 
+                                                    'employees_list', 
+                                                    'oilChangeType_list',
+                                                    'idNextOilChange'
+                                                ));
     }
 
     /**
@@ -119,7 +157,7 @@ class OilChangesController extends Controller
             ]);
         }
 
-        return view('oilChanges.show', compact('oilChange'));
+        return view('services.oilChanges.show', compact('oilChange'));
     }
 
     /**
@@ -133,7 +171,7 @@ class OilChangesController extends Controller
     {
         $oilChange = $this->repository->find($id);
 
-        return view('oilChanges.edit', compact('oilChange'));
+        return view('services.oilChanges.edit', compact('oilChange'));
     }
 
     /**

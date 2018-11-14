@@ -64,6 +64,8 @@ Route::group(['middleware' => 'auth'], function () {
 
 	Route::resource('cleanings', 'CleaningsController');
 
+	Route::resource('employees', 'EmployeesController');
+
 });
 
 

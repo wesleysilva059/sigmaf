@@ -22,4 +22,8 @@ class FilterChangeType extends Model implements Transformable
      */
     protected $fillable = ['name'];
 
+    public function filterChange(){
+        return $this->hasMany(FilterChange::class);
+    }
+
 }

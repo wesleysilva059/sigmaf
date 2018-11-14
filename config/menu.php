@@ -78,7 +78,8 @@ Menu::macro('sidebar', function () {
             ->add(Link::to('/departments', 'Sercretárias/Orgãos'))->addClass('treeview-menu')
             ->add(Link::to('/occupations', 'Cargos'))->addClass('treeview-menu')
             ->add(Link::to('/permissions', 'Permissões'))->addClass('treeview-menu')
-            ->add(Link::to('/costCenters', 'Centros de custo'))->addClass('treeview-menu')    
+            ->add(Link::to('/costCenters', 'Centros de custo'))->addClass('treeview-menu')
+            ->add(Link::to('/employees', 'Funcionários'))->addClass('treeview-menu')    
         )
 //        ->add(
 //            Menu::fullsubmenuexample()

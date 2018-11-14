@@ -22,8 +22,12 @@ class Occupation extends Model implements Transformable
      */
     protected $fillable = ['name'];
 
-     public function users(){
+    public function users(){
     	return $this->hasMany(User::class);
+    }
+
+    public function employees(){
+        return $this->hasMany(Employee::class);
     }
 
 }

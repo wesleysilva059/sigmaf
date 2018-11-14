@@ -2,15 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 use App\Http\Requests;
-use Prettus\Validator\Contracts\ValidatorInterface;
-use Prettus\Validator\Exceptions\ValidatorException;
 use App\Http\Requests\EmployeeCreateRequest;
 use App\Http\Requests\EmployeeUpdateRequest;
 use App\Repositories\EmployeeRepository;
+use App\Repositories\OccupationRepository;
 use App\Validators\EmployeeValidator;
+use Illuminate\Http\Request;
+use Prettus\Validator\Contracts\ValidatorInterface;
+use Prettus\Validator\Exceptions\ValidatorException;
 
 /**
  * Class EmployeesController.
@@ -28,6 +28,7 @@ class EmployeesController extends Controller
      * @var EmployeeValidator
      */
     protected $validator;
+    protected $occupationRepository;
 
     /**
      * EmployeesController constructor.
@@ -35,10 +36,14 @@ class EmployeesController extends Controller
      * @param EmployeeRepository $repository
      * @param EmployeeValidator $validator
      */
-    public function __construct(EmployeeRepository $repository, EmployeeValidator $validator)
+    public function __construct(EmployeeRepository $repository, 
+                                EmployeeValidator $validator,
+                                OccupationRepository $occupationRepository
+                            )
     {
-        $this->repository = $repository;
-        $this->validator  = $validator;
+        $this->repository           = $repository;
+        $this->validator            = $validator;
+        $this->occupationRepository = $occupationRepository;
     }
 
     /**
@@ -51,14 +56,14 @@ class EmployeesController extends Controller
         $this->repository->pushCriteria(app('Prettus\Repository\Criteria\RequestCriteria'));
         $employees = $this->repository->all();
 
-        if (request()->wantsJson()) {
+        return view('register.employees.index', compact('employees'));
+    }
 
-            return response()->json([
-                'data' => $employees,
-            ]);
-        }
+    public function create()
+    {
+        $occupation_list = $this->occupationRepository->all(['id','name']);        
 
-        return view('employees.index', compact('employees'));
+        return view('register.employees.create', compact('occupation_list'));
     }
 
     /**
@@ -119,7 +124,7 @@ class EmployeesController extends Controller
             ]);
         }
 
-        return view('employees.show', compact('employee'));
+        return view('register.employees.show', compact('employee'));
     }
 
     /**
@@ -133,7 +138,7 @@ class EmployeesController extends Controller
     {
         $employee = $this->repository->find($id);
 
-        return view('employees.edit', compact('employee'));
+        return view('register.employees.edit', compact('employee'));
     }
 
     /**

@@ -2,15 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 use App\Http\Requests;
-use Prettus\Validator\Contracts\ValidatorInterface;
-use Prettus\Validator\Exceptions\ValidatorException;
 use App\Http\Requests\FilterChangeCreateRequest;
 use App\Http\Requests\FilterChangeUpdateRequest;
+use App\Repositories\EmployeeRepository;
 use App\Repositories\FilterChangeRepository;
+use App\Repositories\FilterChangeTypeRepository;
+use App\Repositories\MaintenanceStatusRepository;
+use App\Repositories\VehicleRepository;
 use App\Validators\FilterChangeValidator;
+use Illuminate\Http\Request;
+use Prettus\Validator\Contracts\ValidatorInterface;
+use Prettus\Validator\Exceptions\ValidatorException;
 
 /**
  * Class FilterChangesController.
@@ -23,6 +26,10 @@ class FilterChangesController extends Controller
      * @var FilterChangeRepository
      */
     protected $repository;
+    protected $vehicleRepository;
+    protected $maintenanceStatusRepository;
+    protected $employeeRepository;
+    protected $filterChangeTypeRepository;
 
     /**
      * @var FilterChangeValidator
@@ -35,10 +42,20 @@ class FilterChangesController extends Controller
      * @param FilterChangeRepository $repository
      * @param FilterChangeValidator $validator
      */
-    public function __construct(FilterChangeRepository $repository, FilterChangeValidator $validator)
+    public function __construct(FilterChangeRepository $repository, 
+                                FilterChangeValidator $validator,
+                                VehicleRepository $vehicleRepository, 
+                                MaintenanceStatusRepository $maintenanceStatusRepository,
+                                EmployeeRepository $employeeRepository,
+                                FilterChangeTypeRepository $filterChangeTypeRepository
+                            )
     {
-        $this->repository = $repository;
-        $this->validator  = $validator;
+        $this->repository                   = $repository;
+        $this->validator                    = $validator;
+        $this->vehicleRepository            = $vehicleRepository;
+        $this->maintenanceStatusRepository  = $maintenanceStatusRepository;
+        $this->employeeRepository           = $employeeRepository;
+        $this->filterChangeTypeRepository   = $filterChangeTypeRepository;
     }
 
     /**
@@ -58,9 +75,33 @@ class FilterChangesController extends Controller
             ]);
         }
 
-        return view('filterChanges.index', compact('filterChanges'));
+        return view('services.filterChanges.index', compact('filterChanges'));
     }
 
+    public function create()
+    {
+
+        $filterChange = $this->repository->first();
+        
+        if(!is_null($filterChange)){
+            $idNextFilterChange = $filterChange->id + 1;
+        }else{
+            $idNextFilterChange = 1;
+        }
+
+        $vehicles_list              = $this->vehicleRepository->all();
+        $maintenanceStatus_list     = $this->maintenanceStatusRepository->all(['id', 'name']);
+        $employees_list             = $this->employeeRepository->all(['id', 'name']);
+        $filterChangeType_list         = $this->filterChangeTypeRepository->all(['id','name']); 
+
+        return view('services.filterChanges.create', compact(
+                                                    'vehicles_list', 
+                                                    'maintenanceStatus_list', 
+                                                    'employees_list', 
+                                                    'filterChangeType_list',
+                                                    'idNextFilterChange'
+                                                ));
+    }
     /**
      * Store a newly created resource in storage.
      *
@@ -119,7 +160,7 @@ class FilterChangesController extends Controller
             ]);
         }
 
-        return view('filterChanges.show', compact('filterChange'));
+        return view('services.filterChanges.show', compact('filterChange'));
     }
 
     /**
@@ -133,7 +174,7 @@ class FilterChangesController extends Controller
     {
         $filterChange = $this->repository->find($id);
 
-        return view('filterChanges.edit', compact('filterChange'));
+        return view('services.filterChanges.edit', compact('filterChange'));
     }
 
     /**

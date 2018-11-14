@@ -60,6 +60,18 @@ class Vehicle extends Model implements Transformable
         return $this->hasOne(Specification::class);
     }
 
+    public function filterChange(){
+        return $this->hasMany(FilterChange::class);
+    }
+
+    public function oilChange(){
+        return $this->hasMany(OilChange::class);
+    }
+
+    public function lubrification(){
+        return $this->hasMany(Lubrification::class);
+    }
+
     public function getFormatedDateAttribute()
     {
         $date = explode('-', $this->attributes['date']);

@@ -20,10 +20,11 @@ class CreateEmployeesTable extends Migration
             $table->string('name');
             $table->integer('registration');
             $table->unsignedInteger('occupation_id');
+            $table->integer('status');
 
-            $table->foreign('occupation_id')->references('id')->on('occupation')
-            	->onDelete('cascade')
-            	->onUpdate('cascade');
+            $table->foreign('occupation_id')->references('id')->on('occupations')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
 
             $table->timestamps();
 		});

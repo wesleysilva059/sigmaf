@@ -45,7 +45,7 @@ class User extends Authenticatable
         return $this->belongsTo(Department::class);
     }
 
-     public function occupation(){
+    public function occupation(){
         return $this->belongsTo(Occupation::class);
     }
 
