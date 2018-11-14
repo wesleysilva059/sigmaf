@@ -29,6 +29,7 @@ class Lubrification extends Model implements Transformable
 		'nextDateLubrification',
 		'currentKmHr',
 		'maintenanceStatus_id',
+        'description'
     ];
 
 

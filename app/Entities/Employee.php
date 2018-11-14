@@ -43,6 +43,10 @@ class Employee extends Model implements Transformable
         return $this->hasMany(Lubrification::class);
     }
 
+    public function cleaning(){
+        return $this->hasMany(Cleaning::class);
+    }
+
     public function getFormatedStatusAttribute()
     {
         $status = $this->attributes['status'];

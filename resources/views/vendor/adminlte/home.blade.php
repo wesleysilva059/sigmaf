@@ -42,42 +42,34 @@
               <table class="table table-hover">
                 <tbody>
                   <tr>
-                    <th>ID</th>
+                    
                     <th>Placa</th>
-                    <th>Dias</th>
-                    <th>Previsão</th>
                     <th>Secretaria/Orgão</th>
+                    <th>Data Inicial</th>
+                    <th>Previsão</th>
+                    <th>Dias</th>
                   </tr>
+                  @foreach($maintenances as $maintenance)
+                  <?php 
+                      $initdate =    $maintenance->initDateMaintenance;
+                      $enddate = $today;
+
+                      $diff = strtotime($enddate) - strtotime($initdate);
+
+                      $days = floor($diff / (60 * 60 * 24));
+                  ?>
                   <tr>
-                    <td>2</td>
-                    <td>JJJ-1234</td>
-                    <td>10</td>
-                    <td>30/10/2018</span></td>
-                    <td>Secretaria de Obras</td>
+                    <td>{{$maintenance->vehicle->vehiclePlate}}</td>
+                    <td>{{$maintenance->department->name}}</td>
+                    <td>{{$maintenance->formatedinitDateMaintenance}}</td>
+                    <td>{{$maintenance->formatedexpectedDateEnd}}</span></td>
+                    <td>{{$days}}</td>
+
                   </tr>
-                   <tr>
-                    <td>3</td>
-                    <td>ERF-7485</td>
-                    <td>15</td>
-                    <td>05/11/2018</span></td>
-                    <td>Secretaria de Educação</td>
-                  </tr>
-                   <tr>
-                    <td>4</td>
-                    <td>AHJ-4488</td>
-                    <td>5</td>
-                    <td>25/10/2018</span></td>
-                    <td>Gabinete</td>
-                  </tr>
-                   <tr>
-                    <td>5</td>
-                    <td>JHJ-4321</td>
-                    <td>30</td>
-                    <td>20/11/2018</span></td>
-                    <td>Secretaria de Desenvolvimento Social</td>
-                  </tr>
+                  @endforeach
                 </tbody>
               </table>
+              {!! $maintenances->links() !!}
             </div>
           <!-- LINE CHART -->
           
@@ -181,6 +173,21 @@
 </div>
 
     <script>
+  /*
+        var url = "{{url('chart')}}";
+        var active;
+        var inMaintenance;
+        var stopped;
+        var auction;
+        $(document).ready(function(){
+          $.get(url, function(response){
+            response.forEach(function(data){
+              active.push(data.active);
+              inMaintenance.push(data.inMaintenance);
+              stopped.push(data.stopped);
+              auction.push(data.auction);
+            });
+            
         var randomScalingFactor = function() {
             return Math.round(Math.random() * 100);
         };
@@ -190,21 +197,73 @@
             data: {
                 datasets: [{
                     data: [
-                        '10',
-                        '20',
-                        '30',
+                        active,
+                        inMaintenance,
+                        stopped,
+                        auction
                     ],
                     backgroundColor: [
-                        window.chartColors.red,
-                        window.chartColors.yellow,
                         window.chartColors.green,
+                        window.chartColors.yellow,
+                        window.chartColors.red,
+                        window.chartColors.orange,
+
+
                     ],
                     label: 'Dataset 1'
                 }],
                 labels: [
-                    'Parado',
-                    'Em manutenção',
                     'Ativo',
+                    'Em manutenção',
+                    'Parado',
+                    'Leilão'
+                    
+                ]
+            },
+            options: {
+                responsive: true
+            }
+        };
+
+
+        window.onload = function() {
+            var ctx = document.getElementById('chart-area').getContext('2d');
+            window.myPie = new Chart(ctx, config);
+        };
+              });
+        });
+*/
+        var active        =<?=$active?>;
+        var inMaintenance =<?=$inMaintenance?>;
+        var stopped       =<?=$stopped?>;
+        var auction       =<?=$auction?>;
+        var randomScalingFactor = function() {
+            return Math.round(Math.random() * 100);
+        };
+
+        var config = {
+            type: 'pie',
+            data: {
+                datasets: [{
+                    data: [
+                        active,
+                        inMaintenance,
+                        stopped,
+                        auction
+                    ],
+                    backgroundColor: [
+                        window.chartColors.green,
+                        window.chartColors.yellow,
+                        window.chartColors.red,
+                        window.chartColors.purple,
+                    ],
+                    label: 'Dataset 1'
+                }],
+                labels: [
+                    'Ativo',
+                    'Em manutenção',
+                    'Parado',
+                    'Leilão'
                 ]
             },
             options: {

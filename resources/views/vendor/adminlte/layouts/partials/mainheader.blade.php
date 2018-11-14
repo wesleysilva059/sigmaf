@@ -33,7 +33,7 @@
                                 <li><!-- start message -->
                                     <a href="#">
                                         <div class="pull-left">
-                                            <!-- User Image -->
+                                            <!-- User Image Posteriomente colocar imagem local-->
                                             <img src="{{ Gravatar::get($user->email) }}" class="img-circle" alt="User Image"/>
                                         </div>
                                         <!-- Message title and timestamp -->

@@ -17,13 +17,11 @@ class CreateCleaningsTable extends Migration
 	{
 		Schema::create('cleanings', function(Blueprint $table) {
             $table->increments('id');
-            $table->integer('cleaningPeriod');
-            $table->date('initDate');
-            $table->date('endDate')->nullable();
+            $table->date('date');
             $table->integer('currentKmHr');
-            $table->date('dateNextCleaning');
             $table->unsignedInteger('vehicle_id');
             $table->unsignedInteger('employee_id');
+            $table->text('description');
 
             $table->foreign('vehicle_id')->references('id')->on('vehicles')
             	->onDelete('cascade')

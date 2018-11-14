@@ -1,14 +1,14 @@
 @extends('adminlte::layouts.app')
 
 @section('contentheader_title')
-	Cadastro de Troca de Filtro
+	Cadastro de Limpeza
 @endsection
 
 @section('main-content')
 
 <script data-require="jquery" data-semver="2.1.4" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 
-<form role="form" action="{{route('filterChanges.store')}}" method="post">
+<form role="form" action="{{route('cleanings.store')}}" method="post">
     {{ csrf_field() }}
     <div class="tab-content">
         <div class="tab-pane active" role="tabpanel" id="step1">
@@ -16,7 +16,7 @@
 				<div class="row">	    
 					<div class="form-group col-md-2">	      
 						<label for="cod">ID</label>	      
-						<input type="text" class="form-control" id="id" name="id" value="{{$idNextFilterChange}}" disabled>
+						<input type="text" class="form-control" id="id" name="id" value="{{$idNextCleaning}}" disabled>
 					</div>	
 		    		<div class="form-group col-md-4">
 						   <div class="input-group">
@@ -31,50 +31,15 @@
 						   </div><!-- /input-group -->
 						 </div><!-- /.col-lg-6 -->
 		    		<div class="form-group col-md-4">	      
-		    			<label for="initDate">Data de Início</label>
-						<input type="date" class="form-control" name="initDate" id="initDate" value="" required>
+		    			<label for="date">Data</label>
+						<input type="date" class="form-control" name="date" id="date" value="" required>
 		    		</div>		  
 		    	</div>	  	  
 		    	<div class="row">	    
-		    		<div class="form-group col-md-6">	      
-		    			<label for="filterChangeType_id">Tipo de Troca de Filtro</label>   
-		    			<select class="form-control" name="filterChangeType_id" id="filterChangeType_id" required>
-		                    <option>Escolha...</option>
-		                    @foreach($filterChangeType_list as $filterChangeType)
-		                    <option value="{{$filterChangeType->id}}">{{$filterChangeType->name}}</option>
-							@endforeach
-		                </select> 
-		    		</div>
-		    		<div class="form-group col-md-6">	      
-		    			<label for="maintenanceStatus_id">Status Inicial</label>	     <select class="form-control" name="maintenanceStatus_id" id="maintenanceStatus_id" required>
-		                    <option>Escolha...</option>
-		                    @foreach($maintenanceStatus_list as $maintenanceStatus)
-		                    <option value="{{$maintenanceStatus->id}}">{{$maintenanceStatus->name}}</option>
-							@endforeach
-		                </select> 
-		    		</div>		  
-		    	</div>
-		    	<div class="row">	    
-		    		<div class="form-group col-md-4">	      
-		    			<label for="periodFilterChange">Controle Prox Troca Km/Hr</label>
-						<input type="text" class="form-control" id="periodFilterChange" name="periodFilterChange" value="{{$periodfilterChange or old('periodfilterChange')}}" required> 
-		    		</div>	    	    
-		    		<div class="form-group col-md-4">	      
+		    		<div class="form-group col-md-2">	      
 		    			<label for="currentKmHr">Km / Hr Atual</label>
 						<input type="text" class="form-control" id="currentKmHr" name="currentKmHr" value="{{$currentKmHr or old('currentKmHr')}}" required>
-		    		</div>
-		    	</div>	  	  
-		    	<div class="row">	    
-		    		<div class="form-group col-md-4">	      
-		    			<label for="nextDateFilterChange">Data da Prox. Troca</label>
-						<input type="date" class="form-control" name="nextDateFilterChange" id="nextDateFilterChange" value="" required>
-		    		</div> 
-		    		<div class="form-group col-md-4">	      
-		    			<label for="endDate">Data do Término do Serviço</label>
-						<input type="date" class="form-control" name="endDate" id="endDate" value="">
-		    		</div>
-		    	</div>
-		    	<div class="row">	    
+		    		</div>   
 		    		<div class="form-group col-md-6">	      
 		    			<label for="employee_id">Funcionário Responsável</label>	     
 		    			<select class="form-control" name="employee_id" id="employee_id" required>
@@ -83,12 +48,17 @@
 		                    <option value="{{$employee->id}}">{{$employee->name}}</option>
 							@endforeach
 		                </select> 
-		    		</div>
-		    		  
-		    	</div>	    
+		    		</div> 
+		    	</div>
+		    	<div class="row">	    
+		    		<div class="form-group col-md-10">	      
+		    			<label for="description">Descrição do Serviço</label>	      
+		    			<textarea class="form-control" id="description" name="description" rows="2"></textarea>
+		    		</div>		  
+		    	</div>
 	    		<div class="col-md-12">	      		
 	    			<button type="submit" class="btn btn-primary">Salvar</button>	      
-	    			<a href="{{route('filterChanges.index')}}" class="btn btn-default">Cancelar</a>	    
+	    			<a href="{{route('cleanings.index')}}" class="btn btn-default">Cancelar</a>	    
 	    		</div>	  
 	    	</div>
         </div>
@@ -156,6 +126,8 @@
                $('#myModal').modal('hide');
           });
      });
+
 </script>
 
 @endsection
+

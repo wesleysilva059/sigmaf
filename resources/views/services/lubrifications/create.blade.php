@@ -74,9 +74,14 @@
 		                    <option value="{{$employee->id}}">{{$employee->name}}</option>
 							@endforeach
 		                </select> 
-		    		</div>
-		    		  
-		    	</div>	    
+		    		</div> 
+		    	</div>
+		    	<div class="row">	    
+		    		<div class="form-group col-md-10">	      
+		    			<label for="description">Descrição do Serviço</label>	      
+		    			<textarea class="form-control" id="description" name="description" rows="2"></textarea>
+		    		</div>		  
+		    	</div>
 	    		<div class="col-md-12">	      		
 	    			<button type="submit" class="btn btn-primary">Salvar</button>	      
 	    			<a href="{{route('lubrifications.index')}}" class="btn btn-default">Cancelar</a>	    

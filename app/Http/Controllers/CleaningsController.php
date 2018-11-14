@@ -2,15 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 use App\Http\Requests;
-use Prettus\Validator\Contracts\ValidatorInterface;
-use Prettus\Validator\Exceptions\ValidatorException;
 use App\Http\Requests\CleaningCreateRequest;
 use App\Http\Requests\CleaningUpdateRequest;
 use App\Repositories\CleaningRepository;
+use App\Repositories\EmployeeRepository;
+use App\Repositories\MaintenanceStatusRepository;
+use App\Repositories\VehicleRepository;
 use App\Validators\CleaningValidator;
+use Illuminate\Http\Request;
+use Prettus\Validator\Contracts\ValidatorInterface;
+use Prettus\Validator\Exceptions\ValidatorException;
 
 /**
  * Class CleaningsController.
@@ -35,13 +37,19 @@ class CleaningsController extends Controller
      * @param CleaningRepository $repository
      * @param CleaningValidator $validator
      */
-    public function __construct(CleaningRepository $repository, CleaningValidator $validator)
+    public function __construct(CleaningRepository $repository, 
+                                CleaningValidator $validator,
+                                VehicleRepository $vehicleRepository, 
+                                EmployeeRepository $employeeRepository
+                            )
     {
-        $this->repository = $repository;
-        $this->validator  = $validator;
+        $this->repository                   = $repository;
+        $this->validator                    = $validator;
+        $this->vehicleRepository            = $vehicleRepository;
+        $this->employeeRepository           = $employeeRepository;
     }
 
-    /**
+    /*
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -58,7 +66,28 @@ class CleaningsController extends Controller
             ]);
         }
 
-        return view('cleanings.index', compact('cleanings'));
+        return view('services.cleanings.index', compact('cleanings'));
+    }
+
+    public function create()
+    {
+
+        $cleanings = $this->repository->first();
+        
+        if(!is_null($cleanings)){
+            $idNextCleaning = $cleanings->id + 1;
+        }else{
+            $idNextCleaning = 1;
+        }
+
+        $vehicles_list              = $this->vehicleRepository->all();
+        $employees_list             = $this->employeeRepository->all(['id', 'name']); 
+
+        return view('services.cleanings.create', compact(
+                                                    'vehicles_list',
+                                                    'employees_list',
+                                                    'idNextCleaning'
+                                                ));
     }
 
     /**
@@ -119,7 +148,7 @@ class CleaningsController extends Controller
             ]);
         }
 
-        return view('cleanings.show', compact('cleaning'));
+        return view('services.cleanings.show', compact('cleaning'));
     }
 
     /**
@@ -133,7 +162,7 @@ class CleaningsController extends Controller
     {
         $cleaning = $this->repository->find($id);
 
-        return view('cleanings.edit', compact('cleaning'));
+        return view('services.cleanings.edit', compact('cleaning'));
     }
 
     /**

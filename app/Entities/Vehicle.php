@@ -72,6 +72,10 @@ class Vehicle extends Model implements Transformable
         return $this->hasMany(Lubrification::class);
     }
 
+    public function cleaning(){
+        return $this->hasMany(Cleaning::class);
+    }
+
     public function getFormatedDateAttribute()
     {
         $date = explode('-', $this->attributes['date']);

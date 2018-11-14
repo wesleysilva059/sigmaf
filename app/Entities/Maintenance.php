@@ -38,6 +38,7 @@ class Maintenance extends Model implements Transformable
 		'endDateMaintenance',
 		'expectedDateEnd',
 		'serviceDescRealized',
+        'currentKmHr'
     ];
 
     public function vehicle(){
@@ -83,6 +84,17 @@ class Maintenance extends Model implements Transformable
 
         $initDateMaintenance = $initDateMaintenance[2]. '/' . $initDateMaintenance[1] . '/' . $initDateMaintenance[0];
         return $initDateMaintenance;
+    }
+
+    public function getFormatedExpectedDateEndAttribute()
+    {
+        $expectedDateEnd = explode('-', $this->attributes['expectedDateEnd']);
+
+        if(count($expectedDateEnd) != 3)
+            return "";
+
+        $expectedDateEnd = $expectedDateEnd[2]. '/' . $expectedDateEnd[1] . '/' . $expectedDateEnd[0];
+        return $expectedDateEnd;
     }
 
 }

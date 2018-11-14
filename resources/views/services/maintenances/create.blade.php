@@ -107,6 +107,10 @@
 		    			<select class="form-control" name="costCenter_id" id="costCenter_id" required>
 		                </select> 
 		    		</div>
+		    		<div class="form-group col-md-4">	      
+		    			<label for="currentKmHr">Km / Hr Atual</label>
+						<input type="text" class="form-control" id="currentKmHr" name="currentKmHr" value="{{$currentKmHr or old('currentKmHr')}}" required>
+		    		</div>
 		    	</div>	  	  
 		    	<div class="row">	    
 		    		<div class="form-group col-md-10">	      

@@ -15,6 +15,8 @@ Route::get('/', 'HomeController@index');
 
 Route::group(['middleware' => 'auth'], function () {
 
+	Route::get('chart','HomeController@chartHome');
+
 	Route::resource('users', 'UsersController');
 		Route::get('/user/create' , 'UsersController@create')->name('user.create');
 
