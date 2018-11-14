@@ -47,7 +47,7 @@ Menu::macro('sidebar', function () {
             ->add(Link::to('/maintenances', '<i class="fa fa-wrench"></i><span>Manutenção</span>'))
             ->add(Link::to('/oilChanges', '<i class="fa fa-eraser"></i><span>Troca de óleo</span>'))->addClass('treeview-menu')
             ->add(Link::to('/filterChanges', '<i class="fa fa-eraser"></i><span>Troca de Filtro</span>'))->addClass('treeview-menu')
-            ->add(Link::to('/Lubrifications', '<i class="fa fa-eraser"></i><span>Lubrificação</span>'))->addClass('treeview-menu')
+            ->add(Link::to('/lubrifications', '<i class="fa fa-eraser"></i><span>Lubrificação</span>'))->addClass('treeview-menu')
             ->add(Link::to('/cleanings', '<i class="fa fa-eraser"></i><span>Limpeza</span>'))->addClass('treeview-menu')    
         )
 

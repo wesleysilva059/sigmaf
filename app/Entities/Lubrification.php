@@ -22,7 +22,6 @@ class Lubrification extends Model implements Transformable
      */
     protected $fillable = [
 		'periodLubrification',
-		'lubrificationType_id',
 		'vehicle_id',
 		'employee_id',
 		'initDate',
@@ -32,9 +31,6 @@ class Lubrification extends Model implements Transformable
 		'maintenanceStatus_id',
     ];
 
-    public function filterChangeType(){
-        return $this->belongsTo(FilterChangeType::class, 'filterChangeType_id');
-    }
 
     public function vehicle(){
         return $this->belongsTo(Vehicle::class);
@@ -46,6 +42,28 @@ class Lubrification extends Model implements Transformable
 
     public function maintenanceStatus(){
         return $this->belongsTo(MaintenanceStatus::class, 'maintenancesStatus_id');
+    }
+
+    public function getFormatedInitDateAttribute()
+    {
+        $initDate = explode('-', $this->attributes['initDate']);
+
+        if(count($initDate) != 3)
+            return "";
+
+        $initDate = $initDate[2]. '/' . $initDate[1] . '/' . $initDate[0];
+        return $initDate;
+    }
+
+    public function getFormatedNextDateLubrificationAttribute()
+    {
+        $nextDateLubrification = explode('-', $this->attributes['nextDateLubrification']);
+
+        if(count($nextDateLubrification) != 3)
+            return "";
+
+        $nextDateLubrification = $nextDateLubrification[2]. '/' . $nextDateLubrification[1] . '/' . $nextDateLubrification[0];
+        return $nextDateLubrification;
     }
 
 }

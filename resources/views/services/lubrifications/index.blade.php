@@ -1,12 +1,12 @@
 @extends('adminlte::layouts.app')
 @section('contentheader_title')
- Gestão de Troca de Óleo
+ Gestão de Lubrificação
 @endsection
 @section('main-content')
  	<div style="float:right;">
- 		<a href="{{ route('oilChanges.create') }}">
+ 		<a href="{{ route('lubrifications.create') }}">
  		<button type="button" class="btn btn-block btn-primary">
- 			<i class="fa fa-plus"></i> Cadastrar Troca de óleo
+ 			<i class="fa fa-plus"></i> Cadastrar Lubrificação
  		</button>
  		</a><br><br>
  	</div>
@@ -22,29 +22,27 @@
 					 			<th>#</th>
 					 			<th>Placa</th>					 			
 					 			<th>Data de Início</th>
-								<th>Tipo</th>
 					 			<th>KM / Hr</th>
 					 			<th>Resp. Serviço</th>
 					 			<th>Prox. Troca</th>
 					 			<th>Opções</th>
 					 		</tr>
 					 	</thead>
-					 	@foreach($oilChanges as $oilChange)
-					 	<?php $total = $oilChange->currentKmHr+$oilChange->periodOilChange ?>
+					 	@foreach($lubrifications as $lubrification)
+					 	<?php $total = $lubrification->currentKmHr+$lubrification->periodlubrification ?>
 					 	<tbody>
 					 		<tr>
-					 			<th>{{ $oilChange->id }}</th>
-					 			<th>{{ $oilChange->vehicle->vehiclePlate }}</th>
-					 			<th>{{ $oilChange->formatedinitDate}}</th>
-					 			<th>{{ $oilChange->oilChangeType->name}}</th>
-					 			<th>{{ $oilChange->currentKmHr }}</th>
-					 			<th>{{ $oilChange->employee->name }}</th>
-					 			<th>{{ $oilChange->formatednextDateOilChange . ' / '. $total }}</th>
+					 			<th>{{ $lubrification->id }}</th>
+					 			<th>{{ $lubrification->vehicle->vehiclePlate }}</th>
+					 			<th>{{ $lubrification->formatedinitDate}}</th>
+					 			<th>{{ $lubrification->currentKmHr }}</th>
+					 			<th>{{ $lubrification->employee->name }}</th>
+					 			<th>{{ $lubrification->formatednextDatelubrification . ' / '. $total }}</th>
 					 			<td>
 					 				<a href="#" class="btn btn-info">
 					 					<i class="fa fa-wrench"></i>
 					 				</a>
-					 				<a href="{{ route('oilChanges.destroy', $oilChange->id)}}" class="btn btn-danger">
+					 				<a href="{{ route('lubrifications.destroy', $lubrification->id)}}" class="btn btn-danger">
 					 					<i class="fa fa-trash"></i>
 					 				</a>
 					 			</td>

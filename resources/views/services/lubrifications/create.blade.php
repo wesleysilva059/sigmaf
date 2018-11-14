@@ -1,14 +1,14 @@
 @extends('adminlte::layouts.app')
 
 @section('contentheader_title')
-	Cadastro de Troca de Óleo
+	Cadastro de Lubrificação
 @endsection
 
 @section('main-content')
 
 <script data-require="jquery" data-semver="2.1.4" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 
-<form role="form" action="{{route('oilChanges.store')}}" method="post">
+<form role="form" action="{{route('lubrifications.store')}}" method="post">
     {{ csrf_field() }}
     <div class="tab-content">
         <div class="tab-pane active" role="tabpanel" id="step1">
@@ -16,7 +16,7 @@
 				<div class="row">	    
 					<div class="form-group col-md-2">	      
 						<label for="cod">ID</label>	      
-						<input type="text" class="form-control" id="id" name="id" value="{{$idNextOilChange}}" disabled>
+						<input type="text" class="form-control" id="id" name="id" value="{{$idNextLubrification}}" disabled>
 					</div>	
 		    		<div class="form-group col-md-4">
 						   <div class="input-group">
@@ -35,16 +35,7 @@
 						<input type="date" class="form-control" name="initDate" id="initDate" value="" required>
 		    		</div>		  
 		    	</div>	  	  
-		    	<div class="row">	    
-		    		<div class="form-group col-md-6">	      
-		    			<label for="oilChangeType_id">Tipo de Troca de Óleo</label>   
-		    			<select class="form-control" name="oilChangeType_id" id="oilChangeType_id" required>
-		                    <option>Escolha...</option>
-		                    @foreach($oilChangeType_list as $oilChangeType)
-		                    <option value="{{$oilChangeType->id}}">{{$oilChangeType->name}}</option>
-							@endforeach
-		                </select> 
-		    		</div>
+		    	<div class="row">
 		    		<div class="form-group col-md-6">	      
 		    			<label for="maintenanceStatus_id">Status Inicial</label>	     <select class="form-control" name="maintenanceStatus_id" id="maintenanceStatus_id" required>
 		                    <option>Escolha...</option>
@@ -56,8 +47,8 @@
 		    	</div>
 		    	<div class="row">	    
 		    		<div class="form-group col-md-4">	      
-		    			<label for="periodOilChange">Controle Prox Troca Km/Hr</label>
-						<input type="text" class="form-control" id="periodOilChange" name="periodOilChange" value="{{$periodOilChange or old('periodOilChange')}}" required> 
+		    			<label for="periodLubrification">Controle Prox Troca Km/Hr</label>
+						<input type="text" class="form-control" id="periodLubrification" name="periodLubrification" value="{{$periodLubrification or old('periodLubrification')}}" required> 
 		    		</div>	    	    
 		    		<div class="form-group col-md-4">	      
 		    			<label for="currentKmHr">Km / Hr Atual</label>
@@ -66,8 +57,8 @@
 		    	</div>	  	  
 		    	<div class="row">	    
 		    		<div class="form-group col-md-4">	      
-		    			<label for="nextDateOilChange">Data da Prox. Troca</label>
-						<input type="date" class="form-control" name="nextDateOilChange" id="nextDateOilChange" value="" required>
+		    			<label for="nextDateLubrification">Data da Prox. Troca</label>
+						<input type="date" class="form-control" name="nextDateLubrification" id="nextDateLubrification" value="" required>
 		    		</div> 
 		    		<div class="form-group col-md-4">	      
 		    			<label for="endDate">Data do Término do Serviço</label>
@@ -88,7 +79,7 @@
 		    	</div>	    
 	    		<div class="col-md-12">	      		
 	    			<button type="submit" class="btn btn-primary">Salvar</button>	      
-	    			<a href="{{route('oilChanges.index')}}" class="btn btn-default">Cancelar</a>	    
+	    			<a href="{{route('lubrifications.index')}}" class="btn btn-default">Cancelar</a>	    
 	    		</div>	  
 	    	</div>
         </div>

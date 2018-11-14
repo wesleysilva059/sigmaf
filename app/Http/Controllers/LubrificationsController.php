@@ -2,15 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 use App\Http\Requests;
-use Prettus\Validator\Contracts\ValidatorInterface;
-use Prettus\Validator\Exceptions\ValidatorException;
 use App\Http\Requests\LubrificationCreateRequest;
 use App\Http\Requests\LubrificationUpdateRequest;
+use App\Repositories\EmployeeRepository;
 use App\Repositories\LubrificationRepository;
+use App\Repositories\MaintenanceStatusRepository;
+use App\Repositories\VehicleRepository;
 use App\Validators\LubrificationValidator;
+use Illuminate\Http\Request;
+use Prettus\Validator\Contracts\ValidatorInterface;
+use Prettus\Validator\Exceptions\ValidatorException;
 
 /**
  * Class LubrificationsController.
@@ -23,6 +25,9 @@ class LubrificationsController extends Controller
      * @var LubrificationRepository
      */
     protected $repository;
+    protected $vehicleRepository;
+    protected $maintenanceStatusRepository;
+    protected $employeeRepository;
 
     /**
      * @var LubrificationValidator
@@ -35,10 +40,18 @@ class LubrificationsController extends Controller
      * @param LubrificationRepository $repository
      * @param LubrificationValidator $validator
      */
-    public function __construct(LubrificationRepository $repository, LubrificationValidator $validator)
+    public function __construct(LubrificationRepository $repository, 
+                                LubrificationValidator $validator,
+                                VehicleRepository $vehicleRepository, 
+                                MaintenanceStatusRepository $maintenanceStatusRepository,
+                                EmployeeRepository $employeeRepository
+                            )
     {
-        $this->repository = $repository;
-        $this->validator  = $validator;
+        $this->repository                   = $repository;
+        $this->validator                    = $validator;
+        $this->vehicleRepository            = $vehicleRepository;
+        $this->maintenanceStatusRepository  = $maintenanceStatusRepository;
+        $this->employeeRepository           = $employeeRepository;
     }
 
     /**
@@ -58,7 +71,30 @@ class LubrificationsController extends Controller
             ]);
         }
 
-        return view('lubrifications.index', compact('lubrifications'));
+        return view('services.lubrifications.index', compact('lubrifications'));
+    }
+
+    public function create()
+    {
+
+        $lubrifications = $this->repository->first();
+        
+        if(!is_null($lubrifications)){
+            $idNextLubrification = $lubrifications->id + 1;
+        }else{
+            $idNextLubrification = 1;
+        }
+
+        $vehicles_list              = $this->vehicleRepository->all();
+        $maintenanceStatus_list     = $this->maintenanceStatusRepository->all(['id', 'name']);
+        $employees_list             = $this->employeeRepository->all(['id', 'name']); 
+
+        return view('services.lubrifications.create', compact(
+                                                    'vehicles_list', 
+                                                    'maintenanceStatus_list', 
+                                                    'employees_list',
+                                                    'idNextLubrification'
+                                                ));
     }
 
     /**
@@ -119,7 +155,7 @@ class LubrificationsController extends Controller
             ]);
         }
 
-        return view('lubrifications.show', compact('lubrification'));
+        return view('services.lubrifications.show', compact('lubrification'));
     }
 
     /**
@@ -133,7 +169,7 @@ class LubrificationsController extends Controller
     {
         $lubrification = $this->repository->find($id);
 
-        return view('lubrifications.edit', compact('lubrification'));
+        return view('services.lubrifications.edit', compact('lubrification'));
     }
 
     /**

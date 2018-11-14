@@ -18,7 +18,6 @@ class CreateLubrificationsTable extends Migration
 		Schema::create('lubrifications', function(Blueprint $table) {
             $table->increments('id');
             $table->integer('periodLubrification');
-            $table->unsignedInteger('lubrificationType_id');
             $table->unsignedInteger('vehicle_id');
             $table->unsignedInteger('employee_id');
             $table->date('initDate');
