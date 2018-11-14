@@ -24,10 +24,8 @@ class CreateLubrificationsTable extends Migration
             $table->date('endDate')->nullable();
             $table->date('nextDateLubrification');
             $table->integer('currentKmHr');
+            $table->text('description')->nullable();
             $table->unsignedInteger('maintenanceStatus_id');
-            $table->foreign('lubrificationType_id')->references('id')->on('oil_change_types')
-            	->onDelete('cascade')
-            	->onUpdate('cascade');
             $table->foreign('vehicle_id')->references('id')->on('vehicles')
             	->onDelete('cascade')
             	->onUpdate('cascade');
