@@ -28,6 +28,9 @@
         @endif
 
         <div class="login-box-body">
+        <img src="{{URL::asset('/img/logo.jpg')}}" style="
+                width: 320px;
+                align-content: center;"><br><br>
         <p class="login-box-msg"> {{ trans('adminlte_lang::message.siginsession') }} </p>
 
         <login-form name="{{ config('auth.providers.users.field','email') }}"

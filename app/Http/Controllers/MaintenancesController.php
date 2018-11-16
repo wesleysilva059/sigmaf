@@ -297,7 +297,9 @@ class MaintenancesController extends Controller
     {
         $historics = $this->repository->orderBy('initDateMaintenance','desc')->paginate($limit = 15, $columns = ['*']);
 
-        $pdf = PDF::loadView('reports.services.maintenances.index', compact('historics'));
+        $today = date('Y-m-d');
+
+        $pdf = PDF::loadView('reports.services.maintenances.print', compact('historics','today'));
 
         return $pdf->stream();
     }

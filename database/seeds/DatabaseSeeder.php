@@ -27,12 +27,6 @@ class DatabaseSeeder extends Seeder
             ]
         );
 
-        CostCentre::create(
-            [
-                'name'               => '', 
-                'department_id'      => ''
-            ]
-        )
 
         User::create([
 			'registration'           => '123',
