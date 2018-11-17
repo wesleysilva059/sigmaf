@@ -3229,990 +3229,990 @@ class DatabaseSeeder extends Seeder
 
 
         Specification::create([
-            'vehicle_id',       => '1',
+            'vehicle_id'       => '1',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '2',
+            'vehicle_id'       => '2',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '3',
+            'vehicle_id'       => '3',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '4',
+            'vehicle_id'       => '4',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '5',
+            'vehicle_id'       => '5',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '6',
+            'vehicle_id'       => '6',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '7',
+            'vehicle_id'       => '7',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '8',
+            'vehicle_id'       => '8',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '9',
+            'vehicle_id'       => '9',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '10',
+            'vehicle_id'       => '10',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '11',
+            'vehicle_id'       => '11',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '12',
+            'vehicle_id'       => '12',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '13',
+            'vehicle_id'       => '13',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '14',
+            'vehicle_id'       => '14',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '15',
+            'vehicle_id'       => '15',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '16',
+            'vehicle_id'       => '16',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '17',
+            'vehicle_id'       => '17',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '18',
+            'vehicle_id'       => '18',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '19',
+            'vehicle_id'       => '19',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '20',
+            'vehicle_id'       => '20',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '21',
+            'vehicle_id'       => '21',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '22',
+            'vehicle_id'       => '22',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '23',
+            'vehicle_id'       => '23',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '24',
+            'vehicle_id'       => '24',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '25',
+            'vehicle_id'       => '25',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '26',
+            'vehicle_id'       => '26',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '27',
+            'vehicle_id'       => '27',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '28',
+            'vehicle_id'       => '28',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '29',
+            'vehicle_id'       => '29',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '30',
+            'vehicle_id'       => '30',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '31'
+            'vehicle_id'       => '31'
         ]);
 
         Specification::create([
-            'vehicle_id',       => '32',
+            'vehicle_id'       => '32',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '33',
+            'vehicle_id'       => '33',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '34',
+            'vehicle_id'       => '34',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '35',
+            'vehicle_id'       => '35',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '36',
+            'vehicle_id'       => '36',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '37',
+            'vehicle_id'       => '37',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '38',
+            'vehicle_id'       => '38',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '39',
+            'vehicle_id'       => '39',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '40',
+            'vehicle_id'       => '40',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '41',
+            'vehicle_id'       => '41',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '42',
+            'vehicle_id'       => '42',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '43',
+            'vehicle_id'       => '43',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '44',
+            'vehicle_id'       => '44',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '45',
+            'vehicle_id'       => '45',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '46',
+            'vehicle_id'       => '46',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '47',
+            'vehicle_id'       => '47',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '48',
+            'vehicle_id'       => '48',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '49',
+            'vehicle_id'       => '49',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '50',
+            'vehicle_id'       => '50',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '51',
+            'vehicle_id'       => '51',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '52',
+            'vehicle_id'       => '52',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '53',
+            'vehicle_id'       => '53',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '54',
+            'vehicle_id'       => '54',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '55',
+            'vehicle_id'       => '55',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '56',
+            'vehicle_id'       => '56',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '57',
+            'vehicle_id'       => '57',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '58',
+            'vehicle_id'       => '58',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '59',
+            'vehicle_id'       => '59',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '60',
+            'vehicle_id'       => '60',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '61',
+            'vehicle_id'       => '61',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '62',
+            'vehicle_id'       => '62',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '63',
+            'vehicle_id'       => '63',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '64',
+            'vehicle_id'       => '64',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '65',
+            'vehicle_id'       => '65',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '66',
+            'vehicle_id'       => '66',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '67',
+            'vehicle_id'       => '67',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '68',
+            'vehicle_id'       => '68',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '69',
+            'vehicle_id'       => '69',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '70',
+            'vehicle_id'       => '70',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '71',
+            'vehicle_id'       => '71',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '72',
+            'vehicle_id'       => '72',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '73',
+            'vehicle_id'       => '73',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '74',
+            'vehicle_id'       => '74',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '75',
+            'vehicle_id'       => '75',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '76',
+            'vehicle_id'       => '76',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '77',
+            'vehicle_id'       => '77',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '78',
+            'vehicle_id'       => '78',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '79',
+            'vehicle_id'       => '79',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '80',
+            'vehicle_id'       => '80',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '81',
+            'vehicle_id'       => '81',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '82',
+            'vehicle_id'       => '82',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '83',
+            'vehicle_id'       => '83',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '84',
+            'vehicle_id'       => '84',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '85',
+            'vehicle_id'       => '85',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '86',
+            'vehicle_id'       => '86',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '87',
+            'vehicle_id'       => '87',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '88',
+            'vehicle_id'       => '88',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '89',
+            'vehicle_id'       => '89',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '90',
+            'vehicle_id'       => '90',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '91',
+            'vehicle_id'       => '91',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '92',
+            'vehicle_id'       => '92',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '93',
+            'vehicle_id'       => '93',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '94',
+            'vehicle_id'       => '94',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '95',
+            'vehicle_id'       => '95',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '96',
+            'vehicle_id'       => '96',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '97',
+            'vehicle_id'       => '97',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '98',
+            'vehicle_id'       => '98',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '99',
+            'vehicle_id'       => '99',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '100',
+            'vehicle_id'       => '100',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '101',
+            'vehicle_id'       => '101',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '102',
+            'vehicle_id'       => '102',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '103',
+            'vehicle_id'       => '103',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '104',
+            'vehicle_id'       => '104',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '105',
+            'vehicle_id'       => '105',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '106',
+            'vehicle_id'       => '106',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '107',
+            'vehicle_id'       => '107',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '108',
+            'vehicle_id'       => '108',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '109',
+            'vehicle_id'       => '109',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '110',
+            'vehicle_id'       => '110',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '111',
+            'vehicle_id'       => '111',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '112',
+            'vehicle_id'       => '112',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '113',
+            'vehicle_id'       => '113',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '114',
+            'vehicle_id'       => '114',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '115',
+            'vehicle_id'       => '115',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '116',
+            'vehicle_id'       => '116',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '117',
+            'vehicle_id'       => '117',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '118',
+            'vehicle_id'       => '118',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '119',
+            'vehicle_id'       => '119',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '120',
+            'vehicle_id'       => '120',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '121',
+            'vehicle_id'       => '121',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '122',
+            'vehicle_id'       => '122',
         ]);
 
         Specification::create([
-            'vehicle_id',       => '123',
+            'vehicle_id'       => '123',
         ]);
 
 /*------------------------------*/
 
 
         Insurance::create([
-            'vehicle_id',       => '1',
+            'vehicle_id'       => '1',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '2',
+            'vehicle_id'       => '2',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '3',
+            'vehicle_id'       => '3',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '4',
+            'vehicle_id'       => '4',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '5',
+            'vehicle_id'       => '5',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '6',
+            'vehicle_id'       => '6',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '7',
+            'vehicle_id'       => '7',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '8',
+            'vehicle_id'       => '8',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '9',
+            'vehicle_id'       => '9',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '10',
+            'vehicle_id'       => '10',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '11',
+            'vehicle_id'       => '11',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '12',
+            'vehicle_id'       => '12',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '13',
+            'vehicle_id'       => '13',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '14',
+            'vehicle_id'       => '14',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '15',
+            'vehicle_id'       => '15',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '16',
+            'vehicle_id'       => '16',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '17',
+            'vehicle_id'       => '17',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '18',
+            'vehicle_id'       => '18',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '19',
+            'vehicle_id'       => '19',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '20',
+            'vehicle_id'       => '20',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '21',
+            'vehicle_id'       => '21',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '22',
+            'vehicle_id'       => '22',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '23',
+            'vehicle_id'       => '23',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '24',
+            'vehicle_id'       => '24',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '25',
+            'vehicle_id'       => '25',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '26',
+            'vehicle_id'       => '26',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '27',
+            'vehicle_id'       => '27',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '28',
+            'vehicle_id'       => '28',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '29',
+            'vehicle_id'       => '29',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '30',
+            'vehicle_id'       => '30',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '31'
+            'vehicle_id'       => '31'
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '32',
+            'vehicle_id'       => '32',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '33',
+            'vehicle_id'       => '33',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '34',
+            'vehicle_id'       => '34',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '35',
+            'vehicle_id'       => '35',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '36',
+            'vehicle_id'       => '36',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '37',
+            'vehicle_id'       => '37',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '38',
+            'vehicle_id'       => '38',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '39',
+            'vehicle_id'       => '39',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '40',
+            'vehicle_id'       => '40',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '41',
+            'vehicle_id'       => '41',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '42',
+            'vehicle_id'       => '42',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '43',
+            'vehicle_id'       => '43',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '44',
+            'vehicle_id'       => '44',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '45',
+            'vehicle_id'       => '45',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '46',
+            'vehicle_id'       => '46',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '47',
+            'vehicle_id'       => '47',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '48',
+            'vehicle_id'       => '48',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '49',
+            'vehicle_id'       => '49',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '50',
+            'vehicle_id'       => '50',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '51',
+            'vehicle_id'       => '51',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '52',
+            'vehicle_id'       => '52',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '53',
+            'vehicle_id'       => '53',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '54',
+            'vehicle_id'       => '54',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '55',
+            'vehicle_id'       => '55',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '56',
+            'vehicle_id'       => '56',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '57',
+            'vehicle_id'       => '57',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '58',
+            'vehicle_id'       => '58',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '59',
+            'vehicle_id'       => '59',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '60',
+            'vehicle_id'       => '60',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '61',
+            'vehicle_id'       => '61',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '62',
+            'vehicle_id'       => '62',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '63',
+            'vehicle_id'       => '63',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '64',
+            'vehicle_id'       => '64',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '65',
+            'vehicle_id'       => '65',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '66',
+            'vehicle_id'       => '66',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '67',
+            'vehicle_id'       => '67',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '68',
+            'vehicle_id'       => '68',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '69',
+            'vehicle_id'       => '69',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '70',
+            'vehicle_id'       => '70',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '71',
+            'vehicle_id'       => '71',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '72',
+            'vehicle_id'       => '72',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '73',
+            'vehicle_id'       => '73',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '74',
+            'vehicle_id'       => '74',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '75',
+            'vehicle_id'       => '75',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '76',
+            'vehicle_id'       => '76',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '77',
+            'vehicle_id'       => '77',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '78',
+            'vehicle_id'       => '78',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '79',
+            'vehicle_id'       => '79',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '80',
+            'vehicle_id'       => '80',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '81',
+            'vehicle_id'       => '81',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '82',
+            'vehicle_id'       => '82',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '83',
+            'vehicle_id'       => '83',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '84',
+            'vehicle_id'       => '84',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '85',
+            'vehicle_id'       => '85',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '86',
+            'vehicle_id'       => '86',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '87',
+            'vehicle_id'       => '87',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '88',
+            'vehicle_id'       => '88',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '89',
+            'vehicle_id'       => '89',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '90',
+            'vehicle_id'       => '90',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '91',
+            'vehicle_id'       => '91',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '92',
+            'vehicle_id'       => '92',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '93',
+            'vehicle_id'       => '93',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '94',
+            'vehicle_id'       => '94',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '95',
+            'vehicle_id'       => '95',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '96',
+            'vehicle_id'       => '96',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '97',
+            'vehicle_id'       => '97',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '98',
+            'vehicle_id'       => '98',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '99',
+            'vehicle_id'       => '99',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '100',
+            'vehicle_id'       => '100',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '101',
+            'vehicle_id'       => '101',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '102',
+            'vehicle_id'       => '102',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '103',
+            'vehicle_id'       => '103',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '104',
+            'vehicle_id'       => '104',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '105',
+            'vehicle_id'       => '105',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '106',
+            'vehicle_id'       => '106',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '107',
+            'vehicle_id'       => '107',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '108',
+            'vehicle_id'       => '108',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '109',
+            'vehicle_id'       => '109',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '110',
+            'vehicle_id'       => '110',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '111',
+            'vehicle_id'       => '111',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '112',
+            'vehicle_id'       => '112',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '113',
+            'vehicle_id'       => '113',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '114',
+            'vehicle_id'       => '114',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '115',
+            'vehicle_id'       => '115',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '116',
+            'vehicle_id'       => '116',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '117',
+            'vehicle_id'       => '117',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '118',
+            'vehicle_id'       => '118',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '119',
+            'vehicle_id'       => '119',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '120',
+            'vehicle_id'       => '120',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '121',
+            'vehicle_id'       => '121',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '122',
+            'vehicle_id'       => '122',
         ]);
 
         Insurance::create([
-            'vehicle_id',       => '123',
+            'vehicle_id'       => '123',
         ]);
 
         DB::table("states")->insert([
