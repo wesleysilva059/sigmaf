@@ -15,30 +15,8 @@ class DatabaseSeeder extends Seeder
  
     public function run()
     {
-
-        Occupation::create(
-            [
-        	   'name'			=> 'Administrador'
-            ]
-        );
-
-          User::create([
-			'registration'           => '123',
-			'name'			         => 'Wesley Silva',
-			'birthDate'		         => '19821111',
-			'email'			         => 'wesley@ataio.com.br',
-			'userName'		         => 'wesley',
-			'password'		         => bcrypt('123456'),
-			'phone'			         => '3535219812',
-			'celPhone'		         => '35999759812',
-			'permission_id'	         => '1',
-			'department_id'	         => '1',
-			'occupation_id'	         => '1',
-            'status'                 => '1'
-        ]);
-
-
         $now = date("Y-m-d H:i:s");
+
         DB::table("department")->insert([
             [
                 "name"          => "ADMINISTRAÇÃO DO SISTEMA",
@@ -96,6 +74,31 @@ class DatabaseSeeder extends Seeder
                 "updated_at"    => $now,
             ],
         ]);
+
+        Occupation::create(
+            [
+        	   'name'			=> 'Administrador'
+            ]
+        );
+
+          User::create([
+			'registration'           => '123',
+			'name'			         => 'Wesley Silva',
+			'birthDate'		         => '19821111',
+			'email'			         => 'wesley@ataio.com.br',
+			'userName'		         => 'wesley',
+			'password'		         => bcrypt('123456'),
+			'phone'			         => '3535219812',
+			'celPhone'		         => '35999759812',
+			'permission_id'	         => '1',
+			'department_id'	         => '1',
+			'occupation_id'	         => '1',
+            'status'                 => '1'
+        ]);
+
+
+        $now = date("Y-m-d H:i:s");
+        
 
         DB::table("states")->insert([
             [
