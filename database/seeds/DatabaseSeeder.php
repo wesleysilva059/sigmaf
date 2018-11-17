@@ -75,7 +75,7 @@ class DatabaseSeeder extends Seeder
             ],
         ]);
 
-        DB::table("occuptions")->insert([
+        DB::table("occupations")->insert([
             [
                 "name"          => "ADMINISTRADOR DO SISTEMA",
                 "created_at"    => $now,
