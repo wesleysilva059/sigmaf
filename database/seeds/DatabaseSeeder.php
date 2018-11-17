@@ -15,23 +15,6 @@ class DatabaseSeeder extends Seeder
  
     public function run()
     {
-        Department::create(
-            [
-        	    ['name' => 'ADMINISTRAÇÃO DO SISTEMA'],
-                ['name' => 'ASSESSORIA ESPECIAL'],
-                ['name' => 'CONTROLADORIA MUNICIPAL'],
-                ['name' => 'GABINETE'],
-                ['name' => 'POLÍCIA FLORESTAL'],
-                ['name' => 'POLÍCIA MILITAR'],
-                ['name' => 'POLÍCIA RODOVIÁRIA'],
-                ['name' => 'SECRETARIA DE DESENVOLVIMENTO ECONÔMICO E SUSTENTÁVEL'],
-                ['name' => 'SECRETARIA DE DESENVOLVIMENTO SOCIAL'],
-                ['name' => 'SECRETARIA DE EDUCAÇÃO, ESPORTE E LAZER'],
-                ['name' => 'SECRETARIA DE INFRAESTRUTURA'],
-                ['name' => 'SECRETARIA DE PLANEJAMENTO, GESTÃO E FINANÇAS'],
-                ['name' => 'SECRETARIA DE SAÚDE'],
-            ]
-        );
 
         Occupation::create(
             [
@@ -56,6 +39,63 @@ class DatabaseSeeder extends Seeder
 
 
         $now = date("Y-m-d H:i:s");
+        DB::table("department")->insert([
+            [
+                "name"          => "ADMINISTRAÇÃO DO SISTEMA",
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+
+                "name"          => "ASSESSORIA ESPECIAL",
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+
+                "name"          => "CONTROLADORIA MUNICIPAL",
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "GABINETE",
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "POLÍCIA FLORESTAL",
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "POLÍCIA MILITAR",
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "POLÍCIA RODOVIÁRIA",
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "SECRETARIA DE DESENVOLVIMENTO ECONÔMICO E SUSTENTÁVEL",
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "SECRETARIA DE DESENVOLVIMENTO SOCIAL",
+                "created_at"    => $now,
+                "updated_at"    => $now,    
+            ], [
+                "name"          => "SECRETARIA DE EDUCAÇÃO, ESPORTE E LAZER",
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "SECRETARIA DE INFRAESTRUTURA",
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "SECRETARIA DE PLANEJAMENTO, GESTÃO E FINANÇAS",
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "SECRETARIA DE SAÚDE",
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ],
+        ]);
 
         DB::table("states")->insert([
             [
