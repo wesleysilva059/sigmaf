@@ -357,7 +357,8 @@ class DatabaseSeeder extends Seeder
             'department_id'          => '3',
             'occupation_id'          => '9',
             'status'                 => '1'
-
+        ]);
+        
         User::create([
             'registration'           => '1519',
             'name'                   => 'CÍNTIA REZENDE SILVA PAULA',
@@ -371,6 +372,7 @@ class DatabaseSeeder extends Seeder
             'department_id'          => '12',
             'occupation_id'          => '6',
             'status'                 => '1'
+        ]);
 
         User::create([
             'registration'           => '3169',
@@ -385,6 +387,7 @@ class DatabaseSeeder extends Seeder
             'department_id'          => '12',
             'occupation_id'          => '15',
             'status'                 => '1'
+        ]);
 
         User::create([
             'registration'           => '2454',
