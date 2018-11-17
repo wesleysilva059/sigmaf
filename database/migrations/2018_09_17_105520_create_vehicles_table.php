@@ -22,10 +22,10 @@ class CreateVehiclesTable extends Migration
             $table->integer('yearManufactory');
             $table->integer('yearModel');
             $table->date('purchaseDate')->nullable();
-            $table->integer('renavam');
-            $table->string('chassis');
-            $table->string('typeControl');
-            $table->string('status');
+            $table->string('renavam')->nullable();
+            $table->string('chassis')->nullable();
+            $table->integer('typeControl');
+            $table->integer('status');
             $table->unsignedInteger('vehicleModel_id');
             $table->unsignedInteger('costCenter_id');
             $table->unsignedInteger('vehicleType_id');
