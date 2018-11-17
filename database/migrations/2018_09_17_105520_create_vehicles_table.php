@@ -21,7 +21,7 @@ class CreateVehiclesTable extends Migration
             $table->string('vehicleColor');
             $table->integer('yearManufactory');
             $table->integer('yearModel');
-            $table->date('purchaseDate');
+            $table->date('purchaseDate')->nullable();
             $table->integer('renavam');
             $table->string('chassis');
             $table->string('typeControl');
