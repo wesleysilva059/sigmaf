@@ -59,9 +59,9 @@
 <script>
 	$(document).ready(function(){
 		$('#state_id').change(function(){
-			var state_id = $(this).val();
-			$.getJSON('/getCities/' + state_id, function( dados ){
-            	var option = '<option>Selecione o Modelo</option>';
+			var state = $(this).val();
+			$.getJSON('/getCities/' + state, function( dados ){
+            	var option = '<option>Selecione a Cidade</option>';
             	$.each(dados, function(i, obj){
                 	option += '<option value="'+obj.id+'">'+obj.name+'</option>';
               		})

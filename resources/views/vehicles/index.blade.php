@@ -19,13 +19,13 @@
 						style="width:100%" id="vehicles-table">
 					 	<thead>
 					 		<tr>
-					 			<th>#</th>
-					 			<th>Placa</th>
-					 			<th>Marca/Modelo</th>
-					 			<th>Tipo</th>
-					 			<th>Secretaria / Orgão</th>
-					 			<th>Status</th>
-					 			<th>Opções</th>
+					 			<th width="10%">#</th>
+					 			<th width="20%">Placa</th>
+					 			<th width="10%">Marca/Modelo</th>
+					 			<th width="10%">Tipo</th>
+					 			<th width="10%">Secretaria / Orgão</th>
+					 			<th width="10%">Status</th>
+					 			<th width="20%">Opções</th>
 					 		</tr>
 					 	</thead>
 					 	@foreach($vehicles as $vehicle)

@@ -87,11 +87,12 @@ class ProvidersController extends Controller
      */
     public function store(ProviderCreateRequest $request)
     {
+       
         try {
 
             $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_CREATE);
 
-            $provider = $this->repository->create($request->all());
+            $provider = $this->repository->create($request->except('state'));
 
             $response = [
                 'message' => 'Provider created.',
