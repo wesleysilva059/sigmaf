@@ -161,137 +161,137 @@ class DatabaseSeeder extends Seeder
 
         DB::table("cost_centers")->insert([
             [
-                "name"          => "CONVÊNIO: POLÍCIA FLORESTAL" 
+                "name"          => "CONVÊNIO: POLÍCIA FLORESTAL", 
                 "department_id" => 5,
                 "created_at"    => $now,
                 "updated_at"    => $now,
             ], [
-                "name"          => "CONVÊNIO: POLÍCIA MILITAR"   
+                "name"          => "CONVÊNIO: POLÍCIA MILITAR",   
                 "department_id" => 6,
                 "created_at"    => $now,
                 "updated_at"    => $now,
             ], [
-                "name"          => "CONVÊNIO: POLÍCIA RODOVIÁRIA"    
+                "name"          => "CONVÊNIO: POLÍCIA RODOVIÁRIA",    
                 "department_id" => 7,
                 "created_at"    => $now,
                 "updated_at"    => $now,
             ], [
-                "name"          => "GABINETE"    
+                "name"          => "GABINETE",    
                 "department_id" => 4,
                 "created_at"    => $now,
                 "updated_at"    => $now,
             ], [
-                "name"          => "SEC. DES. ECO. SUST.: ADMINISTRAÇÃO" 
+                "name"          => "SEC. DES. ECO. SUST.: ADMINISTRAÇÃO", 
                 "department_id" => 8,
                 "created_at"    => $now,
                 "updated_at"    => $now,
             ], [
-                "name"          => "SEC. DES. ECO. SUST.: AGRICULTURA E M. AMBIENTE" 
+                "name"          => "SEC. DES. ECO. SUST.: AGRICULTURA E M. AMBIENTE", 
                 "department_id" => 8,
                 "created_at"    => $now,
                 "updated_at"    => $now,
             ], [
-                "name"          => "SEC. DES. ECO. SUST.: CULTURA"   
+                "name"          => "SEC. DES. ECO. SUST.: CULTURA",   
                 "department_id" => 8,
                 "created_at"    => $now,
                 "updated_at"    => $now,
             ], [
-                "name"          => "SEC. DES. SOCIAL: ADMINISTRAÇÃO" 
+                "name"          => "SEC. DES. SOCIAL: ADMINISTRAÇÃO", 
                 "department_id" => 9,
                 "created_at"    => $now,
                 "updated_at"    => $now,
             ], [
-                "name"          => "SEC. DES. SOCIAL: CONSELHO TUTELAR"  
+                "name"          => "SEC. DES. SOCIAL: CONSELHO TUTELAR",  
                 "department_id" => 9,
                 "created_at"    => $now,
                 "updated_at"    => $now,
             ], [
-                "name"          => "SEC. DES. SOCIAL: TRANSPORTE PÚBLICO"    
+                "name"          => "SEC. DES. SOCIAL: TRANSPORTE PÚBLICO",    
                 "department_id" => 9,
                 "created_at"    => $now,
                 "updated_at"    => $now,
             ], [
-                "name"          => "SEC. EDUCAÇÃO, ESPORTE E LAZER: ADMINISTRAÇÃO"   
+                "name"          => "SEC. EDUCAÇÃO, ESPORTE E LAZER: ADMINISTRAÇÃO",   
                 "department_id" => 10,
                 "created_at"    => $now,
                 "updated_at"    => $now,
             ], [
-                "name"          => "SEC. EDUCAÇÃO, ESPORTE E LAZER: ENSINO MÉDIO"    
+                "name"          => "SEC. EDUCAÇÃO, ESPORTE E LAZER: ENSINO MÉDIO",    
                 "department_id" => 10,
                 "created_at"    => $now,
                 "updated_at"    => $now,
             ], [
-                "name"          => "SEC. EDUCAÇÃO, ESPORTE E LAZER: ENSINO SUPERIOR" 
+                "name"          => "SEC. EDUCAÇÃO, ESPORTE E LAZER: ENSINO SUPERIOR", 
                 "department_id" => 10,
                 "created_at"    => $now,
                 "updated_at"    => $now,
             ], [
-                "name"          => "SEC. EDUCAÇÃO, ESPORTE E LAZER: PNATE"   
+                "name"          => "SEC. EDUCAÇÃO, ESPORTE E LAZER: PNATE",   
                 "department_id" => 10,
                 "created_at"    => $now,
                 "updated_at"    => $now,
             ], [
-                "name"          => "SEC. EDUCAÇÃO, ESPORTE E LAZER: REC. ORDINÁRIO"  
+                "name"          => "SEC. EDUCAÇÃO, ESPORTE E LAZER: REC. ORDINÁRIO",  
                 "department_id" => 10,
                 "created_at"    => $now,
                 "updated_at"    => $now,
             ], [
-                "name"          => "SEC. INFRAESTRUTURA: ADMINISTRAÇÃO"  
+                "name"          => "SEC. INFRAESTRUTURA: ADMINISTRAÇÃO",  
                 "department_id" => 11,
                 "created_at"    => $now,
                 "updated_at"    => $now,
             ], [
-                "name"          => "SEC. INFRAESTRUTURA: ATERRO CONTROLADO"  
+                "name"          => "SEC. INFRAESTRUTURA: ATERRO CONTROLADO",  
                 "department_id" => 11,
                 "created_at"    => $now,
                 "updated_at"    => $now,
             ], [
-                "name"          => "SEC. INFRAESTRUTURA: ESTRADAS VICINAIS"  
+                "name"          => "SEC. INFRAESTRUTURA: ESTRADAS VICINAIS",  
                 "department_id" => 11,
                 "created_at"    => $now,
                 "updated_at"    => $now,
             ], [
-                "name"          => "SEC. INFRAESTRUTURA: ESTRADAS VICINAIS - CEX"    
+                "name"          => "SEC. INFRAESTRUTURA: ESTRADAS VICINAIS - CEX",    
                 "department_id" => 11,
                 "created_at"    => $now,
                 "updated_at"    => $now,
             ], [
-                "name"          => "SEC. INFRAESTRUTURA: ESTRADAS VICINAIS - CIDE"   
+                "name"          => "SEC. INFRAESTRUTURA: ESTRADAS VICINAIS - CIDE",   
                 "department_id" => 11,
                 "created_at"    => $now,
                 "updated_at"    => $now,
             ], [
-                "name"          => "SEC. INFRAESTRUTURA: LIMPEZA URBANA" 
+                "name"          => "SEC. INFRAESTRUTURA: LIMPEZA URBANA", 
                 "department_id" => 11,
                 "created_at"    => $now,
                 "updated_at"    => $now,
             ], [
-                "name"          => "SEC. PLANEJAMENTO, GESTÃO E FINANÇAS: ADMINISTRAÇÃO" 
+                "name"          => "SEC. PLANEJAMENTO, GESTÃO E FINANÇAS: ADMINISTRAÇÃO", 
                 "department_id" => 12,
                 "created_at"    => $now,
                 "updated_at"    => $now,
             ], [
-                "name"          => "SEC. SAÚDE: ADMINISTRAÇÃO"   
+                "name"          => "SEC. SAÚDE: ADMINISTRAÇÃO",   
                 "department_id" => 13,
                 "created_at"    => $now,
                 "updated_at"    => $now,
             ], [
-                "name"          => "SEC. SAÚDE: PSF" 
+                "name"          => "SEC. SAÚDE: PSF", 
                 "department_id" => 13,
                 "created_at"    => $now,
                 "updated_at"    => $now,
             ], [
-                "name"          => "SEC. SAÚDE: TRANSPORTE SAÚDE"    
+                "name"          => "SEC. SAÚDE: TRANSPORTE SAÚDE",    
                 "department_id" => 13,
                 "created_at"    => $now,
                 "updated_at"    => $now,
             ], [
-                "name"          => "SEC. SAÚDE: VIGILÂNCIA EPIDEMOLÓGICA"    
+                "name"          => "SEC. SAÚDE: VIGILÂNCIA EPIDEMOLÓGICA",    
                 "department_id" => 13,
                 "created_at"    => $now,
                 "updated_at"    => $now,
             ], [
-                "name"          => "SEC. SAÚDE: VIGILÂNCIA SANITÁRIA"    
+                "name"          => "SEC. SAÚDE: VIGILÂNCIA SANITÁRIA",    
                 "department_id" => 13,
                 "created_at"    => $now,
                 "updated_at"    => $now,
