@@ -159,22 +159,190 @@ class DatabaseSeeder extends Seeder
             ],
         ]); 
 
+        DB::table("cost_centers")->insert([
+            [
+                "name"          => "CONVÊNIO: POLÍCIA FLORESTAL" 
+                "department_id" => 5,
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "CONVÊNIO: POLÍCIA MILITAR"   
+                "department_id" => 6,
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "CONVÊNIO: POLÍCIA RODOVIÁRIA"    
+                "department_id" => 7,
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "GABINETE"    
+                "department_id" => 4,
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "SEC. DES. ECO. SUST.: ADMINISTRAÇÃO" 
+                "department_id" => 8,
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "SEC. DES. ECO. SUST.: AGRICULTURA E M. AMBIENTE" 
+                "department_id" => 8,
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "SEC. DES. ECO. SUST.: CULTURA"   
+                "department_id" => 8,
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "SEC. DES. SOCIAL: ADMINISTRAÇÃO" 
+                "department_id" => 9,
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "SEC. DES. SOCIAL: CONSELHO TUTELAR"  
+                "department_id" => 9,
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "SEC. DES. SOCIAL: TRANSPORTE PÚBLICO"    
+                "department_id" => 9,
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "SEC. EDUCAÇÃO, ESPORTE E LAZER: ADMINISTRAÇÃO"   
+                "department_id" => 10,
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "SEC. EDUCAÇÃO, ESPORTE E LAZER: ENSINO MÉDIO"    
+                "department_id" => 10,
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "SEC. EDUCAÇÃO, ESPORTE E LAZER: ENSINO SUPERIOR" 
+                "department_id" => 10,
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "SEC. EDUCAÇÃO, ESPORTE E LAZER: PNATE"   
+                "department_id" => 10,
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "SEC. EDUCAÇÃO, ESPORTE E LAZER: REC. ORDINÁRIO"  
+                "department_id" => 10,
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "SEC. INFRAESTRUTURA: ADMINISTRAÇÃO"  
+                "department_id" => 11,
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "SEC. INFRAESTRUTURA: ATERRO CONTROLADO"  
+                "department_id" => 11,
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "SEC. INFRAESTRUTURA: ESTRADAS VICINAIS"  
+                "department_id" => 11,
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "SEC. INFRAESTRUTURA: ESTRADAS VICINAIS - CEX"    
+                "department_id" => 11,
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "SEC. INFRAESTRUTURA: ESTRADAS VICINAIS - CIDE"   
+                "department_id" => 11,
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "SEC. INFRAESTRUTURA: LIMPEZA URBANA" 
+                "department_id" => 11,
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "SEC. PLANEJAMENTO, GESTÃO E FINANÇAS: ADMINISTRAÇÃO" 
+                "department_id" => 12,
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "SEC. SAÚDE: ADMINISTRAÇÃO"   
+                "department_id" => 13,
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "SEC. SAÚDE: PSF" 
+                "department_id" => 13,
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "SEC. SAÚDE: TRANSPORTE SAÚDE"    
+                "department_id" => 13,
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "SEC. SAÚDE: VIGILÂNCIA EPIDEMOLÓGICA"    
+                "department_id" => 13,
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "SEC. SAÚDE: VIGILÂNCIA SANITÁRIA"    
+                "department_id" => 13,
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ],
+        ]); 
 
-          User::create([
-			'registration'           => '123',
-			'name'			         => 'Wesley Silva',
-			'birthDate'		         => '19821111',
-			'email'			         => 'wesley@ataio.com.br',
-			'userName'		         => 'wesley',
-			'password'		         => bcrypt('123456'),
-			'phone'			         => '3535219812',
-			'celPhone'		         => '35999759812',
-			'permission_id'	         => '1',
-			'department_id'	         => '1',
-			'occupation_id'	         => '1',
+
+        User::create([
+            'registration'           => '3076',
+            'name'                   => 'ADOLPHO SENA DE O. JUNQUEIRA',
+            'birthDate'              => '01011900',
+            'email'                  => 'educacao@capitolio.mg.gov.br',
+            'userName'               => 'AdolphoJunqueira',
+            'password'               => bcrypt('3076'),
+            'phone'                  => '3733731003',
+            'celPhone'               => '35988266366',
+            'permission_id'          => '1',
+            'department_id'          => '10',
+            'occupation_id'          => '7',
+            'status'                 => '1'
+        ]);
+
+        User::create([
+            'registration'           => '9999',
+            'name'                   => 'ADMINISTRADOR DO SISTEMA',
+            'birthDate'              => '01112018',
+            'email'                  => 'contato@ataio.com.br',
+            'userName'               => 'Adm',
+            'password'               => bcrypt('9999'),
+            'phone'                  => '3535219812',
+            'celPhone'               => '35997149936',
+            'permission_id'          => '1',
+            'department_id'          => '1',
+            'occupation_id'          => '1',
             'status'                 => '1'
         ]);
         
+        User::create([
+            'registration'           => '2645',
+            'name'                   => 'ANDRÉIA RODRIGUES DA SILVA',
+            'birthDate'              => '05091980',
+            'email'                  => 'deiaturismo@gmail.com',
+            'userName'               => 'AndreiaRodrigues',
+            'password'               => bcrypt('2645'),
+            'phone'                  => '3733731111',
+            'celPhone'               => '37999681450',
+            'permission_id'          => '1',
+            'department_id'          => '8',
+            'occupation_id'          => '18',
+            'status'                 => '1'
+        ]);
 
         DB::table("states")->insert([
             [
