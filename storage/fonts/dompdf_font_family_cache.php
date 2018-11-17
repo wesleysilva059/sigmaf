@@ -81,4 +81,13 @@
     'italic' => $fontDir . '\861609e7151aace5a79fdf12d74a4e1a',
     'normal' => $fontDir . '\e92855b4d78b971791f1b04733c5c4a9',
   ),
+  'glyphicons halflings' => array(
+    'normal' => $fontDir . '\8522df0a836e275bcf58991e08a0be6e',
+  ),
+  'fontawesome' => array(
+    'normal' => $fontDir . '\880d4b03753c37bf930597ea040f76ae',
+  ),
+  'ionicons' => array(
+    'normal' => $fontDir . '\dd14c4ae69b80224e661740b63974ee2',
+  ),
 ) ?>

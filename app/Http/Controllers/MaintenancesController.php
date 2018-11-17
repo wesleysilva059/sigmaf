@@ -293,13 +293,23 @@ class MaintenancesController extends Controller
         return view('reports.services.maintenances.index', compact('historics', 'dataForm'));
     }
 
-    public function print()
+    public function print(Request $request, Maintenance $maintenances)
     {
-        $historics = $this->repository->orderBy('initDateMaintenance','desc')->paginate($limit = 15, $columns = ['*']);
+        $dataForm = $request->except('_token');
+
+        $Date_init = explode('-', $dataForm['date_init']);
+        $date_init = $Date_init[2]. '/' . $Date_init[1] . '/' . $Date_init[0];
+        $Date_end = explode('-', $dataForm['date_end']);
+        $date_end = $Date_end[2]. '/' . $Date_end[1] . '/' . $Date_end[0];
+                
+
+        $historics = $maintenances->search($dataForm, '15');
 
         $today = date('Y-m-d');
+        $today = explode('-', $today);
+        $today = $today[2]. '/' . $today[1] . '/' . $today[0];
 
-        $pdf = PDF::loadView('reports.services.maintenances.print', compact('historics','today'));
+        $pdf = PDF::loadView('reports.services.maintenances.print', compact('historics','today','date_init', 'date_end'));
 
         return $pdf->stream();
     }

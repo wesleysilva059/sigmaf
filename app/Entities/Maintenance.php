@@ -99,6 +99,7 @@ class Maintenance extends Model implements Transformable
         return $expectedDateEnd;
     }
 
+    
     public function search(Array $data, $totalPage)
     {
         $vehicle = Vehicle::where('vehiclePlate', $data['vehiclePlate'])->get();

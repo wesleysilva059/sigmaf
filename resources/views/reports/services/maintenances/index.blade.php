@@ -6,14 +6,15 @@
  	 <br><br>
  	<div class="box box-primary">
  		<div class="box-header">
-            <form action="{{route('maintenances.search')}}" method="POST" class="form form-inline">
+            <form method="POST" name="actionJava"  class="form form-inline">
                 {!! csrf_field() !!}
                 <input type="text" name="vehiclePlate" class="form-control" placeholder="Placa">
 				<label for="date_init">Data Inicial</label>                
                 <input type="date" name="date_init" class="form-control">
                 <label for="date_end">Data Final</label>
                 <input type="date" name="date_end" class="form-control">
-                <button type="submit" class="btn btn-primary">Pesquisar</button>
+                <input type="submit" class="btn btn-primary" value="Pesquisar" onclick="selecionaAction('{{route('maintenances.search')}}');">
+    			<input type="submit" class="btn btn-primary" value="Imprimir" onclick="selecionaAction('{{route('maintenances.print')}}');">
             </form>
         </div>
 
@@ -51,11 +52,14 @@
  				</div>
  			</div>
  		</div>
- 		<div class="box-footer">
-            <form action="{{route('maintenances.print')}}" method="POST" class="form form-inline">
-                {!! csrf_field() !!}
-                <button type="submit" class="btn btn-primary">Imprimir</button>
-            </form>
-        </div>
  	</div>
+
+
+ 	<script>
+ 		function selecionaAction(script){
+        document.actionJava.action = script;
+        document.actionJava.submit();
+    }
+
+ 	</script>
  @endsection

@@ -17,19 +17,7 @@ class DatabaseSeeder extends Seeder
     {
         Department::create(
             [
-        	    ['name' => 'ADMINISTRAÇÃO DO SISTEMA'],
-                ['name' => 'ASSESSORIA ESPECIAL'],
-                ['name' => 'CONTROLADORIA MUNICIPAL'],
-                ['name' => 'GABINETE'],
-                ['name' => 'POLÍCIA FLORESTAL'],
-                ['name' => 'POLÍCIA MILITAR'],
-                ['name' => 'POLÍCIA RODOVIÁRIA'],
-                ['name' => 'SECRETARIA DE DESENVOLVIMENTO ECONÔMICO E SUSTENTÁVEL'],
-                ['name' => 'SECRETARIA DE DESENVOLVIMENTO SOCIAL'],
-                ['name' => 'SECRETARIA DE EDUCAÇÃO, ESPORTE E LAZER'],
-                ['name' => 'SECRETARIA DE INFRAESTRUTURA'],
-                ['name' => 'SECRETARIA DE PLANEJAMENTO, GESTÃO E FINANÇAS'],
-                ['name' => 'SECRETARIA DE SAÚDE'],
+        	   'name'			=> 'Administração'
             ]
         );
 
@@ -39,7 +27,14 @@ class DatabaseSeeder extends Seeder
             ]
         );
 
-          User::create([
+        CostCentre::create(
+            [
+                'name'               => '', 
+                'department_id'      => ''
+            ]
+        )
+
+        User::create([
 			'registration'           => '123',
 			'name'			         => 'Wesley Silva',
 			'birthDate'		         => '19821111',
@@ -54,6 +49,55 @@ class DatabaseSeeder extends Seeder
             'status'                 => '1'
         ]);
 
+        Make::create(
+            [
+                'name'      => '',
+            ],
+            [
+                'name'      => '',
+            ]
+        );
+
+        VehicleModel::create(
+            [
+                'name'      => '',
+                'make_id'   => '',
+            ],
+            [
+                'name'      => '',
+                'make_id'   => '',
+            ],
+        );
+
+        VehicleType::create(
+            [
+                'name'          => '',
+                'vehicleSize'   => '',
+            ],
+            [
+                'name'          => '',
+                'vehicleSize'   => '',
+            ],
+        );
+
+        Vehicle::create(
+            [
+                'vehiclePlate',     => '',
+                'vehicleColor',     => '',
+                'yearManufactory',  => '',
+                'yearModel',        => '',
+                'purchaseDate',     => '',
+                'renavam',          => '',
+                'chassis',          => '',
+                'typeControl',      => '',
+                'status',           => '',
+                'currentKmHr',      => '',  
+                'vehicleModel_id',  => '',
+                'costCenter_id',    => '',  
+                'vehicleType_id',   => '',
+                'comments',         => '',
+            ]
+        );
 
         $now = date("Y-m-d H:i:s");
 
