@@ -302,7 +302,7 @@ class DatabaseSeeder extends Seeder
         User::create([
             'registration'           => '3076',
             'name'                   => 'ADOLPHO SENA DE O. JUNQUEIRA',
-            'birthDate'              => '01011900',
+            'birthDate'              => '19000101',
             'email'                  => 'educacao@capitolio.mg.gov.br',
             'userName'               => 'AdolphoJunqueira',
             'password'               => bcrypt('3076'),
@@ -317,7 +317,7 @@ class DatabaseSeeder extends Seeder
         User::create([
             'registration'           => '9999',
             'name'                   => 'ADMINISTRADOR DO SISTEMA',
-            'birthDate'              => '01112018',
+            'birthDate'              => '20181101',
             'email'                  => 'contato@ataio.com.br',
             'userName'               => 'Adm',
             'password'               => bcrypt('9999'),
@@ -332,7 +332,7 @@ class DatabaseSeeder extends Seeder
         User::create([
             'registration'           => '2645',
             'name'                   => 'ANDRÉIA RODRIGUES DA SILVA',
-            'birthDate'              => '05091980',
+            'birthDate'              => '19800905',
             'email'                  => 'deiaturismo@gmail.com',
             'userName'               => 'AndreiaRodrigues',
             'password'               => bcrypt('2645'),
