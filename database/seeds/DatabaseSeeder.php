@@ -1,8 +1,14 @@
 <?php
 
 use App\Entities\Department;
+use App\Entities\Insurance;
+use App\Entities\Make;
 use App\Entities\Occupation;
+use App\Entities\Specification;
 use App\Entities\User;
+use App\Entities\Vehicle;
+use App\Entities\VehicleModel;
+use App\Entities\VehicleType;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -656,7 +662,7 @@ class DatabaseSeeder extends Seeder
             'permission_id'          => '1',
             'department_id'          => '4',
             'occupation_id'          => '4',
-            'status'                 => '1'
+            'status'                 => '1',
         ]);
 
         Make::create([
