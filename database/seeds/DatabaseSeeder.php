@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
     {
         $now = date("Y-m-d H:i:s");
 
-        DB::table("department")->insert([
+        DB::table("departments")->insert([
             [
                 "name"          => "ADMINISTRAÇÃO DO SISTEMA",
                 "created_at"    => $now,
