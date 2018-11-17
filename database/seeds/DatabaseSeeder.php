@@ -232,6 +232,11 @@ class DatabaseSeeder extends Seeder
                 "created_at"    => $now,
                 "updated_at"    => $now,
             ], [
+                "name"          => "SEC. EDUCAÇÃO, ESPORTE E LAZER: ESPORTE E LAZER",
+                "department_id" => 10,
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
                 "name"          => "SEC. EDUCAÇÃO, ESPORTE E LAZER: PNATE",   
                 "department_id" => 10,
                 "created_at"    => $now,
