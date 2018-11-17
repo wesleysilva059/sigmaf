@@ -19,7 +19,6 @@ class CreateProvidersTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('address');
-            $table->string('state');
             $table->unsignedInteger('city_id');
             $table->string('phone');
             $table->string('email');
