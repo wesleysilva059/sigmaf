@@ -299,22 +299,7 @@ class DatabaseSeeder extends Seeder
         ]); 
 
 
-        User::create([
-            'registration'           => '3076',
-            'name'                   => 'ADOLPHO SENA DE O. JUNQUEIRA',
-            'birthDate'              => '19000101',
-            'email'                  => 'educacao@capitolio.mg.gov.br',
-            'userName'               => 'AdolphoJunqueira',
-            'password'               => bcrypt('3076'),
-            'phone'                  => '3733731003',
-            'celPhone'               => '35988266366',
-            'permission_id'          => '1',
-            'department_id'          => '10',
-            'occupation_id'          => '7',
-            'status'                 => '1'
-        ]);
-
-        User::create([
+       User::create([
             'registration'           => '9999',
             'name'                   => 'ADMINISTRADOR DO SISTEMA',
             'birthDate'              => '20181101',
@@ -326,6 +311,21 @@ class DatabaseSeeder extends Seeder
             'permission_id'          => '1',
             'department_id'          => '1',
             'occupation_id'          => '1',
+            'status'                 => '1'
+        ]);
+
+         User::create([
+            'registration'           => '3076',
+            'name'                   => 'ADOLPHO SENA DE O. JUNQUEIRA',
+            'birthDate'              => '19000101',
+            'email'                  => 'educacao@capitolio.mg.gov.br',
+            'userName'               => 'AdolphoJunqueira',
+            'password'               => bcrypt('3076'),
+            'phone'                  => '3733731003',
+            'celPhone'               => '35988266366',
+            'permission_id'          => '1',
+            'department_id'          => '10',
+            'occupation_id'          => '7',
             'status'                 => '1'
         ]);
         
@@ -342,6 +342,3874 @@ class DatabaseSeeder extends Seeder
             'department_id'          => '8',
             'occupation_id'          => '18',
             'status'                 => '1'
+        ]);
+
+        User::create([    
+            'registration'           => '2481',
+            'name'                   => 'BERTONLÚCIO MENDONÇA DE MACEDO',
+            'birthDate'              => '19520429',
+            'email'                  => 'bertonlucio@gmail.com',
+            'userName'               => 'BertonlucioMacedo',
+            'password'               => bcrypt('2481'),
+            'phone'                  => '3733731244',
+            'celPhone'               => '37999074491',
+            'permission_id'          => '1',
+            'department_id'          => '3',
+            'occupation_id'          => '9',
+            'status'                 => '1'
+
+        User::create([
+            'registration'           => '1519',
+            'name'                   => 'CÍNTIA REZENDE SILVA PAULA',
+            'birthDate'              => '19000101',
+            'email'                  => 'cintia_rezendesilva@hotmail.com',
+            'userName'               => 'CintiaRezende',
+            'password'               => bcrypt('1519'),
+            'phone'                  => '3733731244',
+            'celPhone'               => '37999389283',
+            'permission_id'          => '1',
+            'department_id'          => '12',
+            'occupation_id'          => '6',
+            'status'                 => '1'
+
+        User::create([
+            'registration'           => '3169',
+            'name'                   => 'DULCINÉIA APARECIDA CORREA',
+            'birthDate'              => '19741005',
+            'email'                  => 'frota@capitolio.mg.gov.br',
+            'userName'               => 'DulceCorrea',
+            'password'               => bcrypt('3169'),
+            'phone'                  => '3733731113',
+            'celPhone'               => '37999380369',
+            'permission_id'          => '1',
+            'department_id'          => '12',
+            'occupation_id'          => '15',
+            'status'                 => '1'
+
+        User::create([
+            'registration'           => '2454',
+            'name'                   => 'EDILSON ANTÔNIO DE OLIVEIRA',
+            'birthDate'              => '19690807',
+            'email'                  => 'compras.prefcapitolio@gmail.com',
+            'userName'               => 'EdilsonOliveira',
+            'password'               => bcrypt('2454'),
+            'phone'                  => '3733731244',
+            'celPhone'               => '37999028971',
+            'permission_id'          => '1',
+            'department_id'          => '12',
+            'occupation_id'          => '13',
+            'status'                 => '1'
+        ]);
+
+        User::create([
+            'registration'           => '1522',
+            'name'                   => 'GENEILSON LUIZ SOARES',
+            'birthDate'              => '19000101',
+            'email'                  => 'geneilsonluiz.soaresgeneilson@hotmail.com',
+            'userName'               => 'GeneilsonSoares',
+            'password'               => bcrypt('1522'),
+            'phone'                  => '3733731244',
+            'celPhone'               => '37999999999',
+            'permission_id'          => '1',
+            'department_id'          => '2',
+            'occupation_id'          => '3',
+            'status'                 => '1'
+        ]);
+
+        User::create([
+            'registration'           => '1112',
+            'name'                   => 'GIVANILDO RODRIGUES COSTA',
+            'birthDate'              => '19770427',
+            'email'                  => 'obras.capitolio@gmail.com',
+            'userName'               => 'GivanildoCosta',
+            'password'               => bcrypt('1112'),
+            'phone'                  => '3733731113',
+            'celPhone'               => '37999399390',
+            'permission_id'          => '1',
+            'department_id'          => '10',
+            'occupation_id'          => '8',
+            'status'                 => '1'
+        ]);
+
+        User::create([
+            'registration'           => '3138',
+            'name'                   => 'HELTON ALVES RODRIGUES',
+            'birthDate'              => '19610109',
+            'email'                  => 'planejamento@capitolio.mg.gov.br',
+            'userName'               => 'HeltonRodrigues',
+            'password'               => bcrypt('3138'),
+            'phone'                  => '3733731244',
+            'celPhone'               => '337999999999',
+            'permission_id'          => '1',
+            'department_id'          => '12',
+            'occupation_id'          => '19',
+            'status'                 => '1'
+        ]);
+
+        User::create([
+            'registration'           => '1871',
+            'name'                   => 'JADER MODESTO NEVES',
+            'birthDate'              => '19851118',
+            'email'                  => 'example@email.com',
+            'userName'               => 'JaderNeves',
+            'password'               => bcrypt('1871'),
+            'phone'                  => '3733731244',
+            'celPhone'               => '37999828374',
+            'permission_id'          => '1',
+            'department_id'          => '12',
+            'occupation_id'          => '10',
+            'status'                 => '1'
+        ]);
+
+        User::create([
+            'registration'           => '2539',
+            'name'                   => 'JOÃO ANTÔNIO ALVES',
+            'birthDate'              => '19580213',
+            'email'                  => 'johnpt13@bol.com.br',
+            'userName'               => 'JoaoAlves',
+            'password'               => bcrypt('2539'),
+            'phone'                  => '3733731003',
+            'celPhone'               => '37999880828',
+            'permission_id'          => '1',
+            'department_id'          => '10',
+            'occupation_id'          => '19',
+            'status'                 => '1'
+        ]);
+
+        User::create([
+            'registration'           => '3049',
+            'name'                   => 'JOSÉ EDUARDO TERRA VALLORY',
+            'birthDate'              => '19580525',
+            'email'                  => 'prefeitura@capitolio.mg.gov.br',
+            'userName'               => 'JoseVallory',
+            'password'               => bcrypt('3049'),
+            'phone'                  => '3733731244',
+            'celPhone'               => '337999999999',
+            'permission_id'          => '1',
+            'department_id'          => '4',
+            'occupation_id'          => '16',
+            'status'                 => '1'
+        ]);
+
+        User::create([
+            'registration'           => '3153',
+            'name'                   => 'JOSÉ VICENTE NUNES',
+            'birthDate'              => '19000101',
+            'email'                  => 'jvnune@hotmail.com',
+            'userName'               => 'JoseVicente',
+            'password'               => bcrypt('3153'),
+            'phone'                  => '3733731244',
+            'celPhone'               => '37999999999',
+            'permission_id'          => '1',
+            'department_id'          => '11',
+            'occupation_id'          => '19',
+            'status'                 => '1'
+        ]);
+
+        User::create([
+            'registration'           => '2562',
+            'name'                   => 'LÉCIA TEREZINHA BATISTA NEVES',
+            'birthDate'              => '19000101',
+            'email'                  => 'conveniopmc@gmail.com',
+            'userName'               => 'LeciaNeves',
+            'password'               => bcrypt('2562'),
+            'phone'                  => '33733731244',
+            'celPhone'               => '37991212710',
+            'permission_id'          => '1',
+            'department_id'          => '12',
+            'occupation_id'          => '5',
+            'status'                 => '1'
+        ]);
+
+        User::create([
+            'registration'           => '3232',
+            'name'                   => 'LIDIANE SOARES UCHOAS',
+            'birthDate'              => '19000101',
+            'email'                  => 'transportesaudecapitolio@gmail.com',
+            'userName'               => 'LidianeUchoas',
+            'password'               => bcrypt('3232'),
+            'phone'                  => '3733731482',
+            'celPhone'               => '37999999999',
+            'permission_id'          => '1',
+            'department_id'          => '13',
+            'occupation_id'          => '2',
+            'status'                 => '1'
+        ]);
+
+        User::create([
+            'registration'           => '1830',
+            'name'                   => 'LUCAS AUGUSTO GOMES DE OLIVEIRA',
+            'birthDate'              => '19000101',
+            'email'                  => 'lucas.financeiro@hotmail.com',
+            'userName'               => 'LucasOliveira',
+            'password'               => bcrypt('1830'),
+            'phone'                  => '3733731244',
+            'celPhone'               => '37999999999',
+            'permission_id'          => '1',
+            'department_id'          => '12',
+            'occupation_id'          => '11',
+            'status'                 => '1'
+        ]);
+
+        User::create([
+            'registration'           => '2960',
+            'name'                   => 'LUCAS GOULART DE ARAÚJO',
+            'birthDate'              => '19910926',
+            'email'                  => 'almoxarifado.prefcapitolio@gmail.com',
+            'userName'               => 'LucasAraujo',
+            'password'               => bcrypt('2960'),
+            'phone'                  => '3733731768',
+            'celPhone'               => '37999341802',
+            'permission_id'          => '1',
+            'department_id'          => '12',
+            'occupation_id'          => '2',
+            'status'                 => '1'
+        ]);
+
+        User::create([
+            'registration'           => '1504',
+            'name'                   => 'MÁRCIA MARIA LEITE',
+            'birthDate'              => '19000101',
+            'email'                  => 'example@email.com',
+            'userName'               => 'MarciaLeite',
+            'password'               => bcrypt('1504'),
+            'phone'                  => '33733731244',
+            'celPhone'               => '37999999999',
+            'permission_id'          => '1',
+            'department_id'          => '12',
+            'occupation_id'          => '12',
+            'status'                 => '1'
+        ]);
+
+        User::create([
+            'registration'           => '2512',
+            'name'                   => 'MARIA DAS GRAÇAS DE MELO',
+            'birthDate'              => '19510425',
+            'email'                  => 'social@capitolio.mg.gov.br',
+            'userName'               => 'MariaDasGracas',
+            'password'               => bcrypt('2512'),
+            'phone'                  => '3733731702',
+            'celPhone'               => '37999849091',
+            'permission_id'          => '1',
+            'department_id'          => '9',
+            'occupation_id'          => '18',
+            'status'                 => '1'
+        ]);
+
+        User::create([
+            'registration'           => '1570',
+            'name'                   => 'MARIA TEREZINHA DE OLIVEIRA',
+            'birthDate'              => '19710612',
+            'email'                  => 'dmsaudecapitolio@yahoo.com.br',
+            'userName'               => 'MariaTerezinha',
+            'password'               => bcrypt('1570'),
+            'phone'                  => '3733731482',
+            'celPhone'               => '37999237153',
+            'permission_id'          => '1',
+            'department_id'          => '13',
+            'occupation_id'          => '17',
+            'status'                 => '1'
+        ]);
+
+        User::create([
+            'registration'           => '1662',
+            'name'                   => 'MARLUCE R. DE MELO NUNES',
+            'birthDate'              => '19000101',
+            'email'                  => 'almoxarifado.prefcapitolio@gmail.com',
+            'userName'               => 'MarluceNunes',
+            'password'               => bcrypt('1662'),
+            'phone'                  => '3733731768',
+            'celPhone'               => '37999449537',
+            'permission_id'          => '1',
+            'department_id'          => '12',
+            'occupation_id'          => '14',
+            'status'                 => '1'
+        ]);
+
+        User::create([
+            'registration'           => '1590',
+            'name'                   => 'RAFAEL JUNIO MOREIRA',
+            'birthDate'              => '19670616',
+            'email'                  => 'obras.capitolio@gmail.com',
+            'userName'               => 'RafaelMoreira',
+            'password'               => bcrypt('1590'),
+            'phone'                  => '3733731113',
+            'celPhone'               => '37999189081',
+            'permission_id'          => '1',
+            'department_id'          => '11',
+            'occupation_id'          => '20',
+            'status'                 => '1'
+        ]);
+
+        User::create([
+            'registration'           => '1525',
+            'name'                   => 'ROZINEI APARECIDA NUNES',
+            'birthDate'              => '19691118',
+            'email'                  => 'prefeitura@capitolio.mg.gov.br',
+            'userName'               => 'RozineiNunes',
+            'password'               => bcrypt('1525'),
+            'phone'                  => '3733731244',
+            'celPhone'               => '37998047372',
+            'permission_id'          => '1',
+            'department_id'          => '4',
+            'occupation_id'          => '4',
+            'status'                 => '1'
+        ]);
+
+        Make::create([
+            'name'      => 'CATERPILLAR',
+        ]);
+
+        Make::create([
+            'name'      => 'CHEVROLET',
+        ]);
+
+        Make::create([
+            'name'      => 'CITROEN',
+        ]);
+
+        Make::create([
+            'name'      => 'FIAT',
+        ]);
+
+        Make::create([
+            'name'      => 'FIATALLIS',
+        ]);
+
+        Make::create([
+            'name'      => 'FORD',
+        ]);
+
+        Make::create([
+            'name'      => 'GMC',
+        ]);
+
+        Make::create([
+            'name'      => 'HONDA',
+        ]);
+
+        Make::create([
+            'name'      => 'HUBER-WARCO',
+        ]);
+
+        Make::create([
+            'name'      => 'IROS',
+        ]);
+
+        Make::create([
+            'name'      => 'IVECO',
+        ]);
+
+        Make::create([
+            'name'      => 'MASSEY FERGUSON',
+        ]);
+
+        Make::create([
+            'name'      => 'MERCEDES BENZ',
+        ]);
+
+        Make::create([
+            'name'      => 'NEW HOLLAND',
+        ]);
+
+        Make::create([
+            'name'      => 'RENAULT',
+        ]);
+
+        Make::create([
+            'name'      => 'VOLARE',
+        ]);
+
+        Make::create([
+            'name'      => 'VOLKSWAGEN',
+        ]);
+
+        Make::create([
+            'name'      => 'YAMAHA',
+        ]);
+
+        Make::create([
+            'name'      => 'MITSUBISHI', 
+        ]);
+
+
+
+        VehicleModel::create([
+            'name'      => '120K',
+            'make_id'   => '1',
+        ]);
+
+        VehicleModel::create([
+            'name'      => '12C',
+            'make_id'   => '14',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => '12D',
+            'make_id'   => '14',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => '416E',
+            'make_id'   => '1',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'AD7',
+            'make_id'   => '5',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'B110B',
+            'make_id'   => '14',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'BROS ES NXR 125',
+            'make_id'   => '8',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'CARGO 1717 E',
+            'make_id'   => '6',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'CARGO B 1618',
+            'make_id'   => '6',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'CARGO TRUC. 2423',
+            'make_id'   => '6',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'CG 125 TITAN',
+            'make_id'   => '8',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'CG 150 TITAN KS',
+            'make_id'   => '8',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'CG 160 FAN ESDI',
+            'make_id'   => '8',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'CITY CLASS 6013 1F',
+            'make_id'   => '11',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'CITY CLASS 70C17',
+            'make_id'   => '11',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'CITY CLASS 70C17 HDE',
+            'make_id'   => '11',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'DAILY 45S16',
+            'make_id'   => '11',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'DAILY 70C16HDCS',
+            'make_id'   => '11',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'DAILY TRUCK 70C17',
+            'make_id'   => '11',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'DOBLO AMBULÂNCIA 1.4 8 V',
+            'make_id'   => '4',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'DOBLO ATTRACTIVE 1.4',
+            'make_id'   => '4',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'DOBLO ESSENCE 7L E',
+            'make_id'   => '4',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'DUCATO 2.3 MULTIJET ECONOMY 16V DS',
+            'make_id'   => '4',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'ELETRÔNICO 15190 EOD E HD ORE',
+            'make_id'   => '17',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'ELETRÔNICO 1718',
+            'make_id'   => '13',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'ELETRÔNICO OF 1417 ',
+            'make_id'   => '13',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'F14.000 160',
+            'make_id'   => '6',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'FIORINO FURGÃO 1.3',
+            'make_id'   => '4',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'FIORINO FURGÃO 1.4 FLEX',
+            'make_id'   => '4',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'GOL CITY MB 1.0 GV',
+            'make_id'   => '17',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'GOL TITAN 1.0 G IV',
+            'make_id'   => '17',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'GOL TITAN G IV',
+            'make_id'   => '17',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'GRANCLASS 150S21E',
+            'make_id'   => '11',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'GRANCLASS 150S21E ORE 2',
+            'make_id'   => '11',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'INDUSCAR APACHE 1721/59',
+            'make_id'   => '13',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'IROS/ONE 125',
+            'make_id'   => '10',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'JUMPER GREENCAR ES',
+            'make_id'   => '3',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'JUMPER M33M 2.3',
+            'make_id'   => '3',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'KANGOO AMBULÂNCIA 1.6 16V',
+            'make_id'   => '15',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'KOMBI 1.4 FLEX',
+            'make_id'   => '17',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'MARCOPOLO TORINO GVU OF 1722',
+            'make_id'   => '13',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'MASTER BUS 16 DCI 120',
+            'make_id'   => '15',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'MASTER EUR STDL2 M9T 2.3 DCI',
+            'make_id'   => '15',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'MASTER G CASA MICI',
+            'make_id'   => '15',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'MF 2651',
+            'make_id'   => '12',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'MF 2652',
+            'make_id'   => '12',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'MF 4275',
+            'make_id'   => '12',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'NEOBUS MINI ESC 8.160',
+            'make_id'   => '17',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'NOVO GOL TL MCV',
+            'make_id'   => '17',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'O 371 RS',
+            'make_id'   => '13',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'O-400 EB 340',
+            'make_id'   => '13',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'OF 1114',
+            'make_id'   => '13',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'OF 1115',
+            'make_id'   => '13',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'OF 1318',
+            'make_id'   => '13',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'OF 1620/60',
+            'make_id'   => '13',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'OH 1628L/59',
+            'make_id'   => '13',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'PALIO FIRE 1.0',
+            'make_id'   => '4',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'RANGER 3.0',
+            'make_id'   => '6',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'RG 140',
+            'make_id'   => '14',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'SAVEIRO 1.6 CE',
+            'make_id'   => '17',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'SAVEIRO 1.6 CS',
+            'make_id'   => '17',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'SAVEIRO ROBUST 1.6',
+            'make_id'   => '17',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'SPRINTER 310D',
+            'make_id'   => '13',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'SPRINTER 515 K54A',
+            'make_id'   => '13',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'SPRINTER MARTM5 415 CDI',
+            'make_id'   => '13',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'STRADA FIRE 1.3 67CV',
+            'make_id'   => '4',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'TECTOR 170E22',
+            'make_id'   => '11',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'TOCO 130V18',
+            'make_id'   => '11',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'TOCO 14190',
+            'make_id'   => '11',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'TORINO OF 1722/59',
+            'make_id'   => '13',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'TRAÇADO 26280 6X4',
+            'make_id'   => '17',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'UNO MILLE ECONOMY',
+            'make_id'   => '4',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'UNO MILLE FIRE',
+            'make_id'   => '4',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'UNO MILLE WAY ECONOMY',
+            'make_id'   => '4',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'UNO WAY 1.4',
+            'make_id'   => '4',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'UP TAKE MA',
+            'make_id'   => '17',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'V8L ESC',
+            'make_id'   => '16',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'VECTRA SEDAN ELEGANCE 2.0',
+            'make_id'   => '2',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'VERTIS 90V18',
+            'make_id'   => '11',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'WORKER BASCULANTE 15180',
+            'make_id'   => '17',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'YBR 150 FACTOR E',
+            'make_id'   => '18',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'ZB 140',
+            'make_id'   => '9',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'CAB. FECHADA',
+            'make_id'   => '11',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'PALIO ADVENTURE 1.8',
+            'make_id'   => '4',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'UNO WAY 1.0',
+            'make_id'   => '4',
+        ]);
+        
+        VehicleModel::create([
+            'name'      => 'L200',
+            'make_id'   => '19',
+        ]);
+
+
+
+        VehicleType::create([
+            'name'          => 'AUTOMÓVEL',
+            'vehicleSize'   => 'Pequeno',
+        ]);
+
+        VehicleType::create([
+            'name'          => 'CAMINHÃO',
+            'vehicleSize'   => 'Grande',
+        ]);
+
+        VehicleType::create([
+            'name'          => 'CAMINHONETE',
+            'vehicleSize'   => 'Pequeno/Médio',
+        ]);
+
+        VehicleType::create([
+            'name'          => 'CARREGADEIRA',
+            'vehicleSize'   => 'Grande',
+        ]);
+
+        VehicleType::create([
+            'name'          => 'KOMBI',
+            'vehicleSize'   => 'Médio',
+        ]);
+
+        VehicleType::create([
+            'name'          => 'MICROÔNIBUS',
+            'vehicleSize'   => 'Médio',
+        ]);
+
+        VehicleType::create([
+            'name'          => 'MOTOCICLETA',
+            'vehicleSize'   => 'Pequeno',
+        ]);
+
+        VehicleType::create([
+            'name'          => 'MOTONIVELADORA',
+            'vehicleSize'   => 'Grande',
+        ]);
+
+        VehicleType::create([
+            'name'          => 'ÔNIBUS',
+            'vehicleSize'   => 'Grande',
+        ]);
+
+        VehicleType::create([
+            'name'          => 'PA-CARREGADEIRA',
+            'vehicleSize'   => 'Grande',
+        ]);
+
+        VehicleType::create([
+            'name'          => 'RETROESCAVADEIRA',
+            'vehicleSize'   => 'Grande',
+        ]);
+
+        VehicleType::create([
+            'name'          => 'TRATOR',
+            'vehicleSize'   => 'Grande',
+        ]);
+
+        VehicleType::create([
+            'name'          => 'TRATOR DE ESTEIRA',
+            'vehicleSize'   => 'Grande',
+        ]);
+
+        VehicleType::create([
+            'name'          => 'VAN',
+            'vehicleSize'   => 'Médio',
+        ]);
+
+
+
+        Vehicle::create([
+            'vehPlate',     => 'BWP-5225',
+            'vehColor',     => 'BRANCO',
+            'yearManufactory',  => '1991',
+            'yearModel',        => '1991',
+            'purchaseDate',     => '',
+            'renavam',          => '404428126',
+            'chassis',          => '9BM384088MB910411',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '54',
+            'costCenter_id',    => '16',  
+            'vehicleType_id',   => '9',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'CPG-8830',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2000',
+            'yearModel',        => '2000',
+            'purchaseDate',     => '',
+            'renavam',          => '749522119',
+            'chassis',          => '9BM664231YB253384',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '51',
+            'costCenter_id',    => '12',  
+            'vehicleType_id',   => '9',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'CVP-2343',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2000',
+            'yearModel',        => '2000',
+            'purchaseDate',     => '',
+            'renavam',          => '751119598',
+            'chassis',          => '9BM382073YD255665',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '56',
+            'costCenter_id',    => '13',  
+            'vehicleType_id',   => '9',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'DJB-8615',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2004',
+            'yearModel',        => '2004',
+            'purchaseDate',     => '',
+            'renavam',          => '827972911',
+            'chassis',          => '9BM3840734B370497',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '35',
+            'costCenter_id',    => '15',  
+            'vehicleType_id',   => '9',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'GKO-2880',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '1991',
+            'yearModel',        => '1991',
+            'purchaseDate',     => '',
+            'renavam',          => '420652566',
+            'chassis',          => '9BM364287MC069239',
+            'typeControl',      => '1',
+            'status',           => '4',  
+            'vehicleModel_id',  => '50',
+            'costCenter_id',    => '11',  
+            'vehicleType_id',   => '9',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'GMF-5380',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2007',
+            'yearModel',        => '2008',
+            'purchaseDate',     => '01052018',
+            'renavam',          => '952481979',
+            'chassis',          => '8AFER13PX8J133406',
+            'typeControl',      => '1',
+            'status',           => '3',  
+            'vehicleModel_id',  => '58',
+            'costCenter_id',    => '17',  
+            'vehicleType_id',   => '3',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'GMF-5404',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2007',
+            'yearModel',        => '2008',
+            'purchaseDate',     => '01052018',
+            'renavam',          => '954586280',
+            'chassis',          => '8AFER13P88J146218',
+            'typeControl',      => '1',
+            'status',           => '3',  
+            'vehicleModel_id',  => '58',
+            'costCenter_id',    => '17',  
+            'vehicleType_id',   => '3',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'GMQ-0326',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '1991',
+            'yearModel',        => '1991',
+            'purchaseDate',     => '',
+            'renavam',          => '249432820',
+            'chassis',          => '9BM384088MB913223',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '54',
+            'costCenter_id',    => '15',  
+            'vehicleType_id',   => '9',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'GPB-3549',
+            'vehicleColor',     => 'BEJE',
+            'yearManufactory',  => '1993',
+            'yearModel',        => '1993',
+            'purchaseDate',     => '',
+            'renavam',          => '249651866',
+            'chassis',          => '9BFYTARB4PDB03891',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '9',
+            'costCenter_id',    => '15',  
+            'vehicleType_id',   => '9',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'GPZ-6369',
+            'vehicleColor',     => 'AZUL',
+            'yearManufactory',  => '1987',
+            'yearModel',        => '1988',
+            'purchaseDate',     => '',
+            'renavam',          => '245623590',
+            'chassis',          => '9BM344058HB739840',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '52',
+            'costCenter_id',    => '10',  
+            'vehicleType_id',   => '9',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'GSH-5168',
+            'vehicleColor',     => 'AZUL',
+            'yearManufactory',  => '1988',
+            'yearModel',        => '1989',
+            'purchaseDate',     => '',
+            'renavam',          => '247395676',
+            'chassis',          => '9BM384091JB832380',
+            'typeControl',      => '1',
+            'status',           => '4',  
+            'vehicleModel_id',  => '53',
+            'costCenter_id',    => '10',  
+            'vehicleType_id',   => '9',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'GST-2294',
+            'vehicleColor',     => 'AZUL',
+            'yearManufactory',  => '1999',
+            'yearModel',        => '1999',
+            'purchaseDate',     => '',
+            'renavam',          => '720904307',
+            'chassis',          => '9C2JC2500XR223493',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '11',
+            'costCenter_id',    => '17',  
+            'vehicleType_id',   => '7',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'GXA-7792',
+            'vehicleColor',     => 'AMARELO',
+            'yearManufactory',  => '2002',
+            'yearModel',        => '2002',
+            'purchaseDate',     => '',
+            'renavam',          => '801243980',
+            'chassis',          => '9BM3840672B311779',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '26',
+            'costCenter_id',    => '10',  
+            'vehicleType_id',   => '9',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'GXS-9149',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2004',
+            'yearModel',        => '2004',
+            'purchaseDate',     => '',
+            'renavam',          => '826802192',
+            'chassis',          => '9BM3840734B370861',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '41',
+            'costCenter_id',    => '15',  
+            'vehicleType_id',   => '9',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'GYP-5447',
+            'vehicleColor',     => 'AZUL',
+            'yearManufactory',  => '2009',
+            'yearModel',        => '2009',
+            'purchaseDate',     => '',
+            'renavam',          => '149922540',
+            'chassis',          => '9C2KC15109R100560',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '12',
+            'costCenter_id',    => '27',  
+            'vehicleType_id',   => '7',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'HFN-0612',
+            'vehicleColor',     => 'PRETO',
+            'yearManufactory',  => '2009',
+            'yearModel',        => '2010',
+            'purchaseDate',     => '',
+            'renavam',          => '157511952',
+            'chassis',          => '9BGAB69C0AB135701',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '78',
+            'costCenter_id',    => '4',  
+            'vehicleType_id',   => '1',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'HLF-1563',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2009',
+            'yearModel',        => '2010',
+            'purchaseDate',     => '',
+            'renavam',          => '172685923',
+            'chassis',          => '9BWAA05W9AP062364',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '31',
+            'costCenter_id',    => '5',  
+            'vehicleType_id',   => '1',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'HLF-1564',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2009',
+            'yearModel',        => '2010',
+            'purchaseDate',     => '',
+            'renavam',          => '172688213',
+            'chassis',          => '9BWAA05W5AP062846',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '31',
+            'costCenter_id',    => '26',  
+            'vehicleType_id',   => '1',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'HLF-1774',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2009',
+            'yearModel',        => '2010',
+            'purchaseDate',     => '',
+            'renavam',          => '178768170',
+            'chassis',          => '9BWMF07XXAP005921',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '40',
+            'costCenter_id',    => '17',  
+            'vehicleType_id',   => '5',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'HLF-2101',
+            'vehicleColor',     => 'PRATA',
+            'yearManufactory',  => '2009',
+            'yearModel',        => '2010',
+            'purchaseDate',     => '',
+            'renavam',          => '190876956',
+            'chassis',          => '9BWLB05U1AP056868',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '60',
+            'costCenter_id',    => '17',  
+            'vehicleType_id',   => '3',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'HLF-2102',
+            'vehicleColor',     => 'PRATA',
+            'yearManufactory',  => '2009',
+            'yearModel',        => '2010',
+            'purchaseDate',     => '',
+            'renavam',          => '190879491',
+            'chassis',          => '9BWAA05W0AP073530',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '32',
+            'costCenter_id',    => '7',  
+            'vehicleType_id',   => '2',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'HLF-2230',
+            'vehicleColor',     => 'PRATA',
+            'yearManufactory',  => '2010',
+            'yearModel',        => '2010',
+            'purchaseDate',     => '',
+            'renavam',          => '192722492',
+            'chassis',          => '9BWKB05UXAP099665',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '61',
+            'costCenter_id',    => '17',  
+            'vehicleType_id',   => '3',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'HLF-3028',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2010',
+            'yearModel',        => '2011',
+            'purchaseDate',     => '',
+            'renavam',          => '210066261',
+            'chassis',          => '9BWAA05W6BP007954',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '31',
+            'costCenter_id',    => '17',  
+            'vehicleType_id',   => '2',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'HLF-3200',
+            'vehicleColor',     => 'PRATA',
+            'yearManufactory',  => '2010',
+            'yearModel',        => '2010',
+            'purchaseDate',     => '',
+            'renavam',          => '214063305',
+            'chassis',          => '93YCDDUH6AJ477857',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '42',
+            'costCenter_id',    => '15',  
+            'vehicleType_id',   => '14',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'HLF-3371',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2010',
+            'yearModel',        => '2011',
+            'purchaseDate',     => '',
+            'renavam',          => '223424528',
+            'chassis',          => '9BWAA05W2BP022452',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '31',
+            'costCenter_id',    => '4',  
+            'vehicleType_id',   => '1',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'HLF-3996',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2010',
+            'yearModel',        => '2010',
+            'purchaseDate',     => '',
+            'renavam',          => '251056317',
+            'chassis',          => '9BM693186AB736958',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '25',
+            'costCenter_id',    => '20',  
+            'vehicleType_id',   => '2',
+            'comments',         => 'Caminhão Pipa',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'HLF-7081',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2011',
+            'yearModel',        => '2012',
+            'purchaseDate',     => '',
+            'renavam',          => '348547358',
+            'chassis',          => '93YCDDUH6CJ897847',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '42',
+            'costCenter_id',    => '16',  
+            'vehicleType_id',   => '14',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'HLF-7104',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2011',
+            'yearModel',        => '2012',
+            'purchaseDate',     => '',
+            'renavam',          => '350194793',
+            'chassis',          => '9BD15822AC6588908',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '72',
+            'costCenter_id',    => '9',  
+            'vehicleType_id',   => '1',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'HLF-7678',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2011',
+            'yearModel',        => '2012',
+            'purchaseDate',     => '',
+            'renavam',          => '372655068',
+            'chassis',          => '93ZA1FC00C8551417',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '68',
+            'costCenter_id',    => '20',  
+            'vehicleType_id',   => '2',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'HLF-8251',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2011',
+            'yearModel',        => '2012',
+            'purchaseDate',     => '',
+            'renavam',          => '452615453',
+            'chassis',          => '93ZC68B01C8431536',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '18',
+            'costCenter_id',    => '6',  
+            'vehicleType_id',   => '2',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'HLF-8877',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2011',
+            'yearModel',        => '2012',
+            'purchaseDate',     => '',
+            'renavam',          => '465432298',
+            'chassis',          => '8A1FC1415CL953579',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '39',
+            'costCenter_id',    => '26',  
+            'vehicleType_id',   => '1',
+            'comments',         => 'Ambulância',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'HMH-0476',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2006',
+            'yearModel',        => '2007',
+            'purchaseDate',     => '',
+            'renavam',          => '911994025',
+            'chassis',          => '9BFYCE6U47BB84898',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '8',
+            'costCenter_id',    => '22',  
+            'vehicleType_id',   => '2',
+            'comments',         => 'Caminhão de Coleta',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'HMH-3002',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2008',
+            'yearModel',        => '2008',
+            'purchaseDate',     => '',
+            'renavam',          => '964166275',
+            'chassis',          => '93ZL42B0188402826',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '17',
+            'costCenter_id',    => '17',  
+            'vehicleType_id',   => '14',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'HMM-0703',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '1998',
+            'yearModel',        => '1998',
+            'purchaseDate',     => '',
+            'renavam',          => '698470796',
+            'chassis',          => '9BG754NJWWC002413',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '69',
+            'costCenter_id',    => '19',  
+            'vehicleType_id',   => '2',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'HMM-9650',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2002',
+            'yearModel',        => '2002',
+            'purchaseDate',     => '',
+            'renavam',          => '797076360',
+            'chassis',          => '9BFXK84F12B072540',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '27',
+            'costCenter_id',    => '20',  
+            'vehicleType_id',   => '2',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'HMN-0601',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2003',
+            'yearModel',        => '2004',
+            'purchaseDate',     => '',
+            'renavam',          => '818216379',
+            'chassis',          => '9BD15822544521048',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '73',
+            'costCenter_id',    => '17',  
+            'vehicleType_id',   => '1',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'HMN-0602',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2003',
+            'yearModel',        => '2004',
+            'purchaseDate',     => '',
+            'renavam',          => '818217839',
+            'chassis',          => '9BD27801042402941',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '66',
+            'costCenter_id',    => '17',  
+            'vehicleType_id',   => '3',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'HMN-1304',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2004',
+            'yearModel',        => '2004',
+            'purchaseDate',     => '',
+            'renavam',          => '834415267',
+            'chassis',          => '9BD25504548738744',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '28',
+            'costCenter_id',    => '17',  
+            'vehicleType_id',   => '3',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'HMN-3232',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2005',
+            'yearModel',        => '2005',
+            'purchaseDate',     => '',
+            'renavam',          => '863831273',
+            'chassis',          => '9BWNE72S55R524848',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '80',
+            'costCenter_id',    => '20',  
+            'vehicleType_id',   => '2',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'HMN-4591',
+            'vehicleColor',     => 'CINZA',
+            'yearManufactory',  => '2006',
+            'yearModel',        => '2006',
+            'purchaseDate',     => '',
+            'renavam',          => '879425040',
+            'chassis',          => '93ZC6190168321512',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '14',
+            'costCenter_id',    => '10',  
+            'vehicleType_id',   => '6',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'HMN-9714',
+            'vehicleColor',     => 'AMARELO',
+            'yearManufactory',  => '2008',
+            'yearModel',        => '2009',
+            'purchaseDate',     => '',
+            'renavam',          => '119623625',
+            'chassis',          => '93PB42G3P9C028608',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '77',
+            'costCenter_id',    => '15',  
+            'vehicleType_id',   => '6',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'JFO-6252',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '1996',
+            'yearModel',        => '1997',
+            'purchaseDate',     => '',
+            'renavam',          => '669191396',
+            'chassis',          => '8AB384087TA122225',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '55',
+            'costCenter_id',    => '16',  
+            'vehicleType_id',   => '9',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'JFP-4281',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '1998',
+            'yearModel',        => '1998',
+            'purchaseDate',     => '',
+            'renavam',          => '710031742',
+            'chassis',          => '8AC690331WA519629',
+            'typeControl',      => '1',
+            'status',           => '4',  
+            'vehicleModel_id',  => '63',
+            'costCenter_id',    => '17',  
+            'vehicleType_id',   => '14',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'LUY-2346',
+            'vehicleColor',     => 'VERDE',
+            'yearManufactory',  => '2005',
+            'yearModel',        => '2006',
+            'purchaseDate',     => '',
+            'renavam',          => '868699527',
+            'chassis',          => '9BM3840786B454151',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '70',
+            'costCenter_id',    => '16',  
+            'vehicleType_id',   => '9',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'MAQ-0001',
+            'vehicleColor',     => 'AMARELO',
+            'yearManufactory',  => '2006',
+            'yearModel',        => '2006',
+            'purchaseDate',     => '',
+            'renavam',          => 'XXXXXXXXX',
+            'chassis',          => 'N6AF00204',
+            'typeControl',      => '2',
+            'status',           => '1',  
+            'vehicleModel_id',  => '59',
+            'costCenter_id',    => '20',  
+            'vehicleType_id',   => '8',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'MAQ-0002',
+            'vehicleColor',     => 'AMARELO',
+            'yearManufactory',  => '2014',
+            'yearModel',        => '2014',
+            'purchaseDate',     => '',
+            'renavam',          => 'XXXXXXXXX',
+            'chassis',          => 'CAT120KKJAP05497',
+            'typeControl',      => '2',
+            'status',           => '1',  
+            'vehicleModel_id',  => '1',
+            'costCenter_id',    => '20',  
+            'vehicleType_id',   => '8',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'MAQ-0003',
+            'vehicleColor',     => 'AMARELO',
+            'yearManufactory',  => '1986',
+            'yearModel',        => '1986',
+            'purchaseDate',     => '',
+            'renavam',          => 'XXXXXXXXX',
+            'chassis',          => 'ZB140',
+            'typeControl',      => '2',
+            'status',           => '1',  
+            'vehicleModel_id',  => '82',
+            'costCenter_id',    => '20',  
+            'vehicleType_id',   => '8',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'MAQ-0004',
+            'vehicleColor',     => 'AMARELO',
+            'yearManufactory',  => '2011',
+            'yearModel',        => '2011',
+            'purchaseDate',     => '',
+            'renavam',          => 'XXXXXXXXX',
+            'chassis',          => 'HBZN012CBAE00957',
+            'typeControl',      => '2',
+            'status',           => '1',  
+            'vehicleModel_id',  => '2',
+            'costCenter_id',    => '20',  
+            'vehicleType_id',   => '10',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'MAQ-0005',
+            'vehicleColor',     => 'AMARELO',
+            'yearManufactory',  => '2011',
+            'yearModel',        => '2011',
+            'purchaseDate',     => '',
+            'renavam',          => 'XXXXXXXXX',
+            'chassis',          => 'HBZN110BLBAH02588',
+            'typeControl',      => '2',
+            'status',           => '1',  
+            'vehicleModel_id',  => '6',
+            'costCenter_id',    => '20',  
+            'vehicleType_id',   => '11',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'MAQ-0006',
+            'vehicleColor',     => 'AMARELO',
+            'yearManufactory',  => '2013',
+            'yearModel',        => '2013',
+            'purchaseDate',     => '',
+            'renavam',          => 'XXXXXXXXX',
+            'chassis',          => 'CAT0416EKMFG05025',
+            'typeControl',      => '2',
+            'status',           => '1',  
+            'vehicleModel_id',  => '4',
+            'costCenter_id',    => '20',  
+            'vehicleType_id',   => '11',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'MAQ-0007',
+            'vehicleColor',     => 'AMARELO',
+            'yearManufactory',  => '1995',
+            'yearModel',        => '1995',
+            'purchaseDate',     => '',
+            'renavam',          => 'XXXXXXXXX',
+            'chassis',          => '2503002',
+            'typeControl',      => '2',
+            'status',           => '1',  
+            'vehicleModel_id',  => '5',
+            'costCenter_id',    => '18',  
+            'vehicleType_id',   => '13',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'MAQ-0008',
+            'vehicleColor',     => 'VERMELHO',
+            'yearManufactory',  => '2000',
+            'yearModel',        => '2000',
+            'purchaseDate',     => '',
+            'renavam',          => 'XXXXXXXXX',
+            'chassis',          => 'XXXXXXXXXXXXXX',
+            'typeControl',      => '2',
+            'status',           => '1',  
+            'vehicleModel_id',  => '45',
+            'costCenter_id',    => '6',  
+            'vehicleType_id',   => '12',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'MAQ-0009',
+            'vehicleColor',     => 'VERMELHO',
+            'yearManufactory',  => '2000',
+            'yearModel',        => '2000',
+            'purchaseDate',     => '',
+            'renavam',          => 'XXXXXXXXX',
+            'chassis',          => 'XXXXXXXXXXXXXX',
+            'typeControl',      => '2',
+            'status',           => '1',  
+            'vehicleModel_id',  => '46',
+            'costCenter_id',    => '6',  
+            'vehicleType_id',   => '12',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'MAQ-0010',
+            'vehicleColor',     => 'AMARELO',
+            'yearManufactory',  => '2018',
+            'yearModel',        => '2018',
+            'purchaseDate',     => '',
+            'renavam',          => 'XXXXXXXXX',
+            'chassis',          => 'HBZN012DJJAE09400',
+            'typeControl',      => '2',
+            'status',           => '1',  
+            'vehicleModel_id',  => '3',
+            'costCenter_id',    => '20',  
+            'vehicleType_id',   => '4',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'MAQ-0011',
+            'vehicleColor',     => 'VERMELHO',
+            'yearManufactory',  => '2018',
+            'yearModel',        => '2018',
+            'purchaseDate',     => '',
+            'renavam',          => 'XXXXXXXXX',
+            'chassis',          => '4275487644',
+            'typeControl',      => '2',
+            'status',           => '1',  
+            'vehicleModel_id',  => '47',
+            'costCenter_id',    => '6',  
+            'vehicleType_id',   => '12',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'NXX-1781',
+            'vehicleColor',     => 'AMARELO',
+            'yearManufactory',  => '2012',
+            'yearModel',        => '2012',
+            'purchaseDate',     => '',
+            'renavam',          => '494596457',
+            'chassis',          => '9532E82W2CR260227',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '24',
+            'costCenter_id',    => '15',  
+            'vehicleType_id',   => '9',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'OPQ-9043',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2013',
+            'yearModel',        => '2013',
+            'purchaseDate',     => '',
+            'renavam',          => '546293409',
+            'chassis',          => '9BD223153D2031453',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '20',
+            'costCenter_id',    => '26',  
+            'vehicleType_id',   => '1',
+            'comments',         => 'Ambulância',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'OPU-0814',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2013',
+            'yearModel',        => '2013',
+            'purchaseDate',     => '',
+            'renavam',          => '533785030',
+            'chassis',          => '9BD15844AD6828199',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '74',
+            'costCenter_id',    => '25',  
+            'vehicleType_id',   => '1',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'OQC-3943',
+            'vehicleColor',     => 'VERMELHO',
+            'yearManufactory',  => '2013',
+            'yearModel',        => '2013',
+            'purchaseDate',     => '',
+            'renavam',          => '5425722150',
+            'chassis',          => '9C2JD2320DR008949',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '7',
+            'costCenter_id',    => '17',  
+            'vehicleType_id',   => '7',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'OQN-2445',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2013',
+            'yearModel',        => '2014',
+            'purchaseDate',     => '',
+            'renavam',          => '559162030',
+            'chassis',          => '935ZCWMNCE2117647',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '37',
+            'costCenter_id',    => '26',  
+            'vehicleType_id',   => '14',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'OQQ-1241',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2018',
+            'yearModel',        => '2018',
+            'purchaseDate',     => '',
+            'renavam',          => '1156055625',
+            'chassis',          => '93ZC70C01J8479720',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '83',
+            'costCenter_id',    => '17',  
+            'vehicleType_id',   => '2',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'OQV-5964',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2013',
+            'yearModel',        => '2013',
+            'purchaseDate',     => '',
+            'renavam',          => '577176820',
+            'chassis',          => '9BD15802AD6869376',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '72',
+            'costCenter_id',    => '24',  
+            'vehicleType_id',   => '1',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'OQV-6007',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2013',
+            'yearModel',        => '2013',
+            'purchaseDate',     => '',
+            'renavam',          => '577175718',
+            'chassis',          => '9BD15844AD6876110',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '74',
+            'costCenter_id',    => '8',  
+            'vehicleType_id',   => '1',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'ORA-9238',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2013',
+            'yearModel',        => '2013',
+            'purchaseDate',     => '',
+            'renavam',          => '588312860',
+            'chassis',          => '9BWMF07X4EP016371',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '40',
+            'costCenter_id',    => '16',  
+            'vehicleType_id',   => '5',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'ORA-9260',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2013',
+            'yearModel',        => '2014',
+            'purchaseDate',     => '',
+            'renavam',          => '588171050',
+            'chassis',          => '9BWMF07XXEP008047',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '40',
+            'costCenter_id',    => '16',  
+            'vehicleType_id',   => '5',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'ORC-8337',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2013',
+            'yearModel',        => '2014',
+            'purchaseDate',     => '',
+            'renavam',          => '596618140',
+            'chassis',          => '9BD373175E5043514',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '84',
+            'costCenter_id',    => '2',  
+            'vehicleType_id',   => '1',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'ORC-8769',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2013',
+            'yearModel',        => '2014',
+            'purchaseDate',     => '',
+            'renavam',          => '683807013',
+            'chassis',          => 'BD195162EO517201',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '85',
+            'costCenter_id',    => '2',  
+            'vehicleType_id',   => '1',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'OWP-4152',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2013',
+            'yearModel',        => '2014',
+            'purchaseDate',     => '',
+            'renavam',          => '599460385',
+            'chassis',          => '953658267ER401099',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '71',
+            'costCenter_id',    => '20',  
+            'vehicleType_id',   => '2',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'OWQ-4169',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2013',
+            'yearModel',        => '2014',
+            'purchaseDate',     => '',
+            'renavam',          => '599744006',
+            'chassis',          => '93YVE34MCEJ756244',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '43',
+            'costCenter_id',    => '15',  
+            'vehicleType_id',   => '14',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'OXK-5654',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2014',
+            'yearModel',        => '2015',
+            'purchaseDate',     => '',
+            'renavam',          => '1008060299',
+            'chassis',          => '9BWAA45UXFP014451',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '30',
+            'costCenter_id',    => '6',  
+            'vehicleType_id',   => '1',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'PUA-9467',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2014',
+            'yearModel',        => '2014',
+            'purchaseDate',     => '',
+            'renavam',          => '1009121488',
+            'chassis',          => '9BD265122E9003203',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '29',
+            'costCenter_id',    => '23',  
+            'vehicleType_id',   => '3',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'PUF-4910',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2014',
+            'yearModel',        => '2014',
+            'purchaseDate',     => '',
+            'renavam',          => '1012105978',
+            'chassis',          => '9BD119707E1119094',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '21',
+            'costCenter_id',    => '26',  
+            'vehicleType_id',   => '1',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'PUF-4917',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2014',
+            'yearModel',        => '2014',
+            'purchaseDate',     => '',
+            'renavam',          => '1012107318',
+            'chassis',          => '9BD119707E1119083',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '21',
+            'costCenter_id',    => '14',  
+            'vehicleType_id',   => '1',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'PUF-4920',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2014',
+            'yearModel',        => '2014',
+            'purchaseDate',     => '',
+            'renavam',          => '1012104807',
+            'chassis',          => '9BD17122LE5924279',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '57',
+            'costCenter_id',    => '27',  
+            'vehicleType_id',   => '1',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'PUF-4922',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2014',
+            'yearModel',        => '2014',
+            'purchaseDate',     => '',
+            'renavam',          => '1012903777',
+            'chassis',          => '9BD195163E0566709',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '75',
+            'costCenter_id',    => '26',  
+            'vehicleType_id',   => '1',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'PUG-5293',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2014',
+            'yearModel',        => '2014',
+            'purchaseDate',     => '',
+            'renavam',          => '1013312993',
+            'chassis',          => '9BFYEAKD2EBS70598',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '10',
+            'costCenter_id',    => '20',  
+            'vehicleType_id',   => '2',
+            'comments',         => 'Trucado/Caçamba',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'PUI-6500',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2012',
+            'yearModel',        => '2012',
+            'purchaseDate',     => '',
+            'renavam',          => '1045111209',
+            'chassis',          => '96ZNE3125CM001773',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '36',
+            'costCenter_id',    => '24',  
+            'vehicleType_id',   => '7',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'PUI-6507',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2012',
+            'yearModel',        => '2012',
+            'purchaseDate',     => '',
+            'renavam',          => '1045044080',
+            'chassis',          => '96ZNE3125CM001809',
+            'typeControl',      => '1',
+            'status',           => '4',  
+            'vehicleModel_id',  => '36',
+            'costCenter_id',    => '24',  
+            'vehicleType_id',   => '7',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'PUI-6557',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2012',
+            'yearModel',        => '2012',
+            'purchaseDate',     => '',
+            'renavam',          => '1045112906',
+            'chassis',          => '96ZNE3125CM001771',
+            'typeControl',      => '1',
+            'status',           => '4',  
+            'vehicleModel_id',  => '36',
+            'costCenter_id',    => '24',  
+            'vehicleType_id',   => '7',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'PUI-6578',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2012',
+            'yearModel',        => '2012',
+            'purchaseDate',     => '',
+            'renavam',          => '1045112396',
+            'chassis',          => '96ZNE3125CM001772',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '36',
+            'costCenter_id',    => '24',  
+            'vehicleType_id',   => '7',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'PUI-6587',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2012',
+            'yearModel',        => '2012',
+            'purchaseDate',     => '',
+            'renavam',          => '1045110806',
+            'chassis',          => '96ZNE3125CM001774',
+            'typeControl',      => '1',
+            'status',           => '3',  
+            'vehicleModel_id',  => '36',
+            'costCenter_id',    => '24',  
+            'vehicleType_id',   => '7',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'PUI-6592',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2012',
+            'yearModel',        => '2012',
+            'purchaseDate',     => '',
+            'renavam',          => '1045113503',
+            'chassis',          => '96ZNE3125CM001810',
+            'typeControl',      => '1',
+            'status',           => '4',  
+            'vehicleModel_id',  => '36',
+            'costCenter_id',    => '24',  
+            'vehicleType_id',   => '7',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'PVA-1427',
+            'vehicleColor',     => 'AMARELO',
+            'yearManufactory',  => '2014',
+            'yearModel',        => '2014',
+            'purchaseDate',     => '',
+            'renavam',          => '1025845568',
+            'chassis',          => '93ZL68C01E8461604',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '15',
+            'costCenter_id',    => '15',  
+            'vehicleType_id',   => '6',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'PVA-1439',
+            'vehicleColor',     => 'AMARELO',
+            'yearManufactory',  => '2014',
+            'yearModel',        => '2014',
+            'purchaseDate',     => '',
+            'renavam',          => '1025847692',
+            'chassis',          => '93ZL68C01E8461672',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '15',
+            'costCenter_id',    => '15',  
+            'vehicleType_id',   => '6',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'PVA-1446',
+            'vehicleColor',     => 'AMARELO',
+            'yearManufactory',  => '2014',
+            'yearModel',        => '2014',
+            'purchaseDate',     => '',
+            'renavam',          => '1025841538',
+            'chassis',          => '93ZL68C01E8461540',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '15',
+            'costCenter_id',    => '15',  
+            'vehicleType_id',   => '6',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'PVA-1455',
+            'vehicleColor',     => 'AMARELO',
+            'yearManufactory',  => '2014',
+            'yearModel',        => '2014',
+            'purchaseDate',     => '',
+            'renavam',          => '1025846793',
+            'chassis',          => '93ZL68C01E8461599',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '15',
+            'costCenter_id',    => '16',  
+            'vehicleType_id',   => '6',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'PVB-6738',
+            'vehicleColor',     => 'CINZA',
+            'yearManufactory',  => '2014',
+            'yearModel',        => '2015',
+            'purchaseDate',     => '',
+            'renavam',          => '1027003904',
+            'chassis',          => '93W244P24F2141667',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '23',
+            'costCenter_id',    => '16',  
+            'vehicleType_id',   => '14',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'PWD-3255',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2015',
+            'yearModel',        => '2016',
+            'purchaseDate',     => '',
+            'renavam',          => '1051501927',
+            'chassis',          => '9BWAG4122GT505513',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '76',
+            'costCenter_id',    => '4',  
+            'vehicleType_id',   => '1',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'PWS-2255',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2015',
+            'yearModel',        => '2016',
+            'purchaseDate',     => '',
+            'renavam',          => '1064166129',
+            'chassis',          => 'XXXXXXXXXXXXXX',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '86',
+            'costCenter_id',    => '1',  
+            'vehicleType_id',   => '3',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'PXA-8590',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2015',
+            'yearModel',        => '2016',
+            'purchaseDate',     => '',
+            'renavam',          => '1071049515',
+            'chassis',          => '935ZBWMMBG2154867',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '38',
+            'costCenter_id',    => '15',  
+            'vehicleType_id',   => '14',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'PXA-8593',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2015',
+            'yearModel',        => '2016',
+            'purchaseDate',     => '',
+            'renavam',          => '1071044963',
+            'chassis',          => '935ZBWMMBG2155130',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '38',
+            'costCenter_id',    => '16',  
+            'vehicleType_id',   => '14',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'PXB-8739',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2015',
+            'yearModel',        => '2016',
+            'purchaseDate',     => '',
+            'renavam',          => '10772050975',
+            'chassis',          => '9BD17122ZG7571802',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '57',
+            'costCenter_id',    => '11',  
+            'vehicleType_id',   => '1',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'PXB-8740',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2015',
+            'yearModel',        => '2016',
+            'purchaseDate',     => '',
+            'renavam',          => '1072052447',
+            'chassis',          => '9BD17122ZG7571807',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '57',
+            'costCenter_id',    => '11',  
+            'vehicleType_id',   => '1',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'PXJ-1294',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2015',
+            'yearModel',        => '2016',
+            'purchaseDate',     => '',
+            'renavam',          => '1073749476',
+            'chassis',          => '9BD17122ZG7570469',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '57',
+            'costCenter_id',    => '24',  
+            'vehicleType_id',   => '1',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'PXJ-9424',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2015',
+            'yearModel',        => '2016',
+            'purchaseDate',     => '',
+            'renavam',          => '1079151955',
+            'chassis',          => '9BD223150G2041754',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '20',
+            'costCenter_id',    => '26',  
+            'vehicleType_id',   => '1',
+            'comments',         => 'Ambulância',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'PYE-2547',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2015',
+            'yearModel',        => '2015',
+            'purchaseDate',     => '01072016',
+            'renavam',          => '1094598930',
+            'chassis',          => '93ZA90D00F8563521',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '79',
+            'costCenter_id',    => '22',  
+            'vehicleType_id',   => '2',
+            'comments',         => 'Cam. Reciclagem (Carr. Aberta)',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'PYF-2031',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2016',
+            'yearModel',        => '2017',
+            'purchaseDate',     => '',
+            'renavam',          => '1095261131',
+            'chassis',          => '9BWAG45U8HT028180',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '49',
+            'costCenter_id',    => '28',  
+            'vehicleType_id',   => '1',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'PYG-8116',
+            'vehicleColor',     => 'AMARELO',
+            'yearManufactory',  => '2016',
+            'yearModel',        => '2016',
+            'purchaseDate',     => '',
+            'renavam',          => '1090038051',
+            'chassis',          => '93ZL68C01G8468031',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '16',
+            'costCenter_id',    => '16',  
+            'vehicleType_id',   => '6',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'PYQ-6565',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2016',
+            'yearModel',        => '2017',
+            'purchaseDate',     => '',
+            'renavam',          => '1102517477',
+            'chassis',          => '8AC906635HE126089',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '65',
+            'costCenter_id',    => '15',  
+            'vehicleType_id',   => '14',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'PYT-2598',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2016',
+            'yearModel',        => '2017',
+            'purchaseDate',     => '',
+            'renavam',          => '1104002512',
+            'chassis',          => '93YMAFELAHJ452841',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '44',
+            'costCenter_id',    => '15',  
+            'vehicleType_id',   => '14',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'PYV-0616',
+            'vehicleColor',     => 'AMARELO',
+            'yearManufactory',  => '2016',
+            'yearModel',        => '2017',
+            'purchaseDate',     => '',
+            'renavam',          => '1105496640',
+            'chassis',          => '9532M52P8HR707614',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '48',
+            'costCenter_id',    => '16',  
+            'vehicleType_id',   => '6',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'PYX-6351',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2016',
+            'yearModel',        => '2016',
+            'purchaseDate',     => '01122016',
+            'renavam',          => '1107545444',
+            'chassis',          => '93ZA1RGH0G8930206',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '67',
+            'costCenter_id',    => '22',  
+            'vehicleType_id',   => '2',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'PZI-2902',
+            'vehicleColor',     => 'PRETO',
+            'yearManufactory',  => '2017',
+            'yearModel',        => '2017',
+            'purchaseDate',     => '01052017',
+            'renavam',          => '1114272504',
+            'chassis',          => '9C2KC2200HR032860',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '13',
+            'costCenter_id',    => '25',  
+            'vehicleType_id',   => '7',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'PZI-2904',
+            'vehicleColor',     => 'PRETO',
+            'yearManufactory',  => '2017',
+            'yearModel',        => '2017',
+            'purchaseDate',     => '01052017',
+            'renavam',          => '1114272814',
+            'chassis',          => '9C2KC2200HR508173',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '13',
+            'costCenter_id',    => '25',  
+            'vehicleType_id',   => '7',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'PZI-2909',
+            'vehicleColor',     => 'PRETO',
+            'yearManufactory',  => '2017',
+            'yearModel',        => '2017',
+            'purchaseDate',     => '01052017',
+            'renavam',          => '1114272679',
+            'chassis',          => '9C2KC2200HR604729',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '13',
+            'costCenter_id',    => '25',  
+            'vehicleType_id',   => '7',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'PZI-7891',
+            'vehicleColor',     => 'PRETO',
+            'yearManufactory',  => '2017',
+            'yearModel',        => '2017',
+            'purchaseDate',     => '01052017',
+            'renavam',          => '1114566621',
+            'chassis',          => '9C2KC2200HR034836',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '13',
+            'costCenter_id',    => '25',  
+            'vehicleType_id',   => '7',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'PZI-7892',
+            'vehicleColor',     => 'PRETO',
+            'yearManufactory',  => '2017',
+            'yearModel',        => '2017',
+            'purchaseDate',     => '01052017',
+            'renavam',          => '1114560810',
+            'chassis',          => '9C2KC2200HR606152',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '13',
+            'costCenter_id',    => '25',  
+            'vehicleType_id',   => '7',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'PZI-7893',
+            'vehicleColor',     => 'PRETO',
+            'yearManufactory',  => '2017',
+            'yearModel',        => '2017',
+            'purchaseDate',     => '01052017',
+            'renavam',          => '1114566192',
+            'chassis',          => '9C2KC2200HR034338',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '13',
+            'costCenter_id',    => '25',  
+            'vehicleType_id',   => '7',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'PZK-1522',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2017',
+            'yearModel',        => '2017',
+            'purchaseDate',     => '01052017',
+            'renavam',          => '1115888517',
+            'chassis',          => '9BD17122ZH7614369',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '57',
+            'costCenter_id',    => '24',  
+            'vehicleType_id',   => '1',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'PZK-1524',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2017',
+            'yearModel',        => '2017',
+            'purchaseDate',     => '01052017',
+            'renavam',          => '1115887138',
+            'chassis',          => '9BD17122ZH7614382',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '57',
+            'costCenter_id',    => '24',  
+            'vehicleType_id',   => '1',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'PZK-1528',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2017',
+            'yearModel',        => '2017',
+            'purchaseDate',     => '01052017',
+            'renavam',          => '1115886123',
+            'chassis',          => '9BD17122ZH7614368',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '57',
+            'costCenter_id',    => '24',  
+            'vehicleType_id',   => '1',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'PZM-8269',
+            'vehicleColor',     => 'AMARELO',
+            'yearManufactory',  => '2016',
+            'yearModel',        => '2017',
+            'purchaseDate',     => '01022017',
+            'renavam',          => '1115958531',
+            'chassis',          => '93ZA01LF0H8931067',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '33',
+            'costCenter_id',    => '16',  
+            'vehicleType_id',   => '9',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'PZT-1999',
+            'vehicleColor',     => 'AMARELO',
+            'yearManufactory',  => '2016',
+            'yearModel',        => '2017',
+            'purchaseDate',     => '01022017',
+            'renavam',          => '1121208000',
+            'chassis',          => '93ZA01LF0H8931363',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '34',
+            'costCenter_id',    => '15',  
+            'vehicleType_id',   => '9',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'PZY-5140',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2017',
+            'yearModel',        => '2018',
+            'purchaseDate',     => '01072017',
+            'renavam',          => '1124117641',
+            'chassis',          => '9BWKB45U2JP044392',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '62',
+            'costCenter_id',    => '17',  
+            'vehicleType_id',   => '3',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'PZY-5143',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2017',
+            'yearModel',        => '2018',
+            'purchaseDate',     => '01072017',
+            'renavam',          => '1124118079',
+            'chassis',          => '9BWKB45U2JP044358',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '62',
+            'costCenter_id',    => '11',  
+            'vehicleType_id',   => '3',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'QNE-5542',
+            'vehicleColor',     => 'PRETO',
+            'yearManufactory',  => '2017',
+            'yearModel',        => '2017',
+            'purchaseDate',     => '01122017',
+            'renavam',          => '1132362358',
+            'chassis',          => '9C6RG3110J0016816',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '81',
+            'costCenter_id',    => '6',  
+            'vehicleType_id',   => '7',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'QNG-7815',
+            'vehicleColor',     => 'AMARELO',
+            'yearManufactory',  => '2016',
+            'yearModel',        => '2017',
+            'purchaseDate',     => '01042017',
+            'renavam',          => '1133243689',
+            'chassis',          => '93ZA01LFOH8930883',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '33',
+            'costCenter_id',    => '16',  
+            'vehicleType_id',   => '9',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'QNN-1457',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2017',
+            'yearModel',        => '2017',
+            'purchaseDate',     => '01122017',
+            'renavam',          => '1136466760',
+            'chassis',          => '9BD1196GDH1140921',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '22',
+            'costCenter_id',    => '24',  
+            'vehicleType_id',   => '1',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'QNQ-4873',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2017',
+            'yearModel',        => '2018',
+            'purchaseDate',     => '01122017',
+            'renavam',          => '1139871355',
+            'chassis',          => '8AC906657JE140612',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '64',
+            'costCenter_id',    => '16',  
+            'vehicleType_id',   => '14',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'QOQ-1241',
+            'vehicleColor',     => 'BRANCO',
+            'yearManufactory',  => '2018',
+            'yearModel',        => '2018',
+            'purchaseDate',     => '01062018',
+            'renavam',          => '1156055625',
+            'chassis',          => '93ZC70C01J8479720',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '19',
+            'costCenter_id',    => '17',  
+            'vehicleType_id',   => '2',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'QOU-9022',
+            'vehicleColor',     => 'AMARELO',
+            'yearManufactory',  => '2018',
+            'yearModel',        => '2019',
+            'purchaseDate',     => '01062018',
+            'renavam',          => '1160103616',
+            'chassis',          => '93ZA01F0K8933608',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '33',
+            'costCenter_id',    => '15',  
+            'vehicleType_id',   => '9',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'QOU-9025',
+            'vehicleColor',     => 'AMARELO',
+            'yearManufactory',  => '2018',
+            'yearModel',        => '2019',
+            'purchaseDate',     => '01072018',
+            'renavam',          => '1160095059',
+            'chassis',          => '93ZL72C01K8480705',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '15',
+            'costCenter_id',    => '16',  
+            'vehicleType_id',   => '6',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'QOU-9030',
+            'vehicleColor',     => 'AMARELO',
+            'yearManufactory',  => '2018',
+            'yearModel',        => '2019',
+            'purchaseDate',     => '01072018',
+            'renavam',          => '1160096292',
+            'chassis',          => '93ZL72C01K8480699',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '15',
+            'costCenter_id',    => '16',  
+            'vehicleType_id',   => '6',
+            'comments',         => '',
+        ]);
+
+        Vehicle::create([
+            'vehiclePlate',     => 'QOZ-7302',
+            'vehicleColor',     => 'AMARELO',
+            'yearManufactory',  => '2018',
+            'yearModel',        => '2019',
+            'purchaseDate',     => '01072018',
+            'renavam',          => '1162935984',
+            'chassis',          => '93ZL72C01K8480702',
+            'typeControl',      => '1',
+            'status',           => '1',  
+            'vehicleModel_id',  => '15',
+            'costCenter_id',    => '16',  
+            'vehicleType_id',   => '6',
+            'comments',         => '',
+        ]);
+
+/*-------------------*/
+
+
+        Specification::create([
+            'vehicle_id',       => '1',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '2',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '3',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '4',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '5',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '6',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '7',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '8',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '9',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '10',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '11',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '12',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '13',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '14',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '15',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '16',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '17',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '18',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '19',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '20',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '21',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '22',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '23',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '24',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '25',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '26',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '27',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '28',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '29',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '30',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '31'
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '32',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '33',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '34',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '35',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '36',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '37',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '38',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '39',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '40',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '41',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '42',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '43',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '44',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '45',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '46',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '47',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '48',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '49',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '50',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '51',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '52',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '53',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '54',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '55',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '56',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '57',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '58',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '59',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '60',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '61',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '62',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '63',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '64',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '65',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '66',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '67',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '68',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '69',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '70',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '71',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '72',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '73',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '74',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '75',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '76',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '77',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '78',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '79',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '80',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '81',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '82',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '83',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '84',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '85',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '86',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '87',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '88',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '89',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '90',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '91',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '92',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '93',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '94',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '95',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '96',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '97',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '98',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '99',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '100',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '101',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '102',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '103',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '104',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '105',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '106',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '107',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '108',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '109',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '110',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '111',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '112',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '113',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '114',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '115',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '116',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '117',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '118',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '119',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '120',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '121',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '122',
+        ]);
+
+        Specification::create([
+            'vehicle_id',       => '123',
+        ]);
+
+/*------------------------------*/
+
+
+        Insurance::create([
+            'vehicle_id',       => '1',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '2',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '3',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '4',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '5',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '6',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '7',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '8',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '9',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '10',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '11',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '12',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '13',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '14',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '15',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '16',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '17',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '18',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '19',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '20',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '21',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '22',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '23',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '24',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '25',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '26',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '27',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '28',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '29',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '30',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '31'
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '32',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '33',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '34',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '35',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '36',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '37',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '38',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '39',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '40',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '41',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '42',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '43',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '44',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '45',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '46',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '47',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '48',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '49',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '50',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '51',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '52',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '53',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '54',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '55',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '56',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '57',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '58',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '59',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '60',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '61',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '62',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '63',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '64',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '65',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '66',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '67',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '68',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '69',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '70',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '71',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '72',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '73',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '74',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '75',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '76',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '77',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '78',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '79',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '80',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '81',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '82',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '83',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '84',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '85',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '86',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '87',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '88',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '89',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '90',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '91',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '92',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '93',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '94',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '95',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '96',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '97',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '98',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '99',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '100',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '101',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '102',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '103',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '104',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '105',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '106',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '107',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '108',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '109',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '110',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '111',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '112',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '113',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '114',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '115',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '116',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '117',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '118',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '119',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '120',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '121',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '122',
+        ]);
+
+        Insurance::create([
+            'vehicle_id',       => '123',
         ]);
 
         DB::table("states")->insert([
