@@ -16,22 +16,22 @@ class CreateSpecificationsTable extends Migration
         Schema::create('specifications', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('vehicle_id');
-            $table->string('engine');
-            $table->string('engineNumber');
-            $table->string('tireWeight');
-            $table->integer('frontTires');
-            $table->integer('backTires');
-            $table->integer('protector');
-            $table->integer('innerTires');
-            $table->string('frontCanvasPad');
-            $table->string('backCanvasPad');
-            $table->string('frontTambor');
-            $table->string('backTambor');
-            $table->string('frontBumper');
-            $table->string('backBumper');
-            $table->string('vehicleBodywork');
-            $table->string('spring');
-            $table->integer('currentKmHr');
+            $table->string('engine')->nullable();
+            $table->string('engineNumber')->nullable();
+            $table->string('tireWeight')->nullable();
+            $table->integer('frontTires')->nullable();
+            $table->integer('backTires')->nullable();
+            $table->integer('protector')->nullable();
+            $table->integer('innerTires')->nullable();
+            $table->string('frontCanvasPad')->nullable();
+            $table->string('backCanvasPad')->nullable();
+            $table->string('frontTambor')->nullable();
+            $table->string('backTambor')->nullable();
+            $table->string('frontBumper')->nullable();
+            $table->string('backBumper')->nullable();
+            $table->string('vehicleBodywork')->nullable();
+            $table->string('spring')->nullable();
+            $table->integer('currentKmHr')->nullable();
             
             $table->foreign('vehicle_id')->references('id')->on('vehicles')
                 ->onDelete('cascade')

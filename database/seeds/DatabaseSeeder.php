@@ -75,11 +75,90 @@ class DatabaseSeeder extends Seeder
             ],
         ]);
 
-        Occupation::create(
+        DB::table("occuptions")->insert([
             [
-        	   'name'			=> 'Administrador'
-            ]
-        );
+                "name"          => "ADMINISTRADOR DO SISTEMA",
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "AGENTE ADMINISTRATIVO",
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "ASSESSOR ESPECIAL",
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "CHEFE DE GABINETE",
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "CHEFE DEPT. CONVÊNIOS",
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "CHEFE DEPT. DE SEGURANÇA DO TRABALHO",
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "CHEFE DEPT. ESPORTE E LAZER",
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "CHEFE DEPT. TRANSPORTE ESCOLAR",
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "CONTROLADOR GERAL",
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "COORD. SETOR DE TECNOLOGIA E INFORMAÇÃO",
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "COORD. SETOR FINANCEIRO",
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "DIRETOR DE GESTÃO DE PATRIMÔNIO",
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "DIRETOR DE GESTÃO DE SUPRIMENTOS",
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "DIRETOR DE GESTÃO DO ALMOXARIFADO",
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "DIRETORA DE GESTÃO DE FROTAS",
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "PREFEITO",
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "SECRETÁRIA",
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "SECRETÁRIA ADJUNTA",
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "SECRETÁRIO",
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "SECRETÁRIO ADJUNTO",
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ],
+        ]); 
+
 
           User::create([
 			'registration'           => '123',
@@ -95,9 +174,6 @@ class DatabaseSeeder extends Seeder
 			'occupation_id'	         => '1',
             'status'                 => '1'
         ]);
-
-
-        $now = date("Y-m-d H:i:s");
         
 
         DB::table("states")->insert([

@@ -15,12 +15,12 @@ class CreateInsurancesTable extends Migration
     {
         Schema::create('insurances', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('numInsurancePolicy');
-            $table->string('insurer');
-            $table->string('insuranceBroker');
-            $table->float('value', 8,2);
-            $table->date('initEffectiveDate');
-            $table->date('endEffectiveDate');
+            $table->string('numInsurancePolicy')->nullable();
+            $table->string('insurer')->nullable();
+            $table->string('insuranceBroker')->nullable();
+            $table->float('value', 8,2)->nullable();
+            $table->date('initEffectiveDate')->nullable();
+            $table->date('endEffectiveDate')->nullable();
             $table->unsignedInteger('vehicle_id');
             $table->foreign('vehicle_id')->references('id')->on('vehicles')
                 ->onDelete('cascade')
