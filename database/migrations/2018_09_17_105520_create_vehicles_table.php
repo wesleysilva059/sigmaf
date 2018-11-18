@@ -24,12 +24,13 @@ class CreateVehiclesTable extends Migration
             $table->date('purchaseDate')->nullable();
             $table->string('renavam')->nullable();
             $table->string('chassis')->nullable();
+            $table->integer('typeFuel');
             $table->integer('typeControl');
             $table->integer('status');
             $table->unsignedInteger('vehicleModel_id');
             $table->unsignedInteger('costCenter_id');
             $table->unsignedInteger('vehicleType_id');
-            $table->text('comments');
+            $table->text('comments')->nullable();
 
             $table->foreign('vehicleModel_id')->references('id')->on('vehicle_models')
             	->onDelete('cascade')

@@ -322,4 +322,34 @@ class MaintenancesController extends Controller
 
         return $pdf->stream();
     }
+
+    public function historicsByCar()
+    {
+        $historics = $this->repository->orderBy('initDateMaintenance','desc')->paginate($limit = 15, $columns = ['*']);
+
+
+        return view('reports.services.maintenancesByCar.index', compact('historics'));
+    }
+
+    public function search(Request $request, Maintenance $maintenances)
+    {
+        $dataForm = $request->except('_token');
+
+        $historics = $maintenances->searchByCar($dataForm, '15');
+
+        return view('reports.services.maintenancesByCar.index', compact('historics', 'dataForm'));
+    }
+
+    public function printByCar($id)
+    {
+        $maintenance = $this->repository->find($id);
+        //dd($maintenance);
+        $today = date('Y-m-d');
+        $today = explode('-', $today);
+        $today = $today[2]. '/' . $today[1] . '/' . $today[0];
+
+        $pdf = PDF::loadView('reports.services.maintenancesByCar.print', compact('maintenance','today'));
+
+        return $pdf->stream();
+    }
 }

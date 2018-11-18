@@ -120,4 +120,21 @@ class Maintenance extends Model implements Transformable
         return $historics;
     }
 
+    public function searchByCar(Array $data, $totalPage)
+    {
+        $vehicle = Vehicle::where('vehiclePlate', $data['vehiclePlate'])->get();
+
+        $historics = $this->where(function ($query) use ($data, $vehicle) {
+            
+            if (isset($data['vehiclePlate']))
+                $query->where('vehicle_id', $vehicle[0]->id);
+
+        })
+
+        ->paginate($totalPage);
+        //->toSql();dd($historics);
+
+        return $historics;
+    }
+
 }

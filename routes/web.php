@@ -56,6 +56,9 @@ Route::group(['middleware' => 'auth'], function () {
 		Route::get('/historicsPeriod', 'MaintenancesController@historicsPeriod');
 		Route::any('/maintenancesSearch', 'MaintenancesController@searchPeriod')->name('maintenances.search');
 		Route::any('/historicsPeriodPrint','MaintenancesController@print')->name('maintenances.print');
+		Route::get('/historicsByCar', 'MaintenancesController@historicsByCar');
+		Route::any('/maintenancesByCarSearch', 'MaintenancesController@search')->name('maintenancesByCar.search');
+		Route::any('/historicsPeriodByCarPrint/{id}','MaintenancesController@printByCar')->name('maintenancesByCar.print');
 
 	Route::resource('vehicleTypes', 'VehicleTypesController');
 

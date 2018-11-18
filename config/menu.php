@@ -55,7 +55,7 @@ Menu::macro('sidebar', function () {
             ->add(Menu::new()->prepend('<a href="#"><i class="fa fa-wrench"></i><span>Manutenções</span> <i class="fa fa-angle-left pull-right"></i></a>')
                     ->addParentClass('treeview')
                     ->add(Link::to('/historicsPeriod', '<i class="fa fa-calendar"></i><span>Por Período</span>'))->addClass('treeview-menu')
-                    ->add(Link::to('/historicsvehicle', '<i class="fa fa-car"></i><span>Por Veículo</span>'))->addClass('treeview-menu')
+                    ->add(Link::to('/historicsByCar', '<i class="fa fa-car"></i><span>Por Veículo</span>'))->addClass('treeview-menu')
                 )
             ->addParentClass('treeview')
             ->add(Link::to('/historicsOilChanges', '<i class="fa fa-tint"></i><span>Troca de óleo</span>'))->addClass('treeview-menu')
