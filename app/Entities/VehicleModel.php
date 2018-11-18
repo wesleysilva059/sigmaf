@@ -23,11 +23,11 @@ class VehicleModel extends Model implements Transformable
     protected $fillable = ['name', 'make_id'];
 
     public function make(){
-        return $this->belongsTo(make::class);
+        return $this->belongsTo(Make::class);
     }
     
     public function vehicle(){
-        return $this->hasMany(vehicle::class);
+        return $this->hasMany(Vehicle::class);
     }
 
     public function maintenance(){

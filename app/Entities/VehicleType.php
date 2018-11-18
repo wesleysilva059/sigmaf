@@ -23,7 +23,7 @@ class VehicleType extends Model implements Transformable
     protected $fillable = ['name','vehicleSize'];
 
     public function vehicle(){
-        return $this->hasMany(vehicle::class);
+        return $this->hasMany(Vehicle::class);
     }
 
 }

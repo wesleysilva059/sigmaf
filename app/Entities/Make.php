@@ -23,7 +23,7 @@ class Make extends Model implements Transformable
     protected $fillable = ['name'];
 
     public function vehicleModel(){
-        return $this->hasMany(vehicleModel::class, 'vehicleModel_id');
+        return $this->hasMany(VehicleModel::class, 'vehicleModel_id');
     }
 
 }
