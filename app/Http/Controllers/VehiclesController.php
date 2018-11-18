@@ -85,7 +85,8 @@ class VehiclesController extends Controller
     {
         $currentYear = date('Y');
 
-        $vehicles = $this->repository->first();
+        $vehicles = $this->repository->orderBy('id','desc')->first();
+        //$vehicles = Student::orderBy('id', 'desc')->first();
         
         if(!is_null($vehicles)){
             $idNextVehicle = $vehicles->id + 1;
@@ -136,7 +137,7 @@ class VehiclesController extends Controller
      */
     public function store(VehicleCreateRequest $request)
     {
-        dd($request);
+        //dd($request);
         try {
 
             $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_CREATE);

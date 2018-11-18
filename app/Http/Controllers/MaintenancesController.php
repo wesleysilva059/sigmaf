@@ -297,10 +297,19 @@ class MaintenancesController extends Controller
     {
         $dataForm = $request->except('_token');
 
-        $Date_init = explode('-', $dataForm['date_init']);
-        $date_init = $Date_init[2]. '/' . $Date_init[1] . '/' . $Date_init[0];
-        $Date_end = explode('-', $dataForm['date_end']);
-        $date_end = $Date_end[2]. '/' . $Date_end[1] . '/' . $Date_end[0];
+        if(isset($dataForm['date_init'])){
+            $Date_init = explode('-', $dataForm['date_init']);
+            $date_init = $Date_init[2]. '/' . $Date_init[1] . '/' . $Date_init[0];    
+        } else {
+            $date_init = 'NULL';
+        }
+        
+        if(isset($dataForm['date_end'])){
+            $Date_end = explode('-', $dataForm['date_end']);
+            $date_end = $Date_end[2]. '/' . $Date_end[1] . '/' . $Date_end[0];
+        } else {
+            $date_end = 'NULL';
+        }
                 
 
         $historics = $maintenances->search($dataForm, '15');

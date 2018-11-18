@@ -20,10 +20,10 @@
 					 	<thead>
 					 		<tr>
 					 			<th width="10%">#</th>
-					 			<th width="20%">Placa</th>
-					 			<th width="10%">Marca/Modelo</th>
+					 			<th width="10%">Placa</th>
+					 			<th width="25%">Marca/Modelo</th>
 					 			<th width="10%">Tipo</th>
-					 			<th width="10%">Secretaria / Orgão</th>
+					 			<th width="25%">Secretaria / Orgão</th>
 					 			<th width="10%">Status</th>
 					 			<th width="20%">Opções</th>
 					 		</tr>

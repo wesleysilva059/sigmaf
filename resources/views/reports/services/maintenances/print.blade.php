@@ -13,7 +13,9 @@
                 width: 250px;
                 align-content: center;">
 		<h1>Relatório de Manutenção Por Período</h1>
-		<h3>{{$date_init}} a {{$date_end}}</h3>
+		@if(isset($date_init) && isset($date_end))
+			<h3>{{$date_init}} a {{$date_end}}</h3>
+		@endif
 	</head>
 	<hr>
 	<div class="row">
