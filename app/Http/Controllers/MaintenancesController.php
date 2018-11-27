@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Entities\Maintenance;
+use App\Entities\Vehicle;
 use App\Http\Requests;
 use App\Http\Requests\MaintenanceCreateRequest;
 use App\Http\Requests\MaintenanceUpdateRequest;
@@ -152,6 +153,10 @@ class MaintenancesController extends Controller
 
             $maintenance = $this->repository->create($request->all());
 
+            $vehicle = Vehicle::find($request->vehicle_id);
+            $vehicle->status = 2;
+            $vehicle->save();
+            
             $response = [
                 'message' => 'Maintenance created.',
                 'data'    => $maintenance->toArray(),

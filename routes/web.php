@@ -27,6 +27,7 @@ Route::group(['middleware' => 'auth'], function () {
 
 	Route::resource('vehicles', 'VehiclesController');
 		Route::get('vehicle/create', 'VehiclesController@create')->name('vehicle.create');
+		Route::post('vehicles/{id}', 'VehiclesController@update')->name('vehicles.update');
 		Route::get('/getVehicleModels/{make_id}', 'VehiclesController@getVehicleModels');
 		Route::get('/getCostCenters/{departmente_id}', 'VehiclesController@getCostCenter');
 

@@ -37,7 +37,7 @@ class Specification extends Model implements Transformable
     ];
 
     public function vehicle(){
-        return $this->belongsTo(vehicle::class);
+        return $this->belongsTo(Vehicle::class);
     }
 
 }

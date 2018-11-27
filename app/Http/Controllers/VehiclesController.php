@@ -14,6 +14,8 @@ use App\Repositories\MakeRepository;
 use App\Repositories\VehicleModelRepository;
 use App\Repositories\VehicleRepository;
 use App\Repositories\VehicleTypeRepository;
+use App\Repositories\InsuranceRepository;
+use App\Repositories\SpecificationRepository;
 use App\Services\VehicleService;
 use App\Validators\VehicleValidator;
 use Illuminate\Http\Request;
@@ -46,6 +48,8 @@ class VehiclesController extends Controller
     protected $vehicleTypeRepository;
     protected $departmentRepository;
     protected $costCenterRepository;
+    protected $insuranceRepository;
+    protected $specificationRepository;
     /**
      * VehiclesController constructor.
      *
@@ -53,16 +57,18 @@ class VehiclesController extends Controller
      * @param VehicleValidator $validator
      * @param VehicleService $service
      */
-    public function __construct(VehicleRepository $repository, VehicleValidator $validator, VehicleService $service, MakeRepository $makeRepository, VehicleTypeRepository $vehicleTypeRepository, DepartmentRepository $departmentRepository, CostCenterRepository $costCenterRepository, VehicleModelRepository $vehicleModel)
+    public function __construct(VehicleRepository $repository, VehicleValidator $validator, VehicleService $service, MakeRepository $makeRepository, VehicleTypeRepository $vehicleTypeRepository, DepartmentRepository $departmentRepository, CostCenterRepository $costCenterRepository, VehicleModelRepository $vehicleModel, SpecificationRepository $specificationRepository, InsuranceRepository $insuranceRepository)
     {
-        $this->repository = $repository;
-        $this->validator  = $validator;
-        $this->service = $service;
-        $this->makeRepository = $makeRepository;
-        $this->vehicleTypeRepository = $vehicleTypeRepository;
-        $this->departmentRepository = $departmentRepository;
-        $this->costCenterRepository = $costCenterRepository;
-        $this->vehicleModel = $vehicleModel;
+        $this->repository               = $repository;
+        $this->validator                = $validator;
+        $this->service                  = $service;
+        $this->makeRepository           = $makeRepository;
+        $this->vehicleTypeRepository    = $vehicleTypeRepository;
+        $this->departmentRepository     = $departmentRepository;
+        $this->costCenterRepository     = $costCenterRepository;
+        $this->vehicleModel             = $vehicleModel;
+        $this->insuranceRepository      = $insuranceRepository;
+        $this->specificationRepository  = $specificationRepository;
     }
 
     /**
@@ -222,16 +228,7 @@ class VehiclesController extends Controller
      */
     public function show($id)
     {
-        $vehicle = $this->repository->find($id);
-
-        if (request()->wantsJson()) {
-
-            return response()->json([
-                'data' => $vehicle,
-            ]);
-        }
-
-        return view('vehicles.show', compact('vehicle'));
+        
     }
 
     /**
@@ -245,7 +242,29 @@ class VehiclesController extends Controller
     {
         $vehicle = $this->repository->find($id);
 
-        return view('vehicles.edit', compact('vehicle'));
+        $insurance =$this->insuranceRepository->findByField('vehicle_id' , $vehicle->id);
+
+        $specification = $this->specificationRepository->findByField('vehicle_id', $vehicle->id);
+
+        $currentYear = date('Y');
+
+        $make_list = $this->makeRepository->all(['id','name']);
+
+        $vehicleType_list = $this->vehicleTypeRepository->all(['id','name']);
+
+        $department_list = $this->departmentRepository->all(['id','name']);
+
+        $costCenter_list = $this->costCenterRepository->all(['id','name']);
+
+        //dd($vehicle, $insurance, $specification);
+        if (request()->wantsJson()) {
+
+            return response()->json([
+                'data' => $vehicle,
+            ]);
+        }
+
+        return view('vehicles.edit', compact('vehicle','insurance','specification','make_list','vehicleType_list','department_list','costCenter_list','currentYear'));
     }
 
     /**
@@ -260,11 +279,65 @@ class VehiclesController extends Controller
      */
     public function update(VehicleUpdateRequest $request, $id)
     {
-        try {
+       try {
 
             $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_UPDATE);
+            $vehicle = Vehicle::find($id);
+            $vehicle->vehiclePlate = $request->get('vehiclePlate');
+            $vehicle->vehicleColor = $request->get('vehicleColor');
+            $vehicle->yearManufactory = $request->get('yearManufactory');
+            $vehicle->yearModel = $request->get('yearModel');
+            $vehicle->purchaseDate = $request->get('purchaseDate');
+            $vehicle->renavam = $request->get('renavam');
+            $vehicle->chassis = $request->get('chassis');
+            $vehicle->typeFuel = $request->get('typeControl');
+            $vehicle->typeControl = $request->get('typeFuel');
+            $vehicle->status = $request->get('status');
+            $vehicle->vehicleModel_id = $request->get('vehicleModel_id');
+            $vehicle->costCenter_id = $request->get('costCenter_id');
+            $vehicle->vehicleType_id = $request->get('vehicleType_id');
+            $vehicle->comments = $request->get('comments'); 
+            $vehicle->save();
+            
+            $insurances = Insurance::all()->where('vehicle_id', $vehicle->id);
+            //dd($insurances);
+            foreach ($insurances as $insurance) {
+                    $id = $insurance->id;
+                }    
+            $insurance = Insurance::find($id);            
+            $insurance->numInsurancePolicy = $request->get('numInsurancePolicy');
+            $insurance->insurer = $request->get('insurer');
+            $insurance->insuranceBroker = $request->get('insuranceBroker');
+            $value = (double)$request->get('value');
+            $insurance->value = number_format($value, 2, '.', '');
+            $insurance->initEffectiveDate = $request->get('initEffectiveDate');
+            $insurance->endEffectiveDate = $request->get('endEffectiveDate');
+            $insurance->save();
 
-            $vehicle = $this->repository->update($request->all(), $id);
+            $specifications = Specification::all()->where('vehicle_id', $vehicle->id);
+            //dd($insurances);
+            foreach ($specifications as $specification) {
+                    $id = $specification->id;
+                }    
+            $specification = Specification::find($id); 
+            $specification->engine = $request->get('engine');
+            $specification->engineNumber = $request->get('engineNumber');
+            $specification->tireWeight = $request->get('tireWeight');
+            $specification->frontTires = $request->get('frontTires');
+            $specification->backTires = $request->get('backTires');
+            $specification->backTires = $request->get('backTires');
+            $specification->protector = $request->get('protector');
+            $specification->innerTires = $request->get('innerTires');
+            $specification->frontCanvasPad = $request->get('frontCanvasPad');
+            $specification->backCanvasPad = $request->get('backCanvasPad');
+            $specification->frontTambor = $request->get('frontTambor');
+            $specification->backTambor = $request->get('backTambor');
+            $specification->frontBumper = $request->get('frontBumper');
+            $specification->backBumper = $request->get('backBumper');
+            $specification->vehicleBodywork = $request->get('vehicleBodywork');
+            $specification->spring = $request->get('spring');
+            $specification->currentKmHr = $request->get('currentKmHr');
+            $specification->save();
 
             $response = [
                 'message' => 'Vehicle updated.',

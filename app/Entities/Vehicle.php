@@ -92,27 +92,71 @@ class Vehicle extends Model implements Transformable
         $status = $this->attributes['status'];
 
         switch ($status) {
-            case "1":
+            case "0":
                 $status = "Ativo";
                 break;
 
-            case "2":
+            case "1":
                 $status = "Inativo";
                 break;
 
-            case "3":
+            case "2":
                 $status = "Em Manutenção";
                 break;
 
-            case "4":
+            case "3":
                 $status = "Doação";
                 break;
 
-            case "5":
+            case "4":
                 $status = "Leilão";
                 break;
         }
         return $status;
+    }
+
+    public function getFormatedTypeFuelAttribute()
+    {
+        $typeFuel = $this->attributes['typeFuel'];
+
+        switch ($typeFuel) {
+            case "1":
+                $typeFuel = "Gasolina";
+                break;
+
+            case "2":
+                $typeFuel = "Alcool";
+                break;
+
+            case "3":
+                $typeFuel = "Bi-Combustível";
+                break;
+
+            case "4":
+                $typeFuel = "Diesel";
+                break;
+
+            case "5":
+                $typeFuel = "Diesel S10";
+                break;
+        }
+        return $typeFuel;
+    }
+
+     public function getFormatedTypeControlAttribute()
+    {
+        $typeControl = $this->attributes['typeControl'];
+
+        switch ($typeControl) {
+            case "0":
+                $typeControl = "Km";
+                break;
+
+            case "1":
+                $typeControl = "Hr";
+                break;
+        }
+        return $typeControl;
     }
 
 }

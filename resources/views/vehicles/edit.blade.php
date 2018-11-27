@@ -65,26 +65,28 @@
                 </ul>
             </div>
 
-            <form role="form" action="{{route('vehicles.store')}}" method="post">
+            <form role="form" action="{{route('vehicles.update', $vehicle->id)}}" method="post">
+                {{method_field('patch')}}
                 {{ csrf_field() }}
                 <div class="tab-content">
                     <div class="tab-pane active" role="tabpanel" id="step1">
   
 						<!-- area de campos do form -->	  
 						<hr />	  
+						
 							<div class="row">	    
 								<div class="form-group col-md-2">	      
 									<label for="vehicle_id">Codigo</label>	      
-									<input type="text" class="form-control" id="vehicle_id" name="vehicle_id" value="{{$idNextVehicle}}" disabled>
+									<input type="text" class="form-control" id="vehicle_id" name="vehicle_id" value="{{$vehicle->id}}" disabled>
 								</div>	
 					    		<div class="form-group col-md-2">
 					    			<label for="vehiclePlate">PLACA</label>
-					    			<input type="text" class="form-control" id="vehiclePlate" name="vehiclePlate" required>
+					    			<input type="text" class="form-control" id="vehiclePlate" name="vehiclePlate" value="{{$vehicle->vehiclePlate}}" required>
 					    		</div>	
 					    		<div class="form-group col-md-4">	      
 					    			<label for="make_id">Marca</label>
 					    			<select class="form-control make_id" id="make_id" name="make_id" required>
-					                    <option>Escolha...</option>
+					                    <option value="{{$vehicle->vehicleModel->make->id}}">{{$vehicle->vehicleModel->make->name}}</option>
 					                    @foreach($make_list as $make)
 					                    <option value="{{$make->id}}">{{$make->name}}</option>
 										@endforeach
@@ -94,18 +96,20 @@
 					    		<div class="form-group col-md-4">	      
 					    			<label for="vehicleModel_id">Modelo</label>	      
 					    			<select class="form-control vehicleModel_id" id="vehicleModel_id" name="vehicleModel_id" required>
+					                	<option value="{{$vehicle->vehicleModel->id}}">
+					                		{{$vehicle->vehicleModel->name}}</option>
 					                </select>
 					    		</div>	  
 					    	</div>	  	  
 					    	<div class="row">	    
 					    		<div class="form-group col-md-3">	      
 					    			<label for="vehicleColor">Cor</label>	      
-					    			<input type="text" class="form-control" id="vehicleColor" name="vehicleColor" value="{{$vehicles->vehicleColor or old('vehicleColor')}}" required>
+					    			<input type="text" class="form-control" id="vehicleColor" name="vehicleColor" value="{{$vehicle->vehicleColor or old('vehicleColor')}}" required>
 					    		</div>	
 					    		<div class="form-group col-md-3">	      
 					    			<label for="yearModel">Ano Modelo</label>	      
 					    			<select class="form-control" id="yearModel" name="yearModel" required>
-					                    <option value="{{$currentYear}}">{{$currentYear}}</option>
+					                    <option value="{{$vehicle->yearModel}}">{{$vehicle->yearModel}}</option>
 					                    @for($i = 1;$i <= 30; $i++)
 					                    	<option value="{{$currentYear - $i}}">{{$currentYear - $i}}</option>
 					                    @endfor
@@ -114,7 +118,7 @@
 					    		<div class="form-group col-md-3">	      
 					    			<label for="yearManufactory">Ano Fabricação</label>	      
 					    			<select class="form-control" id="yearManufactory" name="yearManufactory" required>
-					                    <option value="{{$currentYear}}">{{$currentYear}}</option>
+					                    <option value="{{$vehicle->yearManufactory}}">{{$vehicle->yearManufactory}}</option>
 					                    @for($i = 1;$i <= 30; $i++)
 					                    	<option value="{{$currentYear - $i}}">{{$currentYear - $i}}</option>
 					                    @endfor
@@ -123,7 +127,7 @@
 					    		<div class="form-group col-md-3">	      
 					    			<label for="vehicleType_id">Tipo de Veículo</label>	      
 					    			<select class="form-control" id="vehicleType_id" name="vehicleType_id" required>
-					                    <option>Escolha...</option>
+					                    <option value="{{$vehicle->vehicleType->id}}">{{$vehicle->vehicleType->name}}</option>
 					                    @foreach($vehicleType_list as $vehicleType)
 					                    <option value="{{$vehicleType->id}}">{{$vehicleType->name}}</option>
 										@endforeach
@@ -133,22 +137,22 @@
 					    	<div class="row">	    
 					    		<div class="form-group col-md-4">	      
 					    			<label for="purchaseDate">Data de Aquisição</label>
-    								<input type="date" class="form-control" name="purchaseDate" id="purchaseDate" value="{{$vehicles->purchaseDate or old('purchaseDate')}}" required>
+    								<input type="date" class="form-control" name="purchaseDate" id="purchaseDate" value="{{$vehicle->purchaseDate or old('purchaseDate')}}" required>
 					    		</div>	    	    
 					    		<div class="form-group col-md-4">	      
 					    			<label for="renavam">Renavam</label>	      
-					    			<input type="text" class="form-control" id="renavam" name="renavam" value="{{$vehicles->renavam or old('renavam')}}" required>
+					    			<input type="text" class="form-control" id="renavam" name="renavam" value="{{$vehicle->renavam or old('renavam')}}" required>
 					    		</div>	    	    
 					    		<div class="form-group col-md-4">	      
 					    			<label for="chassis">Chassi</label>	      
-					    			<input type="text" class="form-control" id="chassis" name="chassis" value="{{$vehicles->chassis or old('chassis')}}" required>
+					    			<input type="text" class="form-control" id="chassis" name="chassis" value="{{$vehicle->chassis or old('chassis')}}" required>
 					    		</div>		  
 					    	</div>
 					    	<div class="row">	    
 					    		<div class="form-group col-md-4">	      
 					    			<label for="typeFuel">Combustível</label>	      
 					    			<select class="form-control" name="typeFuel" id="typeFuel" required>
-					                    <option>Escolha...</option>
+					                    <option value="{{$vehicle->typeFuel}}">{{$vehicle->formatedtypeFuel}}</option>
 					                    <option value="1">Gasolina</option>
 					                    <option value="2">Alcool</option>
 					                    <option value="3">Bi-Combustível</option>
@@ -159,16 +163,16 @@
 					    		<div class="form-group col-md-4">	      
 					    			<label for="typeControl">Controle por:</label>	      
 					    			<select class="form-control" name="typeControl" id="typeControl" required>
-					                    <option>Escolha...</option>
-					                    <option value="1">Km</option>
-					                    <option value="2">Hr</option>			                    
+					                    <option value="{{$vehicle->typeControl}}">{{$vehicle->formatedtypeControl}}</option>
+					                    <option value="0">Km</option>
+					                    <option value="1">Hr</option>			                    
 					                </select> 
 					    		</div>	  
 					    	</div>
 					    	<div class="row">	    
 					    		<div class="form-group col-md-4">	      
 					    			<label for="department">Secretaria / Orgão</label>	     <select class="form-control" name="department" id="department" required>
-					                    <option>Escolha...</option>
+					                    <option value="{{$vehicle->costCenter->department->id}}">{{$vehicle->costCenter->department->name}}</option>
 					                    @foreach($department_list as $department)
 					                    <option value="{{$department->id}}">{{$department->name}}</option>
 										@endforeach
@@ -177,16 +181,17 @@
 					    		<div class="form-group col-md-4">	      
 					    			<label for="costCenter_id">Centro de Custo</label>	      
 					    			<select class="form-control" name="costCenter_id" id="costCenter_id" required>
+					    				<option value="{{$vehicle->costCenter->id}}">{{$vehicle->costCenter->name}}</option>
 					                </select> 
 					    		</div>	    	    
 					    		<div class="form-group col-md-4">	      
-					    			<label for="status">Status Inicial</label>	      
+					    			<label for="status">Status</label>	      
 					    			<select class="form-control" name="status" id="status" required>
-					                    <option>Escolha...</option>
+					                    <option value="{{$vehicle->status}}">{{$vehicle->formatedstatus}}</option>
 					                    <option value="0">Ativo</option>
 					                    <option value="1">Inativo</option>
 					                    <option value="2">Em manutenção</option>
-					                    <option value="3">Doação</option>
+					                 	<option value="3">Doação</option>
 					                    <option value="4">Leilão</option>
 					                </select>
 					    		</div>	  
@@ -204,43 +209,44 @@
 	  
 						<!-- area de campos do form -->	  
 						<hr />	  
+						@foreach($insurance as $insurance)
 							<div class="row">	    
 								<div class="form-group col-md-2">	      
 									<label for="name">Codigo do Veículo</label>	      
-									<input type="text" class="form-control" value="{{$idNextVehicle}}" disabled>
+									<input type="text" class="form-control" value="{{$vehicle->id}}" disabled>
 								</div>	
 					    		<div class="form-group col-md-6">
 					    			<label for="numInsurancePolicy">Numero Apolice</label>
-					    			<input type="text" class="form-control" id="numInsurancePolicy" name="numInsurancePolicy">
+					    			<input type="text" class="form-control" id="numInsurancePolicy" value="{{$insurance->numInsurancePolicy}}" name="numInsurancePolicy">
 					    		</div>	  
 					    	</div>	  	  
 					    	<div class="row">	    
 					    		<div class="form-group col-md-4">	      
 					    			<label for="insurer">Seguradora</label>	      
-					    			<input type="text" class="form-control" id="insurer" name="insurer" value="{{$vehicles->insurer or old('insurer')}}">
+					    			<input type="text" class="form-control" id="insurer" name="insurer" value="{{$insurance->insurer or old('insurer')}}">
 					    		</div>	
 					    		<div class="form-group col-md-4">	      
 					    			<label for="insuranceBroker">Corretora de Seguro</label>	      
-					    			<input type="text" class="form-control" id="insuranceBroker" name="insuranceBroker" value="{{$vehicles->insuranceBroker or old('insuranceBroker')}}">
+					    			<input type="text" class="form-control" id="insuranceBroker" name="insuranceBroker" value="{{$insurance->insuranceBroker or old('insuranceBroker')}}">
 					    		</div>
 					    	</div>	  	  
 					    	<div class="row">	    
 					    		<div class="form-group col-md-4">	      
 					    			<label for="value">Valor</label>	      
-					    			<input type="text" class="form-control" id="value" name="value" value="{{$vehicles->value or old('value')}}">
+					    			<input type="text" class="form-control" id="value" name="value" value="{{number_format($insurance->value, 2, ',','.')}}">
 					    		</div>
 
 					    		<div class="form-group col-md-4">	      
 					    			<label for="initEffectiveDate">Data Vigência Inicial</label>
-    								<input type="date" class="form-control" name="initEffectiveDate" id="initEffectiveDate" value="{{$vehicles->initEffectiveDate or old('initEffectiveDate')}}">
+    								<input type="date" class="form-control" name="initEffectiveDate" id="initEffectiveDate" value="{{$insurance->initEffectiveDate or old('initEffectiveDate')}}">
 					    		</div>	    	    
 					    			    	    
 					    		<div class="form-group col-md-4">	      
 					    			<label for="endEffectiveDate">Data Vigência Final</label>
-    								<input type="date" class="form-control" name="endEffectiveDate" id="endEffectiveDate" value="{{$vehicles->endEffectiveDate or old('endEffectiveDate')}}">
+    								<input type="date" class="form-control" name="endEffectiveDate" id="endEffectiveDate" value="{{$insurance->endEffectiveDate or old('endEffectiveDate')}}">
 					    		</div>		  
 					    	</div>
-
+						@endforeach
                         <ul class="list-inline pull-right">
                             <li><button type="button" class="btn btn-default prev-step">Voltar</button></li>
                             <li><button type="button" class="btn btn-primary next-step">Salvar e Continuar</button></li>
@@ -249,86 +255,87 @@
                     <div class="tab-pane" role="tabpanel" id="step3">
  
 						<!-- area de campos do form -->	  
-						<hr />	  
+						<hr />
+						@foreach($specification as $specification)	  
 							<div class="row">	    
 								<div class="form-group col-md-2">	      
 									<label>Codigo do Veículo</label>	      
-									<input type="text" class="form-control" value="{{$idNextVehicle}}" disabled>
+									<input type="text" class="form-control" value="{{$vehicle->id}}" disabled>
 								</div>
 								<div class="form-group col-md-2">	      
 									<label for="currentKmHr">Km/Hr Atual</label>	      
-									<input type="text" class="form-control" name="currentKmHr" id="currentKmHr" required>
+									<input type="text" class="form-control" name="currentKmHr" id="currentKmHr" value="{{$specification->currentKmHr}}" required>
 								</div>
 					    		<div class="form-group col-md-4">	      
 					    			<label for="engine">Motorização</label>	      
-					    			<input type="text" class="form-control" name="engine" id="engine">
+					    			<input type="text" class="form-control" name="engine" id="engine" value="{{$specification->engine}}">
 					    		</div>	
 					    		<div class="form-group col-md-4">
 					    			<label for="engineNumber">Numero do Motor</label>
-					    			<input type="text" class="form-control" id="engineNumber" name="engineNumber">
+					    			<input type="text" class="form-control" id="engineNumber" name="engineNumber" value="{{$specification->engineNumber}}">
 					    		</div>  
 					    	</div>	  	  
 					    	<div class="row">	    
 					    		<div class="form-group col-md-4">	      
 					    			<label for="tyreWeight">Gramatura dos Pneus</label>	      
-					    			<input type="text" class="form-control" id="tyreWeight" name="tyreWeight" value="{{$vehicles->tyreWeight or old('tyreWeight')}}">
+					    			<input type="text" class="form-control" id="tyreWeight" name="tyreWeight" value="{{$specification->tyreWeight or old('tyreWeight')}}">
 					    		</div>	
 					    		<div class="form-group col-md-4">	      
 					    			<label for="frontTires">Pneus Dianteiros</label>	      
-					    			<input type="text" class="form-control" id="frontTires" name="frontTires" value="{{$vehicles->frontTires or old('frontTires')}}">
+					    			<input type="text" class="form-control" id="frontTires" name="frontTires" value="{{$specification->frontTires or old('frontTires')}}">
 					    		</div>
 					    		<div class="form-group col-md-4">	      
 					    			<label for="backTires">Pneus Traseiros</label>	      
-					    			<input type="text" class="form-control" id="backTires" name="backTires" value="{{$vehicles->backTires or old('backTires')}}">
+					    			<input type="text" class="form-control" id="backTires" name="backTires" value="{{$specification->backTires or old('backTires')}}">
 					    		</div>
 					    	</div>	  	  
 					    	<div class="row">	    
 					    		<div class="form-group col-md-3">	      
 					    			<label for="protector">Protetor</label>	      
-					    			<input type="text" class="form-control" id="protector" name="protector" value="{{$vehicles->protector or old('protector')}}">
+					    			<input type="text" class="form-control" id="protector" name="protector" value="{{$specification->protector or old('protector')}}">
 					    		</div>
 					    		<div class="form-group col-md-3">	      
 					    			<label for="innerTires">Camara de Ar</label>	      
-					    			<input type="text" class="form-control" id="innerTires" name="innerTires" value="{{$vehicles->innerTires or old('innerTires')}}">
+					    			<input type="text" class="form-control" id="innerTires" name="innerTires" value="{{$specification->innerTires or old('innerTires')}}">
 					    		</div>
 					    		<div class="form-group col-md-3">	      
 					    			<label for="frontCanvasPad">Lona Pastilha Dianteira</label>	      
-					    			<input type="text" class="form-control" id="frontCanvasPad" name="frontCanvasPad" value="{{$vehicles->frontCanvasPad or old('frontCanvasPad')}}">
+					    			<input type="text" class="form-control" id="frontCanvasPad" name="frontCanvasPad" value="{{$specification->frontCanvasPad or old('frontCanvasPad')}}">
 					    		</div>
 					    		<div class="form-group col-md-3">	      
 					    			<label for="backCanvasPad">Lona Pastilha Traseora</label>	      
-					    			<input type="text" class="form-control" id="backCanvasPad" name="backCanvasPad" value="{{$vehicles->backCanvasPad or old('backCanvasPad')}}">
+					    			<input type="text" class="form-control" id="backCanvasPad" name="backCanvasPad" value="{{$specification->backCanvasPad or old('backCanvasPad')}}">
 					    		</div>	  
 					    	</div>
 					    	<div class="row">	    
 					    		<div class="form-group col-md-3">	      
 					    			<label for="frontTambor">Tambor Dianteiro</label>	      
-					    			<input type="text" class="form-control" id="frontTambor" name="frontTambor" value="{{$vehicles->frontTambor or old('frontTambor')}}">
+					    			<input type="text" class="form-control" id="frontTambor" name="frontTambor" value="{{$specification->frontTambor or old('frontTambor')}}">
 					    		</div>
 					    		<div class="form-group col-md-3">	      
 					    			<label for="backTambor">Tambor Traseiro</label>	      
-					    			<input type="text" class="form-control" id="backTambor" name="backTambor" value="{{$vehicles->backTambor or old('backTambor')}}">
+					    			<input type="text" class="form-control" id="backTambor" name="backTambor" value="{{$specification->backTambor or old('backTambor')}}">
 					    		</div>
 					    		<div class="form-group col-md-3">	      
 					    			<label for="frontBumper">Amortecedor Dianteiro</label>	      
-					    			<input type="text" class="form-control" id="frontBumper" name="frontBumper" value="{{$vehicles->frontBumper or old('frontBumper')}}">
+					    			<input type="text" class="form-control" id="frontBumper" name="frontBumper" value="{{$specification->frontBumper or old('frontBumper')}}">
 					    		</div>
 					    		<div class="form-group col-md-3">	      
 					    			<label for="backBumper">Amortecedor Traseiro</label>	      
-					    			<input type="text" class="form-control" id="backBumper" name="backBumper" value="{{$vehicles->backBumper or old('backBumper')}}">
+					    			<input type="text" class="form-control" id="backBumper" name="backBumper" value="{{$specification->backBumper or old('backBumper')}}">
 					    		</div>	  
 					    	</div>
 					    	<div class="row">	    
 								<div class="form-group col-md-4">	      
 					    			<label for="vehicleBodywork">Carroceria</label>	      
-					    			<input type="text" class="form-control" name="vehicleBodywork" id="vehicleBodywork">
+					    			<input type="text" class="form-control" name="vehicleBodywork" id="vehicleBodywork" value="{{$specification->vehicleBodywork or old('vehicleBodywork')}}">
 					    		</div>	
 					    		<div class="form-group col-md-4">
 					    			<label for="spring">Molas</label>
-					    			<input type="text" class="form-control" id="spring" name="spring">
+					    			<input type="text" class="form-control" id="spring" name="spring" value="{{$specification->spring or old('spring')}}">
 					    		</div>  
 					    	</div>
-
+						@endforeach
                         <ul class="list-inline pull-right">
                             <li><button type="button" class="btn btn-default prev-step">Voltar</button></li>
                             <li><button type="button" class="btn btn-primary btn-info-full next-step">Salvar e continuar</button></li>
@@ -341,13 +348,13 @@
 							<div class="row">	    
 								<div class="form-group col-md-2">	      
 									<label>Codigo do Veículo</label>	      
-									<input type="text" class="form-control" value="{{$idNextVehicle}}" disabled>
+									<input type="text" class="form-control" value="{{$vehicle->id}}" disabled>
 								</div>	  
 					    	</div>	  	  
 					    	<div class="row">	    
 					    		<div class="form-group col-md-10">	      
 					    			<label for="comments">Observações</label>	      
-					    			<textarea class="form-control" id="comments" name="comments" rows="5"></textarea>
+					    			<textarea class="form-control" id="comments" name="comments" rows="5" value="{{$vehicle->comments}}"></textarea>
 					    		</div>	
 					    	</div>	  	  
 					    </form>

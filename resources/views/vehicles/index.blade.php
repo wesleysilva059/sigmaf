@@ -38,13 +38,15 @@
 					 			<th>{{ $vehicle->costCenter->department->name }}</th>
 					 			<th>{{ $vehicle->formatedstatus }}</th>
 					 			<td>
-					 				<a href="#" class="btn btn-info">
+					 				<a href="{{route('vehicles.edit', $vehicle->id)}}" class="btn btn-info">
 					 					<i class="fa fa-wrench"></i>
 					 				</a>
-					 				<a href="{{ route('vehicles.destroy', $vehicle->id)}}" class="btn btn-danger">
-					 					<i class="fa fa-trash"></i>
-					 				</a>
-					 			</td>
+					 				<form action="{{ route('vehicles.destroy', $vehicle->id)}}" method="post">
+                  					@csrf
+                  					@method('DELETE')
+                  						<button class="btn btn-danger" type="submit"><i class="fa fa-trash"></i></button>
+                					</form>
+   					 			</td>
 					 		</tr>
 					 	</tbody>
 					 	@endforeach
