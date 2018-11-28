@@ -3,6 +3,11 @@
  Gestão de Veículos
 @endsection
 @section('main-content')
+	@if(session()->get('success'))
+    <div class="alert alert-success">
+      {{ session()->get('success') }}  
+    </div><br />
+  @endif
  	<div style="float:right;">
  		<a href="{{ route('vehicle.create') }}">
  		<button type="button" class="btn btn-block btn-primary">
@@ -19,7 +24,7 @@
 						style="width:100%" id="vehicles-table">
 					 	<thead>
 					 		<tr>
-					 			<th width="10%">#</th>
+					 			<th width="5%">#</th>
 					 			<th width="10%">Placa</th>
 					 			<th width="25%">Marca/Modelo</th>
 					 			<th width="10%">Tipo</th>

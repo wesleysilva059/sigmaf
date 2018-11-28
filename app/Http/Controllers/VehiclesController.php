@@ -156,8 +156,8 @@ class VehiclesController extends Controller
             $vehicle->purchaseDate = $request->get('purchaseDate');
             $vehicle->renavam = $request->get('renavam');
             $vehicle->chassis = $request->get('chassis');
-            $vehicle->typeFuel = $request->get('typeControl');
-            $vehicle->typeControl = $request->get('typeFuel');
+            $vehicle->typeFuel = $request->get('typeFuel');
+            $vehicle->typeControl = $request->get('typeControl');
             $vehicle->status = $request->get('status');
             $vehicle->vehicleModel_id = $request->get('vehicleModel_id');
             $vehicle->costCenter_id = $request->get('costCenter_id');
@@ -197,7 +197,7 @@ class VehiclesController extends Controller
             $specification->save();
 
             $response = [
-                'message' => 'Vehicle created.',
+                'message' => 'Veículo adicionado com sucesso!.',
                 'data'    => $vehicle->toArray(),
             ];
 
@@ -206,7 +206,7 @@ class VehiclesController extends Controller
                 return response()->json($response);
             }
 
-            return redirect()->back()->with('message', $response['message']);
+            return redirect()->route('vehicles.index')->with('message', $response['message']);
         } catch (ValidatorException $e) {
             if ($request->wantsJson()) {
                 return response()->json([
@@ -290,8 +290,8 @@ class VehiclesController extends Controller
             $vehicle->purchaseDate = $request->get('purchaseDate');
             $vehicle->renavam = $request->get('renavam');
             $vehicle->chassis = $request->get('chassis');
-            $vehicle->typeFuel = $request->get('typeControl');
-            $vehicle->typeControl = $request->get('typeFuel');
+            $vehicle->typeFuel = $request->get('typeFuel');
+            $vehicle->typeControl = $request->get('typeControl');
             $vehicle->status = $request->get('status');
             $vehicle->vehicleModel_id = $request->get('vehicleModel_id');
             $vehicle->costCenter_id = $request->get('costCenter_id');
@@ -340,7 +340,7 @@ class VehiclesController extends Controller
             $specification->save();
 
             $response = [
-                'message' => 'Vehicle updated.',
+                'message' => 'Veículo atualizado com sucesso!',
                 'data'    => $vehicle->toArray(),
             ];
 
@@ -349,7 +349,7 @@ class VehiclesController extends Controller
                 return response()->json($response);
             }
 
-            return redirect()->back()->with('message', $response['message']);
+            return redirect()->route('vehicles.index')->with('message', $response['message']);
         } catch (ValidatorException $e) {
 
             if ($request->wantsJson()) {

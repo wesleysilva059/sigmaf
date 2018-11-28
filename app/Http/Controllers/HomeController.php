@@ -50,10 +50,10 @@ class HomeController extends Controller
 
         $maintenances = Maintenance::where('maintenanceStatus_id','<>',7)->paginate($limit = 4);
         
-        $active = $this->vehicleRepository->all()->where('status','1')->count();
+        $active = $this->vehicleRepository->all()->where('status','0')->count();
         $inMaintenance = $this->vehicleRepository->all()->where('status','2')->count();
-        $stopped = $this->vehicleRepository->all()->where('status','3')->count();
-        $auction = $this->vehicleRepository->all()->where('status','4')->count();
+        $stopped = $this->vehicleRepository->all()->where('status','1')->count();
+        $auction = $this->vehicleRepository->all()->where('status','3')->count();
         
         return view('adminlte::home', compact(  'maintenances',
                                                 'today',
