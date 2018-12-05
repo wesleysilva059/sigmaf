@@ -71,10 +71,10 @@ class HomeController extends Controller
         date_default_timezone_set('America/Sao_Paulo');
 
         
-        $active = $this->vehicleRepository->all()->where('status','1')->count();
+        $active = $this->vehicleRepository->all()->where('status','0')->count();
         $inMaintenance = $this->vehicleRepository->all()->where('status','2')->count();
-        $stopped = $this->vehicleRepository->all()->where('status','3')->count();
-        $auction = $this->vehicleRepository->all()->where('status','4')->count();
+        $stopped = $this->vehicleRepository->all()->where('status','1')->count();
+        $auction = $this->vehicleRepository->all()->where('status','3')->count();
    
         $status = collect(
                     [
