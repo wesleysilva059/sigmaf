@@ -196,17 +196,8 @@ class VehiclesController extends Controller
             $specification->currentKmHr = $request->get('currentKmHr');
             $specification->save();
 
-            $response = [
-                'message' => 'Veículo adicionado com sucesso!.',
-                'data'    => $vehicle->toArray(),
-            ];
+            return redirect()->route('vehicles.index')->with('success', 'Veículo adicionado com sucesso');
 
-            if ($request->wantsJson()) {
-
-                return response()->json($response);
-            }
-
-            return redirect()->route('vehicles.index')->with('message', $response['message']);
         } catch (ValidatorException $e) {
             if ($request->wantsJson()) {
                 return response()->json([
@@ -339,17 +330,9 @@ class VehiclesController extends Controller
             $specification->currentKmHr = $request->get('currentKmHr');
             $specification->save();
 
-            $response = [
-                'message' => 'Veículo atualizado com sucesso!',
-                'data'    => $vehicle->toArray(),
-            ];
-
-            if ($request->wantsJson()) {
-
-                return response()->json($response);
-            }
-
-            return redirect()->route('vehicles.index')->with('message', $response['message']);
+            
+            return redirect()->route('vehicles.index')->with('success', 'Veículo alterado com sucesso');
+        
         } catch (ValidatorException $e) {
 
             if ($request->wantsJson()) {
@@ -376,14 +359,6 @@ class VehiclesController extends Controller
     {
         $deleted = $this->repository->delete($id);
 
-        if (request()->wantsJson()) {
-
-            return response()->json([
-                'message' => 'Vehicle deleted.',
-                'deleted' => $deleted,
-            ]);
-        }
-
-        return redirect()->back()->with('message', 'Vehicle deleted.');
+        return redirect()->back()->with('success', 'Veículo deletado com sucesso.');
     }
 }

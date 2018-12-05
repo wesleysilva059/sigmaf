@@ -16,7 +16,7 @@ Route::get('/', 'HomeController@index');
 Route::group(['middleware' => 'auth'], function () {
 
 	Route::resource('users', 'UsersController');
-		Route::get('/user/create' , 'UsersController@create')->name('user.create');
+		//Route::get('/user/create' , 'UsersController@create')->name('user.create');
 
 	Route::resource('permissions', 'PermissionsController');
 
@@ -26,8 +26,8 @@ Route::group(['middleware' => 'auth'], function () {
 		Route::get('/departament/create' , 'DepartmentsController@create')->name('department.create');
 
 	Route::resource('vehicles', 'VehiclesController');
-		Route::get('vehicle/create', 'VehiclesController@create')->name('vehicle.create');
-		Route::post('vehicles/{id}', 'VehiclesController@update')->name('vehicles.update');
+		//Route::get('vehicle/create', 'VehiclesController@create')->name('vehicle.create');
+		//Route::post('vehicles/{id}', 'VehiclesController@update')->name('vehicles.update');
 		Route::get('/getVehicleModels/{make_id}', 'VehiclesController@getVehicleModels');
 		Route::get('/getCostCenters/{departmente_id}', 'VehiclesController@getCostCenter');
 

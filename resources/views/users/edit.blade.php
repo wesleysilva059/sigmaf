@@ -12,45 +12,47 @@
         </ul>
     </div>
 @endif
-<form action="{{route('users.store')}}" method="post" data-toggle="validator">	  
+<form action="{{route('users.update', $user->id)}}" method="post">
+    {{ method_field('patch')}}	  
     {{ csrf_field() }}
     <!-- area de campos do form -->	  
 	<hr />	  
         <div class="row">	    
-			<div class="form-group col-md-8">	      
+			<input type="hidden" value="{{$user->id}}">
+            <div class="form-group col-md-8">	      
 				<label for="name">Nome Completo</label>	      
-				<input type="text" class="form-control" name="name" required>
+				<input type="text" class="form-control" name="name" value="{{$user->name or old('name')}}">
 			</div>	
     		<div class="form-group col-md-4">
     			<label for="birthDate">Data de Nascimento</label>
-    			<input type="date" class="form-control" name="birthDate" required>
+    			<input type="date" class="form-control" name="birthDate" value="{{$user->birthDate or old('birthDate')}}">
     		</div>	  
     	</div>	  	  
     	<div class="row">	    
     		<div class="form-group col-md-5">	      
     			<label for="username">Nome de Usuário</label>	      
-    			<input type="text" class="form-control" name="username">
+    			<input type="text" class="form-control" name="username" value="{{$user->username or old('username')}}">
     		</div>	
     		<div class="form-group col-md-7">	      
     			<label for="email">E-mail</label>	      
-    			<input type="text" class="form-control" name="email" required>
+    			<input type="text" class="form-control" name="email" value="{{$user->email or old('email')}}">
     		</div>	    	    
     	</div>	  	  
     	<div class="row">	    
        		<div class="form-group col-md-6">	      
     			<label for="phone">Telefone Fixo</label>	      
-    			<input type="text" class="form-control" name="phone" required>
+    			<input type="text" class="form-control" name="phone" value="{{$user->phone or old('phone')}}">
     		</div>	    	    
     		<div class="form-group col-md-6">	      
     			<label for="celPhone">Telefone Celular</label>	      
-    			<input type="text" class="form-control" name="celPhone" required>
+    			<input type="text" class="form-control" name="celPhone" value="{{$user->celPhone or old('celPhone')}}">
     		</div>	    	    
     	</div>
         <div class="row">       
             <div class="form-group col-md-6">         
                 <label for="occupation_id">Cargo</label>
-                <select class="form-control" name="occupation_id"  required>
-                    <option>Escolha...</option>
+                <select class="form-control" name="occupation_id">
+                    <option value="{{$user->occupation_id or old('occupation_id')}}">{{$user->occupation->name }}</option>
                     @foreach($occupation_list as $occupation)
                     <option value="{{$occupation->id}}">{{$occupation->name}}</option>
                     @endforeach
@@ -59,14 +61,13 @@
             </div>              
             <div class="form-group col-md-6">         
                 <label for="registration">Matrícula</label>          
-                <input type="text" class="form-control" name="registration" required>
+                <input type="text" class="form-control" name="registration" value="{{$user->registration or old('registration')}}">
             </div>              
         </div>
         <div class="row">       
             <div class="form-group col-md-6">         
-                <label for="department">Secretaria / Orgão</label>       
-                <select class="form-control" name="department_id" required>
-                    <option></option>
+                <label for="department">Secretaria / Orgão</label>       <select class="form-control" name="department_id" required>
+                    <option value="{{$user->department_id or old('department_id')}}">{{$user->department->name }}</option>
                     @foreach($department_list as $department)
                     <option value="{{$department->id}}">{{$department->name}}</option>
                     @endforeach
@@ -74,8 +75,8 @@
             </div>
             <div class="form-group col-md-6">         
                 <label for="department_id">Status</label>         
-                <select class="form-control" name="status" required>
-                    <option>Escolha...</option>
+                <select class="form-control" name="status">
+                    <option value="{{$user->status or old('status')}}">{{$user->formatedstatus}}</option>
                     <option value="1">Ativo</option>
                     <option value="0">Inativo</option>
                 </select>
@@ -84,13 +85,11 @@
         <div class="row">       
             <div class="form-group col-md-6">         
                 <label for="password">Senha</label>         
-                <input type="password" data-minlength="6" class="form-control" id="password" name="password" required>
-                <div class="help-block">Minimo de 6 caracteres</div>
+                <input type="password" class="form-control" name="password" value="{{$user->password or old('password')}}">
             </div>              
             <div class="form-group col-md-6">         
                 <label for="password_confirmation">Confirmar Senha</label>         
-                <input type="password" class="form-control" name="password_confirmation" data-match="#password" data-match-error="As senhas não coincidem!" required>
-                <div class="help-block with-errors"></div>
+                <input type="password" class="form-control" name="password_confirmation" value="{{$user->password or old('password')}}">
             </div>              
         </div>  	  
     	<div id="actions" class="row">	    
@@ -100,5 +99,5 @@
     		</div>	  
     	</div>	
     </form>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.js"></script>
+
 @endsection

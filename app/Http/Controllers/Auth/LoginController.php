@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use App\Entities\User;
 
 class LoginController extends Controller
 {
@@ -68,6 +69,7 @@ class LoginController extends Controller
      */
     protected function attemptLogin(Request $request)
     {
+
         if ($this->username() === 'email') {
             return $this->attemptLoginAtAuthenticatesUsers($request);
         }
@@ -86,7 +88,7 @@ class LoginController extends Controller
     protected function attempLoginUsingUsernameAsAnEmail(Request $request)
     {
         return $this->guard()->attempt(
-            ['email' => $request->input('username'), 'password' => $request->input('password')],
+            ['email' => $request->input('username'), 'password' => $request->input('password'), 'status' => 1],
             $request->has('remember')
         );
     }

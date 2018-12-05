@@ -3,13 +3,8 @@
  Gestão de Veículos
 @endsection
 @section('main-content')
-	@if(session()->get('success'))
-    <div class="alert alert-success">
-      {{ session()->get('success') }}  
-    </div><br />
-  @endif
  	<div style="float:right;">
- 		<a href="{{ route('vehicle.create') }}">
+ 		<a href="{{ route('vehicles.create') }}">
  		<button type="button" class="btn btn-block btn-primary">
  			<i class="fa fa-plus"></i> Cadastrar Veículo
  		</button>
@@ -17,6 +12,11 @@
  	</div>
  <br><br>
  	<div class="box box-primary">
+ 		@if(session()->get('success'))
+    		<div class="alert alert-success">
+      			{{ session()->get('success') }}  
+    		</div><br />
+  		@endif
  		<div class="row">
  			<div class="col-sm-12">
  				<div class="box-body">
@@ -30,7 +30,7 @@
 					 			<th width="10%">Tipo</th>
 					 			<th width="25%">Secretaria / Orgão</th>
 					 			<th width="10%">Status</th>
-					 			<th width="20%">Opções</th>
+					 			<th width="5%">Opções</th>
 					 		</tr>
 					 	</thead>
 					 	@foreach($vehicles as $vehicle)
@@ -46,7 +46,9 @@
 					 				<a href="{{route('vehicles.edit', $vehicle->id)}}" class="btn btn-info">
 					 					<i class="fa fa-wrench"></i>
 					 				</a>
-					 				<form action="{{ route('vehicles.destroy', $vehicle->id)}}" method="post">
+					 			</td>
+					 			<td>
+					 				<form action="{{ route('vehicles.destroy', $vehicle->id)}}" method="post" onsubmit="confirm('Tem certeza que deseja excluir?')">
                   					@csrf
                   					@method('DELETE')
                   						<button class="btn btn-danger" type="submit"><i class="fa fa-trash"></i></button>

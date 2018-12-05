@@ -4,7 +4,7 @@
 @endsection
 @section('main-content')
  	<div style="float:right;">
- 		<a href="{{ route('user.create') }}">
+ 		<a href="{{ route('users.create') }}">
  		<button type="button" class="btn btn-block btn-primary">
  			<i class="fa fa-plus"></i> Cadastrar Usuário
  		</button>
@@ -12,6 +12,11 @@
  	</div>
  <br><br>
  	<div class="box box-primary">
+ 		@if(session()->get('success'))
+    		<div class="alert alert-success">
+      			{{ session()->get('success') }}  
+    		</div><br />
+  		@endif
  		<div class="row">
  			<div class="col-sm-12">
  				<div class="box-body">
@@ -25,7 +30,7 @@
 								<th>Cargo</th>
 					 			<th>Secretaria/Orgão</th>
 					 			<th>Status</th>
-					 			<th>Opções</th>
+					 			<th width="5%">Opções</th>
 
 					 		</tr>
 					 	</thead>
@@ -39,12 +44,16 @@
 					 			<th>{{ $user->department->name }}</th>
 					 			<th>{{ $user->formatedstatus }}</th>
 					 			<td>
-					 				<a href="#" class="btn btn-info">
+					 				<a href="{{route('users.edit', $user->id)}}" class="btn btn-info">
 					 					<i class="fa fa-wrench"></i>
 					 				</a>
-					 				<a href="{{ route('users.destroy', $user->id)}}" class="btn btn-danger">
-					 					<i class="fa fa-trash"></i>
-					 				</a>
+					 			</td>
+					 			<td>	
+					 				<form action="{{ route('users.destroy', $user->id)}}" method="post" onsubmit="confirm('Tem certeza que deseja excluir?')">
+                  					@csrf
+                  					@method('DELETE')
+                  						<button class="btn btn-danger" type="submit"><i class="fa fa-trash"></i></button>
+                					</form>
 					 			</td>
 					 		</tr>
 					 	</tbody>

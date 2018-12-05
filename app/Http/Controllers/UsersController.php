@@ -119,8 +119,10 @@ class UsersController extends Controller
     public function edit($id)
     {
         $user = $this->repository->find($id);
+        $department_list = $this->departmentRepository->all(['id','name']);
+        $occupation_list = $this->occupationRepository->all(['id','name']);
 
-        return view('users.edit', compact('user'));
+        return view('users.edit', compact('user','department_list','occupation_list'));
     }
 
     /**
@@ -138,8 +140,19 @@ class UsersController extends Controller
         try {
 
             $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_UPDATE);
-
-            $user = $this->repository->update($request->all(), $id);
+            $user = User::find($id);
+            $user->name           = $request->get('name');
+            $user->username       = $request->get('username');
+            $user->email          = $request->get('email');
+            $user->password       = bcrypt($request->get('password'));
+            $user->registration   = $request->get('registration');
+            $user->birthDate      = $request->get('birthDate');
+            $user->phone          = $request->get('phone');
+            $user->celPhone       = $request->get('celPhone');
+            $user->department_id  = $request->get('department_id');
+            $user->occupation_id  = $request->get('occupation_id');
+            $user->status         = $request->get('status');
+            $user->save();
 
             $response = [
                 'message' => 'user updated.',
@@ -151,7 +164,7 @@ class UsersController extends Controller
                 return response()->json($response);
             }
 
-            return redirect()->back()->with('message', $response['message']);
+            return redirect()->route('users.index')->with('success', 'Usuario alterado com sucesso');
         } catch (ValidatorException $e) {
 
             if ($request->wantsJson()) {
@@ -178,14 +191,6 @@ class UsersController extends Controller
     {
         $deleted = $this->repository->delete($id);
 
-        if (request()->wantsJson()) {
-
-            return response()->json([
-                'message' => 'user deleted.',
-                'deleted' => $deleted,
-            ]);
-        }
-
-        return redirect()->route('users.index');
+        return redirect()->route('users.index')->with('success', 'Usuario removido com sucesso');
     }
  }

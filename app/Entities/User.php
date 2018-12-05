@@ -58,7 +58,7 @@ class User extends Authenticatable
                 $status = "Ativo";
                 break;
 
-            case "2":
+            case "0":
                 $status = "Inativo";
                 break;
         }

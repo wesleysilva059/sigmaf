@@ -377,8 +377,7 @@
                         </ul>
                     </div>
                     <div class="tab-pane" role="tabpanel" id="complete">
-                        <h3>Completo</h3>
-                        <p>Cadastro de veículo realizado com Sucesso.</p>
+                        <h3>Completo, Aguarde um instante...</h3>
                     </div>
                     <div class="clearfix"></div>
                 </div>
