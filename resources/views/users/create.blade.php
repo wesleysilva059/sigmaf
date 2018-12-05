@@ -39,11 +39,11 @@
     	<div class="row">	    
        		<div class="form-group col-md-6">	      
     			<label for="phone">Telefone Fixo</label>	      
-    			<input type="text" class="form-control" name="phone" required>
+    			<input type="text" class="form-control" name="phone">
     		</div>	    	    
     		<div class="form-group col-md-6">	      
     			<label for="celPhone">Telefone Celular</label>	      
-    			<input type="text" class="form-control" name="celPhone" required>
+    			<input type="text" class="form-control" name="celPhone">
     		</div>	    	    
     	</div>
         <div class="row">       
