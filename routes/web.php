@@ -60,6 +60,7 @@ Route::group(['middleware' => 'auth'], function () {
 		Route::get('/historicsByCar', 'MaintenancesController@historicsByCar');
 		Route::any('/maintenancesByCarSearch', 'MaintenancesController@search')->name('maintenancesByCar.search');
 		Route::any('/historicsPeriodByCarPrint/{id}','MaintenancesController@printByCar')->name('maintenancesByCar.print');
+		Route::any('/finishMaintenance','MaintenancesController@finishMaintenance')->name('maintenance.finish');
 
 	Route::resource('vehicleTypes', 'VehicleTypesController');
 

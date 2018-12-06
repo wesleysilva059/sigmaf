@@ -23,52 +23,57 @@ class DatabaseSeeder extends Seeder
     {
         $now = date("Y-m-d H:i:s");
 
-        DB::table("maintenance_categories")->insert([
-            [
-                "name" => "ACESSÓRIOS" 
-            ], [
-                "name" => "BOMBA INJETORA" 
-            ], [
-                "name" => "CAIXA DE REDUÇÃO" 
-            ], [
-                "name" => "DIREÇÃO" 
-            ], [
-                "name" => "DOCUMENTAÇÃO" 
-            ], [
-                "name" => "ELÉTRICA" 
-            ], [
-                "name" => "EQUIPAMENTOS" 
-            ], [
-                "name" => "FREIO" 
-            ], [
-                "name" => "FUNILARIA" 
-            ], [
-                "name" => "GUINCHO" 
-            ], [
-                "name" => "IMPLEMENTOS" 
-            ], [
-                "name" => "LAVAGEM" 
-            ], [
-                "name" => "MOTOR" 
-            ], [
-                "name" => "PINTURA" 
-            ], [
-                "name" => "PNEUS" 
-            ], [
-                "name" => "REVISÃO PREVENTIVA" 
-            ], [
-                "name" => "SISTEMA HIDRÁULICO" 
-            ], [
-                "name" => "SUSPENSÃO" 
-            ], [
-                "name" => "TELEMETRIA" 
-            ], [
-                "name" => "TRANSMISSÃO" 
-            ], [
-                "name" => "OUTROS" 
-            ], 
+        DB::table("maintenance_statuses")->insert([
+            [ "name"    => "SOLICITANDO ORÇAMENTO"],
+            [ "name"    => "ANALISANDO ORÇAMENTOS"],
+            [ "name"    => "AGUARD. APROV. SETOR DE COMPRAS"],
+            [ "name"    => "AGUARDANDO PEÇAS"],
+            [ "name"    => "AGUARD. ATEND. NA OFICINA"],
+            [ "name"    => "EM MANUTENÇÃO"],
+            [ "name"    => "CONCLUÍDA"],
         ]);
 
+        DB::table("maintenance_categories")->insert([
+            ["name" => "ACESSÓRIOS" ],
+            ["name" => "BOMBA INJETORA" ],
+            ["name" => "CAIXA DE REDUÇÃO" ],
+            ["name" => "DIREÇÃO" ],
+            ["name" => "DOCUMENTAÇÃO" ],
+            ["name" => "ELÉTRICA" ],
+            ["name" => "EQUIPAMENTOS" ],
+            ["name" => "FREIO" ],
+            ["name" => "FUNILARIA" ],
+            ["name" => "GUINCHO" ],
+            ["name" => "IMPLEMENTOS" ],
+            ["name" => "LAVAGEM" ],
+            ["name" => "MOTOR" ],
+            ["name" => "PINTURA" ],
+            ["name" => "PNEUS" ],
+            ["name" => "REVISÃO PREVENTIVA" ],
+            ["name" => "SISTEMA HIDRÁULICO" ],
+            ["name" => "SUSPENSÃO" ],
+            ["name" => "TELEMETRIA" ],
+            ["name" => "TRANSMISSÃO" ],
+            ["name" => "OUTROS" ],   
+        ]);
+
+        DB::table("oil_change_types")->insert([
+            ["name" => "CAIXA"],
+            ["name" => "DIFERENCIAL"],
+            ["name" => "MOTOR"],
+        ]);
+
+
+        DB::table("filter_change_types")->insert([
+            ["name" => "FILTRO DE AR"],
+            ["name" => "FILTRO DE COMBUSTÍVEL"],
+            ["name" => "FILTRO DE DIREÇÃO"],
+            ["name" => "FILTRO DE LUBRIFICAÇÃO"],
+            ["name" => "FILTRO DE TRANSMISSÃO"],
+            ["name" => "FILTRO HIDRÁULICO"],
+            ["name" => "FILTRO RACOR"],
+            ["name" => "OUTROS"],
+        ]);
 
         DB::table("departments")->insert([
             [

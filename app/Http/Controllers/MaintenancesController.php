@@ -157,26 +157,16 @@ class MaintenancesController extends Controller
             $vehicle->status = 2;
             $vehicle->save();
             
-            $response = [
-                'message' => 'Maintenance created.',
-                'data'    => $maintenance->toArray(),
-            ];
-
-            if ($request->wantsJson()) {
-
-                return response()->json($response);
-            }
-
-            return redirect()->back()->with('message', $response['message']);
+            return redirect()->route('maintenances.index')->with('success', 'Manutenção Cadastrada com Sucesso!');
         } catch (ValidatorException $e) {
             if ($request->wantsJson()) {
                 return response()->json([
                     'error'   => true,
-                    'message' => $e->getMessageBag()
+                    'success' => $e->getsuccessBag()
                 ]);
             }
 
-            return redirect()->back()->withErrors($e->getMessageBag())->withInput();
+            return redirect()->back()->withErrors($e->getsuccessBag())->withInput();
         }
     }
 
@@ -233,28 +223,18 @@ class MaintenancesController extends Controller
 
             $maintenance = $this->repository->update($request->all(), $id);
 
-            $response = [
-                'message' => 'Maintenance updated.',
-                'data'    => $maintenance->toArray(),
-            ];
-
-            if ($request->wantsJson()) {
-
-                return response()->json($response);
-            }
-
-            return redirect()->back()->with('message', $response['message']);
+            return redirect()->route('maintenances.index')->with('success', 'Manutenção Alterada com Sucesso!');
         } catch (ValidatorException $e) {
 
             if ($request->wantsJson()) {
 
                 return response()->json([
                     'error'   => true,
-                    'message' => $e->getMessageBag()
+                    'success' => $e->getsuccessBag()
                 ]);
             }
 
-            return redirect()->back()->withErrors($e->getMessageBag())->withInput();
+            return redirect()->back()->withErrors($e->getsuccessBag())->withInput();
         }
     }
 
@@ -273,13 +253,35 @@ class MaintenancesController extends Controller
         if (request()->wantsJson()) {
 
             return response()->json([
-                'message' => 'Maintenance deleted.',
+                'success' => 'Maintenance deleted.',
                 'deleted' => $deleted,
             ]);
         }
 
-        return redirect()->back()->with('message', 'Maintenance deleted.');
+        return redirect()->route('maintenances.index')->with('success', 'Manutenção deletada.');
     }
+
+
+    public function finishMaintenance(Request $request)
+    {
+        $id = $request->id;
+        $maintenance = $this->repository->find($id);
+
+        $maintenance->maintenanceStatus_id = 7;
+        $maintenance->endDateMaintenance = $request->get('endDateMaintenance');
+        $maintenance->serviceDescRealized = $request->get('serviceDescRealized');
+        $maintenance->save();
+        //dd($request);
+
+        $idVehicle = $maintenance->vehicle_id;
+        $vehicle = $this->vehicleRepository->find($idVehicle);        
+        $vehicle->status = 0;
+        $vehicle->save();
+        
+        return redirect()->route('maintenances.index')->with('success', 'Manutenção Finalizada com Sucesso.');
+    }
+
+
 
     public function historicsPeriod()
     {

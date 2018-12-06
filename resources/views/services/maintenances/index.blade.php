@@ -12,6 +12,11 @@
  	</div>
  <br><br>
  	<div class="box box-primary">
+ 		@if(session()->get('success'))
+    		<div class="alert alert-success">
+      			{{ session()->get('success') }}  
+    		</div><br />
+  		@endif
  		<div class="row">
  			<div class="col-sm-12">
  				<div class="box-body">
@@ -50,11 +55,11 @@
 					 			</td>
 					 			<td>
 					 				<button type="button" class="btn btn-success" 
-					 					data-myid="{{$maintenance->cod}}"
-										data-vehiclePlate="{{$maintenance->vehicle->vehiclePlate}}"
-										data-expectedDateEnd="{{$maintenance->expectedDateEnd}}"
-										data-toggle="modal" 
-					 					data-target="#myModal">
+					 					data-id="{{$maintenance->id}}"
+					 					data-cod="{{$maintenance->cod}}"
+										data-vehicleplate="{{$maintenance->vehicle->vehiclePlate}}"
+										data-expecteddateend="{{$maintenance->expectedDateEnd}}"
+										data-toggle="modal" data-target="#modal">
 					 					<i class="fa fa-flag-checkered"></i>
 					 				</button>
 					 			</td>
@@ -68,18 +73,17 @@
  		</div>
  	</div>
 
- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+ <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
   	<div class="modal-dialog" role="document">
     	<div class="modal-content">
 	      	<div class="modal-header">
 	        	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	        	<h4 class="modal-title" id="myModalLabel">Finalizar Manutenção</h4>
+	        	<h4 class="modal-title" id="modalLabel">Finalizar Manutenção</h4>
 	      	</div>
       		<div class="modal-body">
-				<form action="" method="post">
+				<form action="{{ route('maintenance.finish', 'test')}}" method="post">
 				{{method_field('patch')}}
-				{{csrf_field()}}	  
-				<hr />	
+				{{csrf_field()}}
 					<input type="hidden" id="id" name="id" value="">
 					<div class="row">	    
 						<div class="form-group col-md-6">	      
@@ -118,25 +122,21 @@
 		</div>
 	</div>
 </div>
-<script type='text/javascript'>
+<script>
 	
-	  $('#myModal').on('show.bs.modal', function (event) {
+	  $('#modal').on('show.bs.modal', function (event) {
 
-      var button = $(event.relatedTarget) 
-      console.log(button);
-      var cod = button.data('myid')
-      var vehiclePlate = button.data('vehiclePlate') 
-      var datee = button.data('expectedDateEnd').split("/") 
-      var expectedDateEnd = datee[2]+'-'+datee[1]+'-'+datee[0]
+      var button = $(event.relatedTarget)
+      var id = button.data('id')
+      var cod = button.data('cod')
+      var vehiclePlate = button.data('vehicleplate') 
+      var date = button.data('expecteddateend')
       var modal = $(this)
 
-      console.log(cod,vehiclePlate,datee,expectedDateEnd);
-
-		//
-
+      modal.find('.modal-body #id').val(id);
       modal.find('.modal-body #cod').val(cod);
       modal.find('.modal-body #vehiclePlate').val(vehiclePlate);
-      modal.find('.modal-body #expectedDateEnd').val(expectedDateEnd);
+      modal.find('.modal-body #expectedDateEnd').val(date);
 	})
 </script>
-@stop
+@endsection
