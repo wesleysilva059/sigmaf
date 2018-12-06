@@ -23,6 +23,53 @@ class DatabaseSeeder extends Seeder
     {
         $now = date("Y-m-d H:i:s");
 
+        DB::table("maintenance_categories")->insert([
+            [
+                "name" => "ACESSÓRIOS" 
+            ], [
+                "name" => "BOMBA INJETORA" 
+            ], [
+                "name" => "CAIXA DE REDUÇÃO" 
+            ], [
+                "name" => "DIREÇÃO" 
+            ], [
+                "name" => "DOCUMENTAÇÃO" 
+            ], [
+                "name" => "ELÉTRICA" 
+            ], [
+                "name" => "EQUIPAMENTOS" 
+            ], [
+                "name" => "FREIO" 
+            ], [
+                "name" => "FUNILARIA" 
+            ], [
+                "name" => "GUINCHO" 
+            ], [
+                "name" => "IMPLEMENTOS" 
+            ], [
+                "name" => "LAVAGEM" 
+            ], [
+                "name" => "MOTOR" 
+            ], [
+                "name" => "PINTURA" 
+            ], [
+                "name" => "PNEUS" 
+            ], [
+                "name" => "REVISÃO PREVENTIVA" 
+            ], [
+                "name" => "SISTEMA HIDRÁULICO" 
+            ], [
+                "name" => "SUSPENSÃO" 
+            ], [
+                "name" => "TELEMETRIA" 
+            ], [
+                "name" => "TRANSMISSÃO" 
+            ], [
+                "name" => "OUTROS" 
+            ], 
+        ]);
+
+
         DB::table("departments")->insert([
             [
                 "name"          => "ADMINISTRAÇÃO DO SISTEMA",
@@ -162,8 +209,49 @@ class DatabaseSeeder extends Seeder
                 "name"          => "SECRETÁRIO ADJUNTO",
                 "created_at"    => $now,
                 "updated_at"    => $now,
+            ], [
+                "name"          => "MECÂNICO",
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "AUXILIAR DE MECÂNICO",
+                "created_at"    => $now,
+                "updated_at"    => $now,
+            ], [
+                "name"          => "LAVADOR",
+                "created_at"    => $now,
+                "updated_at"    => $now,
             ],
-        ]); 
+        ]);
+
+        DB::table("employees")->insert([
+        [    
+             "name"             => "Arnaldo Alves Vieira",
+             "registration"     => "3273",
+             "occupation_id"    => "21",
+             "status"           => "1",
+         ], [
+            "name"             => "Filipe Oliveira Costa",
+             "registration"     => "2893",
+             "occupation_id"    => "23",
+             "status"           => "1",
+         ], [
+            "name"             => "Francisco Vaz de Oliveira",
+             "registration"     => "3246",
+             "occupation_id"    => "23",
+             "status"           => "1",
+         ], [
+            "name"             => "Gilmar dos Reis de Jesus",
+             "registration"     => "3159",
+             "occupation_id"    => "21",
+             "status"           => "1",
+         ], [
+            "name"             => "Maicon César Chagas",
+             "registration"     => "3067",
+             "occupation_id"    => "22",
+             "status"           => "1", 
+         ],
+     ]); 
 
         DB::table("cost_centers")->insert([
             [

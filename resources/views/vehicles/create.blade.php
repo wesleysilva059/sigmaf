@@ -65,7 +65,7 @@
                 </ul>
             </div>
 
-            <form role="form" action="{{route('vehicles.store')}}" method="post">
+            <form role="form" action="{{route('vehicles.store')}}" method="post" data-toggle="validator">
                 {{ csrf_field() }}
                 <div class="tab-content">
                     <div class="tab-pane active" role="tabpanel" id="step1">
@@ -133,21 +133,21 @@
 					    	<div class="row">	    
 					    		<div class="form-group col-md-4">	      
 					    			<label for="purchaseDate">Data de Aquisição</label>
-    								<input type="date" class="form-control" name="purchaseDate" id="purchaseDate" value="{{$vehicles->purchaseDate or old('purchaseDate')}}" required>
+    								<input type="date" class="form-control" name="purchaseDate" id="purchaseDate" value="{{$vehicles->purchaseDate or old('purchaseDate')}}">
 					    		</div>	    	    
 					    		<div class="form-group col-md-4">	      
 					    			<label for="renavam">Renavam</label>	      
-					    			<input type="text" class="form-control" id="renavam" name="renavam" value="{{$vehicles->renavam or old('renavam')}}" required>
+					    			<input type="text" class="form-control" id="renavam" name="renavam" value="{{$vehicles->renavam or old('renavam')}}">
 					    		</div>	    	    
 					    		<div class="form-group col-md-4">	      
 					    			<label for="chassis">Chassi</label>	      
-					    			<input type="text" class="form-control" id="chassis" name="chassis" value="{{$vehicles->chassis or old('chassis')}}" required>
+					    			<input type="text" class="form-control" id="chassis" name="chassis" value="{{$vehicles->chassis or old('chassis')}}">
 					    		</div>		  
 					    	</div>
 					    	<div class="row">	    
 					    		<div class="form-group col-md-4">	      
 					    			<label for="typeFuel">Combustível</label>	      
-					    			<select class="form-control" name="typeFuel" id="typeFuel" required>
+					    			<select class="form-control" name="typeFuel" id="typeFuel">
 					                    <option>Escolha...</option>
 					                    <option value="1">Gasolina</option>
 					                    <option value="2">Alcool</option>
@@ -191,10 +191,6 @@
 					                </select>
 					    		</div>	  
 					    	</div>
-					    	<div class="custom-file">
-							  	<input type="file" class="custom-file-input" id="customFileLang" lang="es">
-							  	<label class="custom-file-label" for="customFileLang">Selecionar Arquivo</label>
-							</div>
 
                         <ul class="list-inline pull-right">
                             <li><button type="button" class="btn btn-primary next-step">Salvar e continuar</button></li>
@@ -257,7 +253,7 @@
 								</div>
 								<div class="form-group col-md-2">	      
 									<label for="currentKmHr">Km/Hr Atual</label>	      
-									<input type="text" class="form-control" name="currentKmHr" id="currentKmHr" required>
+									<input type="text" class="form-control" name="currentKmHr" id="currentKmHr">
 								</div>
 					    		<div class="form-group col-md-4">	      
 					    			<label for="engine">Motorização</label>	      
@@ -379,7 +375,7 @@
     </section>
    </div>
 </div>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.js"></script>
 <script>
 
 	$(document).ready(function () {

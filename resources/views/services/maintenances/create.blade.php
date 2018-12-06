@@ -176,8 +176,7 @@
  					<th>#</th> 
  					<th>Placa do Veículo</th> 
  					<th>Modelo</th>
- 					<th>Id Dep.</th> 
- 					<th>Deparmento</th> 
+ 					<th>Deparmento</th>
  				</tr> 
  			</thead>
  			<tbody> 
@@ -186,8 +185,10 @@
  					<td>{{$vehicle->id}}</td> 
  					<td>{{$vehicle->vehiclePlate}}</td> 
  					<td>{{$vehicle->vehicleModel->name}}</td> 
- 					<td>{{$vehicle->costCenter->department->id}}</td>
- 					<td>{{$vehicle->costCenter->department->name}}</td> 
+ 					<td>{{$vehicle->costCenter->department->name}}</td>
+ 					<td style="visibility: hidden;">{{$vehicle->costCenter->department->id}}</td>
+ 					<td style="visibility: hidden;">{{$vehicle->costCenter_id}}</td>
+ 					<td style="visibility: hidden;">{{$vehicle->costCenter->name}}</td> 
  				</tr>  
  			@endforeach
                </tbody>
@@ -217,11 +218,11 @@
                //alert(selitem[1].innerHTML);
                $("input[name='vehiclePlate']").val(selitem[1].innerHTML);
                $("input[name='vehicle_id']").val(selitem[0].innerHTML);
-               var op = '<option value="'+selitem[3].innerHTML+'">'+selitem[4].innerHTML+'</option>';
+               var op = '<option value="'+selitem[4].innerHTML+'">'+selitem[3].innerHTML+'</option>';
                $('#department_id').html(op).show();
                var department_id = selitem[3].innerHTML;
                $.getJSON('/getCostCenters/' + department_id, function( dados ){
-            	var option = '<option>Selecione o Centro de Custo</option>';
+            	var option = '<option value="'+selitem[5].innerHTML+'">'+selitem[6].innerHTML+'</option>';
             	$.each(dados, function(i, obj){
                 	option += '<option value="'+obj.id+'">'+obj.name+'</option>';
               		})

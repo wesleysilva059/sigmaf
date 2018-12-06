@@ -65,7 +65,7 @@
                 </ul>
             </div>
 
-            <form role="form" action="{{route('vehicles.update', $vehicle->id)}}" method="post">
+            <form role="form" action="{{route('vehicles.update', $vehicle->id)}}" method="post" data-toggle="validator">
                 {{method_field('patch')}}
                 {{ csrf_field() }}
                 <div class="tab-content">
@@ -137,21 +137,21 @@
 					    	<div class="row">	    
 					    		<div class="form-group col-md-4">	      
 					    			<label for="purchaseDate">Data de Aquisição</label>
-    								<input type="date" class="form-control" name="purchaseDate" id="purchaseDate" value="{{$vehicle->purchaseDate or old('purchaseDate')}}" required>
+    								<input type="date" class="form-control" name="purchaseDate" id="purchaseDate" value="{{$vehicle->purchaseDate or old('purchaseDate')}}">
 					    		</div>	    	    
 					    		<div class="form-group col-md-4">	      
 					    			<label for="renavam">Renavam</label>	      
-					    			<input type="text" class="form-control" id="renavam" name="renavam" value="{{$vehicle->renavam or old('renavam')}}" required>
+					    			<input type="text" class="form-control" id="renavam" name="renavam" value="{{$vehicle->renavam or old('renavam')}}">
 					    		</div>	    	    
 					    		<div class="form-group col-md-4">	      
 					    			<label for="chassis">Chassi</label>	      
-					    			<input type="text" class="form-control" id="chassis" name="chassis" value="{{$vehicle->chassis or old('chassis')}}" required>
+					    			<input type="text" class="form-control" id="chassis" name="chassis" value="{{$vehicle->chassis or old('chassis')}}">
 					    		</div>		  
 					    	</div>
 					    	<div class="row">	    
 					    		<div class="form-group col-md-4">	      
 					    			<label for="typeFuel">Combustível</label>	      
-					    			<select class="form-control" name="typeFuel" id="typeFuel" required>
+					    			<select class="form-control" name="typeFuel" id="typeFuel">
 					                    <option value="{{$vehicle->typeFuel}}">{{$vehicle->formatedtypeFuel}}</option>
 					                    <option value="1">Gasolina</option>
 					                    <option value="2">Alcool</option>
@@ -181,7 +181,7 @@
 					    		<div class="form-group col-md-4">	      
 					    			<label for="costCenter_id">Centro de Custo</label>	      
 					    			<select class="form-control" name="costCenter_id" id="costCenter_id" required>
-					    				<option value="{{$vehicle->costCenter->id}}">{{$vehicle->costCenter->name}}</option>
+					    				<option value="{{$vehicle->costCenter_id}}">{{$vehicle->costCenter->name}}</option>
 					                </select> 
 					    		</div>	    	    
 					    		<div class="form-group col-md-4">	      
@@ -196,10 +196,6 @@
 					                </select>
 					    		</div>	  
 					    	</div>
-					    	<div class="custom-file">
-							  	<input type="file" class="custom-file-input" id="customFileLang" lang="es">
-							  	<label class="custom-file-label" for="customFileLang">Selecionar Arquivo</label>
-							</div>
 
                         <ul class="list-inline pull-right">
                             <li><button type="button" class="btn btn-primary next-step">Salvar e continuar</button></li>
@@ -386,7 +382,7 @@
     </section>
    </div>
 </div>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.js"></script>
 <script>
 
 	$(document).ready(function () {

@@ -24,7 +24,7 @@ class CreateVehiclesTable extends Migration
             $table->date('purchaseDate')->nullable();
             $table->string('renavam')->nullable();
             $table->string('chassis')->nullable();
-            $table->integer('typeFuel');
+            $table->integer('typeFuel')->nullable();
             $table->integer('typeControl');
             $table->integer('status');
             $table->unsignedInteger('vehicleModel_id');
