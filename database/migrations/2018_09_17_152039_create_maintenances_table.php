@@ -27,7 +27,7 @@ class CreateMaintenancesTable extends Migration
             $table->unsignedInteger('maintenanceCategory_id');
             $table->unsignedInteger('maintenanceStatus_id');
             $table->unsignedInteger('machineShop_id');
-            $table->unsignedInteger('provider_id');
+            $table->unsignedInteger('provider_id')->nullable();
             $table->unsignedInteger('costCenter_id');
             $table->unsignedInteger('department_id');
             $table->date('initDateMaintenance');

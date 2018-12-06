@@ -1,4 +1,5 @@
 @extends('adminlte::layouts.app')
+
 @section('contentheader_title')
  Gestão de Veículos
 @endsection

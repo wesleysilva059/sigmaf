@@ -18,7 +18,6 @@ class CreateFilterChangesTable extends Migration
 		Schema::create('filter_changes', function(Blueprint $table) {
             $table->increments('id');
             $table->integer('periodFilterChange');
-            $table->unsignedInteger('filterChangeType_id');
             $table->unsignedInteger('vehicle_id');
             $table->unsignedInteger('employee_id');
             $table->date('initDate');
@@ -27,9 +26,6 @@ class CreateFilterChangesTable extends Migration
             $table->integer('currentKmHr');
             $table->unsignedInteger('maintenanceStatus_id');
             
-            $table->foreign('filterChangeType_id')->references('id')->on('filter_change_types')
-            	->onDelete('cascade')
-            	->onUpdate('cascade');
             $table->foreign('vehicle_id')->references('id')->on('vehicles')
             	->onDelete('cascade')
             	->onUpdate('cascade');

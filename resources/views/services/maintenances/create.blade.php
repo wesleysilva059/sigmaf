@@ -8,7 +8,7 @@
 
 <script data-require="jquery" data-semver="2.1.4" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 
-<form role="form" action="{{route('maintenances.store')}}" method="post">
+<form role="form" action="{{route('maintenances.store')}}" method="post" data-toggle="validator">
     {{ csrf_field() }}
     <div class="tab-content">
         <div class="tab-pane active" role="tabpanel" id="step1">
@@ -21,7 +21,7 @@
 		    		<div class="form-group col-md-4">
 						   <div class="input-group">
   							<label for="plate">Placa do Veículo</label>
-  							<input type="text" class="form-control" name="vehiclePlate" placeholder="Placa">
+  							<input type="text" class="form-control" name="vehiclePlate" placeholder="Placa" required>
 						    	<span class="input-group-btn">
 						       		<button class="btn btn-block bt-test" type="button" data-toggle="modal" data-target="#myModal">	
 						       			&#128269;
@@ -127,7 +127,7 @@
 		    	<div class="row">	    
 		    		<div class="form-group col-md-6">	      
 		    			<label for="provider_id">Fornecedor Peças</label>	     
-		    			<select class="form-control" name="provider_id" id="provider_id" required>
+		    			<select class="form-control" name="provider_id" id="provider_id">
 		                    <option>Escolha...</option>
 		                    @foreach($provider_list as $provider)
 		                    <option value="{{$provider->id}}">{{$provider->name}}</option>
@@ -173,10 +173,13 @@
       	<table id="vehicles" class="table row">
  			<thead> 
  				<tr> 
- 					<th>#</th> 
- 					<th>Placa do Veículo</th> 
- 					<th>Modelo</th>
- 					<th>Deparmento</th>
+ 					<th width="5%">#</th> 
+ 					<th width="20%">Placa do Veículo</th> 
+ 					<th width="25%">Modelo</th>
+ 					<th width="30%">Deparmento</th>
+ 					<th width="0%"></th>
+ 					<th width="0%"></th>
+ 					<th width="0%"></th>
  				</tr> 
  			</thead>
  			<tbody> 
@@ -201,6 +204,8 @@
     </div>
   </div>
 </div>
+
+
 
 <script>
      //Funçtion search in table inside modal

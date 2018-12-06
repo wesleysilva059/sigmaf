@@ -1,4 +1,4 @@
-@extends('adminlte::layouts.app')
+@extends('adminlte::layouts2.app')
 @section('contentheader_title')
  Gestão de Manutenções
 @endsection
@@ -122,6 +122,7 @@
 		</div>
 	</div>
 </div>
+
 <script>
 	
 	  $('#modal').on('show.bs.modal', function (event) {
@@ -139,4 +140,5 @@
       modal.find('.modal-body #expectedDateEnd').val(date);
 	})
 </script>
+
 @endsection
