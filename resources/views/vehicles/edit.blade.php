@@ -127,7 +127,7 @@
 					    		<div class="form-group col-md-3">	      
 					    			<label for="vehicleType_id">Tipo de Veículo</label>	      
 					    			<select class="form-control" id="vehicleType_id" name="vehicleType_id" required>
-					                    <option value="{{$vehicle->vehicleType->id}}">{{$vehicle->vehicleType->name}}</option>
+					                    <option value="{{$vehicle->vehicleType_id}}">{{$vehicle->vehicleType->name}}</option>
 					                    @foreach($vehicleType_list as $vehicleType)
 					                    <option value="{{$vehicleType->id}}">{{$vehicleType->name}}</option>
 										@endforeach
@@ -264,7 +264,7 @@
 								</div>
 								<div class="form-group col-md-2">	      
 									<label for="currentKmHr">Km/Hr Atual</label>	      
-									<input type="text" class="form-control" name="currentKmHr" id="currentKmHr" value="{{$specification->currentKmHr}}" required>
+									<input type="text" class="form-control" name="currentKmHr" id="currentKmHr" value="{{$specification->currentKmHr}}">
 								</div>
 					    		<div class="form-group col-md-4">	      
 					    			<label for="engine">Motorização</label>	      
